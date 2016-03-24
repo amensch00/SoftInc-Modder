@@ -1,4 +1,19 @@
-﻿using System;
+﻿//This file is part of SoftInc Modder.
+
+//SoftInc Modder is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+
+//SoftInc Modder is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+//GNU General Public License for more details.
+
+//You should have received a copy of the GNU General Public License
+//along with SoftInc Modder.  If not, see<http://www.gnu.org/licenses/>.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +36,8 @@ namespace softwareInc_mod_exe
         int anzahlFeature = 0;
         bool[] Attr1 = new bool[50];
 
+        bool ShowHelp;
+
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +50,8 @@ namespace softwareInc_mod_exe
         private void button3_Click(object sender, EventArgs e)
         {
             feature_form feature_form = new feature_form();
-            feature_form.Starten(this);
+            Settings_ frm_settings = new Settings_();
+            feature_form.Starten(this, frm_settings, ShowHelp);
             feature_form.ShowInTaskbar = false;
             feature_form.ShowDialog();
 
@@ -50,41 +68,41 @@ namespace softwareInc_mod_exe
 
             string userName = Environment.UserName;
 
-            using (XmlWriter xmlWriter = XmlWriter.Create(@"C:\Users\" + userName + @"\Desktop\Mod\SoftwareTypes\" + textBox1.Text + ".xml", settings))
+            using (XmlWriter xmlWriter = XmlWriter.Create(@"C:\Users\" + userName + @"\Desktop\Mod\SoftwareTypes\" + txtbox_softname.Text + ".xml", settings))
             {                
                 xmlWriter.WriteStartElement("SoftwareType");
 
-                if (textBox1.Text == "")
+                if (txtbox_softname.Text == "")
                 {
                     MessageBox.Show("Please enter a Name!");
-                    textBox1.Text = ("Please enter a Name!");
+                    txtbox_softname.Text = ("Please enter a Name!");
                     return;
                 }
                 else
                 {
-                    xmlWriter.WriteElementString("Name", textBox1.Text);
+                    xmlWriter.WriteElementString("Name", txtbox_softname.Text);
                 }
 
-                if (richTextBox1.Text == "")
+                if (rtxtbox_soft_descri.Text == "")
                 {   
                     MessageBox.Show("Please enter a Description!");
-                    richTextBox1.Text = ("Please enter a Description!");
+                    rtxtbox_soft_descri.Text = ("Please enter a Description!");
                     return;
                 }
                 else
                 {
-                    xmlWriter.WriteElementString("Description", richTextBox1.Text);
+                    xmlWriter.WriteElementString("Description", rtxtbox_soft_descri.Text);
                 }   
 
                 double z;
-                z = (double)trackBar1.Value / 10.0;
+                z = (double)trbar_random.Value / 10.0;
                 string z2, z3;
                 z2 = z.ToString();
                 z3 = z2.Replace(",", ".");
                 xmlWriter.WriteElementString("Random", z3);
 
                 double f;
-                f = (double)trackBar2.Value / 10.0;
+                f = (double)trbar_popularity.Value / 10.0;
                 string f2, f3;
                 f2 = f.ToString();
                 f3 = f2.Replace(",", ".");
@@ -94,17 +112,17 @@ namespace softwareInc_mod_exe
                 xmlWriter.WriteElementString("OneClient", WahrFalsch(checkBox2.Checked));
                 xmlWriter.WriteElementString("InHouse", WahrFalsch(checkBox3.Checked));
                 
-                if (textBox2.Text == "")
+                if (txtbox_unlock.Text == "")
                 {
                     xmlWriter.WriteElementString("Unlock", "1970");
                 }
                 else
                 {
-                    xmlWriter.WriteElementString("Unlock", textBox2.Text);
+                    xmlWriter.WriteElementString("Unlock", txtbox_unlock.Text);
                 }                
 
                 // ~~ NAMEGEN ~~
-                if (textBox3.Text == "")
+                if (txtbox_namegen.Text == "")
                 {
                     System.IO.StreamWriter w = new System.IO.StreamWriter(@"C:\Users\" + userName + @"\Desktop\Mod\NameGenerators\NameGen_1.txt");
 
@@ -119,7 +137,7 @@ namespace softwareInc_mod_exe
                 }
                 else
                 {
-                    xmlWriter.WriteElementString("NameGenerator", textBox3.Text);
+                    xmlWriter.WriteElementString("NameGenerator", txtbox_namegen.Text);
                 }
                 
                 //MessageBox.Show(comboBox1.SelectedText);

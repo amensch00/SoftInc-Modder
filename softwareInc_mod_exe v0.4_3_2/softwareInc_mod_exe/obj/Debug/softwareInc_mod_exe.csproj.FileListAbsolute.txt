@@ -242,3 +242,51 @@ P:\00 Projekte\Programs\Software Inc Modder\softwareInc_mod_exe v0.4_3_2\softwar
 P:\00 Projekte\Programs\Software Inc Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.TrustInfo.xml
 P:\00 Projekte\Programs\Software Inc Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.exe.manifest
 P:\00 Projekte\Programs\Software Inc Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.application
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.exe.config
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.exe
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.pdb
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.exe.manifest
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.application
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.exe
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.pdb
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.csprojResolveAssemblyReference.cache
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.companies.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.companiesProduct.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.companyTypes.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Event_.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.feature_form.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Form1.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.forms_choice.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.namegen.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Properties.Resources.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.scenarios.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Settings.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.start_screen.resources
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.csproj.GenerateResource.Cache
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.TrustInfo.xml
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.exe.manifest
+P:\00 Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.application
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.exe.config
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.exe
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.pdb
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.exe.manifest
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.application
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.exe
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\bin\Debug\softwareInc_mod_exe.pdb
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.csprojResolveAssemblyReference.cache
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.companies.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.companiesProduct.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.companyTypes.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Event_.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.feature_form.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Form1.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.forms_choice.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.namegen.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Properties.Resources.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.scenarios.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.start_screen.resources
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.csproj.GenerateResource.Cache
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.TrustInfo.xml
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.exe.manifest
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.application
+P:\00_Projekte\Programs\GitHub\SoftInc-Modder\softwareInc_mod_exe v0.4_3_2\softwareInc_mod_exe\obj\Debug\softwareInc_mod_exe.Settings_.resources

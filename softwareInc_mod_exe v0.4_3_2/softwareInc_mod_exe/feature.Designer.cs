@@ -50,26 +50,29 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.trackBar6 = new System.Windows.Forms.TrackBar();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this._hh1 = new System.Windows.Forms.Button();
+            this._hh5 = new System.Windows.Forms.Button();
+            this._hh6 = new System.Windows.Forms.Button();
+            this._hh2 = new System.Windows.Forms.Button();
+            this._hh3 = new System.Windows.Forms.Button();
+            this._hh4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -281,14 +284,6 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Server";
             // 
-            // trackBar6
-            // 
-            this.trackBar6.LargeChange = 2;
-            this.trackBar6.Location = new System.Drawing.Point(165, 285);
-            this.trackBar6.Name = "trackBar6";
-            this.trackBar6.Size = new System.Drawing.Size(143, 45);
-            this.trackBar6.TabIndex = 26;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -339,16 +334,6 @@
             this.label15.TabIndex = 32;
             this.label15.Text = "0";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Hobo Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(173, 312);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(16, 18);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "0";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -368,16 +353,6 @@
             this.label18.Size = new System.Drawing.Size(16, 18);
             this.label18.TabIndex = 35;
             this.label18.Text = "1";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Hobo Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(292, 312);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(16, 18);
-            this.label19.TabIndex = 36;
-            this.label19.Text = "1";
             // 
             // label20
             // 
@@ -421,26 +396,99 @@
             this.radioButton1.Text = "Forced";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // _hh1
+            // 
+            this._hh1.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._hh1.Location = new System.Drawing.Point(107, 195);
+            this._hh1.Name = "_hh1";
+            this._hh1.Size = new System.Drawing.Size(38, 24);
+            this._hh1.TabIndex = 41;
+            this._hh1.UseVisualStyleBackColor = true;
+            // 
+            // _hh5
+            // 
+            this._hh5.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._hh5.Location = new System.Drawing.Point(270, 194);
+            this._hh5.Name = "_hh5";
+            this._hh5.Size = new System.Drawing.Size(38, 24);
+            this._hh5.TabIndex = 42;
+            this._hh5.UseVisualStyleBackColor = true;
+            // 
+            // _hh6
+            // 
+            this._hh6.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._hh6.Location = new System.Drawing.Point(270, 263);
+            this._hh6.Name = "_hh6";
+            this._hh6.Size = new System.Drawing.Size(38, 24);
+            this._hh6.TabIndex = 43;
+            this._hh6.UseVisualStyleBackColor = true;
+            this._hh6.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // _hh2
+            // 
+            this._hh2.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._hh2.Location = new System.Drawing.Point(112, 265);
+            this._hh2.Name = "_hh2";
+            this._hh2.Size = new System.Drawing.Size(38, 24);
+            this._hh2.TabIndex = 44;
+            this._hh2.UseVisualStyleBackColor = true;
+            // 
+            // _hh3
+            // 
+            this._hh3.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._hh3.Location = new System.Drawing.Point(107, 340);
+            this._hh3.Name = "_hh3";
+            this._hh3.Size = new System.Drawing.Size(38, 24);
+            this._hh3.TabIndex = 45;
+            this._hh3.UseVisualStyleBackColor = true;
+            // 
+            // _hh4
+            // 
+            this._hh4.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._hh4.Location = new System.Drawing.Point(112, 418);
+            this._hh4.Name = "_hh4";
+            this._hh4.Size = new System.Drawing.Size(38, 24);
+            this._hh4.TabIndex = 46;
+            this._hh4.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(176, 293);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(132, 30);
+            this.textBox3.TabIndex = 47;
+            // 
             // feature_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 497);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this._hh4);
+            this.Controls.Add(this._hh3);
+            this.Controls.Add(this._hh2);
+            this.Controls.Add(this._hh6);
+            this.Controls.Add(this._hh5);
+            this.Controls.Add(this._hh1);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.trackBar6);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
@@ -464,12 +512,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "feature_form";
             this.Text = "Feature";
+            this.Load += new System.EventHandler(this.feature_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,19 +546,23 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TrackBar trackBar6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button _hh1;
+        private System.Windows.Forms.Button _hh5;
+        private System.Windows.Forms.Button _hh6;
+        private System.Windows.Forms.Button _hh2;
+        private System.Windows.Forms.Button _hh3;
+        private System.Windows.Forms.Button _hh4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

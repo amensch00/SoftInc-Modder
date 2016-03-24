@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bttn_modCreate = new System.Windows.Forms.Button();
+            this.txtbox_softname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trbar_random = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.trbar_popularity = new System.Windows.Forms.TrackBar();
+            this.rtxtbox_soft_descri = new System.Windows.Forms.RichTextBox();
+            this.txtbox_unlock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bttn_nFeature = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbox_namegen = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,28 +55,38 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lab_iterative = new System.Windows.Forms.Label();
+            this.trbar_iterative = new System.Windows.Forms.TrackBar();
+            this.lab_retention = new System.Windows.Forms.Label();
+            this.trbar_retention = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_random)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_popularity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_iterative)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_retention)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // bttn_modCreate
             // 
-            this.button1.Font = new System.Drawing.Font("Hobo Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(350, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(416, 88);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Create Mod";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bttn_modCreate.Font = new System.Drawing.Font("Hobo Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttn_modCreate.Location = new System.Drawing.Point(350, 410);
+            this.bttn_modCreate.Name = "bttn_modCreate";
+            this.bttn_modCreate.Size = new System.Drawing.Size(416, 88);
+            this.bttn_modCreate.TabIndex = 13;
+            this.bttn_modCreate.Text = "Create Mod";
+            this.bttn_modCreate.UseVisualStyleBackColor = true;
+            this.bttn_modCreate.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtbox_softname
             // 
-            this.textBox1.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(294, 30);
-            this.textBox1.TabIndex = 1;
+            this.txtbox_softname.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_softname.Location = new System.Drawing.Point(12, 36);
+            this.txtbox_softname.Name = "txtbox_softname";
+            this.txtbox_softname.Size = new System.Drawing.Size(294, 30);
+            this.txtbox_softname.TabIndex = 1;
             // 
             // label1
             // 
@@ -99,12 +109,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Software description";
             // 
-            // trackBar1
+            // trbar_random
             // 
-            this.trackBar1.Location = new System.Drawing.Point(353, 36);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(203, 45);
-            this.trackBar1.TabIndex = 5;
+            this.trbar_random.Location = new System.Drawing.Point(353, 36);
+            this.trbar_random.Name = "trbar_random";
+            this.trbar_random.Size = new System.Drawing.Size(203, 45);
+            this.trbar_random.TabIndex = 5;
             // 
             // label3
             // 
@@ -126,36 +136,36 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Popularity";
             // 
-            // trackBar2
+            // trbar_popularity
             // 
-            this.trackBar2.Location = new System.Drawing.Point(565, 36);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(203, 45);
-            this.trackBar2.TabIndex = 6;
+            this.trbar_popularity.Location = new System.Drawing.Point(565, 36);
+            this.trbar_popularity.Name = "trbar_popularity";
+            this.trbar_popularity.Size = new System.Drawing.Size(203, 45);
+            this.trbar_popularity.TabIndex = 6;
             // 
-            // richTextBox1
+            // rtxtbox_soft_descri
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 109);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(294, 158);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtxtbox_soft_descri.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtbox_soft_descri.Location = new System.Drawing.Point(12, 109);
+            this.rtxtbox_soft_descri.Name = "rtxtbox_soft_descri";
+            this.rtxtbox_soft_descri.Size = new System.Drawing.Size(294, 158);
+            this.rtxtbox_soft_descri.TabIndex = 2;
+            this.rtxtbox_soft_descri.Text = "";
             // 
-            // textBox2
+            // txtbox_unlock
             // 
-            this.textBox2.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 346);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 30);
-            this.textBox2.TabIndex = 3;
+            this.txtbox_unlock.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_unlock.Location = new System.Drawing.Point(12, 318);
+            this.txtbox_unlock.Name = "txtbox_unlock";
+            this.txtbox_unlock.Size = new System.Drawing.Size(139, 30);
+            this.txtbox_unlock.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 318);
+            this.label5.Location = new System.Drawing.Point(10, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 27);
             this.label5.TabIndex = 14;
@@ -212,16 +222,16 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Needs";
             // 
-            // button3
+            // bttn_nFeature
             // 
-            this.button3.Font = new System.Drawing.Font("Hobo Std", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(350, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(416, 70);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Create new feature";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.bttn_nFeature.Font = new System.Drawing.Font("Hobo Std", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttn_nFeature.Location = new System.Drawing.Point(350, 306);
+            this.bttn_nFeature.Name = "bttn_nFeature";
+            this.bttn_nFeature.Size = new System.Drawing.Size(416, 70);
+            this.bttn_nFeature.TabIndex = 12;
+            this.bttn_nFeature.Text = "Create new feature";
+            this.bttn_nFeature.UseVisualStyleBackColor = true;
+            this.bttn_nFeature.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -234,19 +244,19 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox3
+            // txtbox_namegen
             // 
-            this.textBox3.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(16, 459);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(290, 30);
-            this.textBox3.TabIndex = 24;
+            this.txtbox_namegen.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_namegen.Location = new System.Drawing.Point(12, 392);
+            this.txtbox_namegen.Name = "txtbox_namegen";
+            this.txtbox_namegen.Size = new System.Drawing.Size(290, 30);
+            this.txtbox_namegen.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 431);
+            this.label8.Location = new System.Drawing.Point(13, 362);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(266, 27);
             this.label8.TabIndex = 25;
@@ -325,11 +335,99 @@
             this.checkBox3.Text = "One Client";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Hobo Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(290, 492);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 18);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Hobo Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(122, 492);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(16, 18);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "1";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Hobo Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(179, 492);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(16, 18);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Hobo Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(22, 492);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(16, 18);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "0";
+            // 
+            // lab_iterative
+            // 
+            this.lab_iterative.AutoSize = true;
+            this.lab_iterative.Font = new System.Drawing.Font("Hobo Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_iterative.Location = new System.Drawing.Point(169, 433);
+            this.lab_iterative.Name = "lab_iterative";
+            this.lab_iterative.Size = new System.Drawing.Size(70, 21);
+            this.lab_iterative.TabIndex = 36;
+            this.lab_iterative.Text = "Iterative";
+            // 
+            // trbar_iterative
+            // 
+            this.trbar_iterative.Location = new System.Drawing.Point(172, 460);
+            this.trbar_iterative.Maximum = 9;
+            this.trbar_iterative.Minimum = 1;
+            this.trbar_iterative.Name = "trbar_iterative";
+            this.trbar_iterative.Size = new System.Drawing.Size(134, 45);
+            this.trbar_iterative.TabIndex = 34;
+            this.trbar_iterative.Value = 1;
+            // 
+            // lab_retention
+            // 
+            this.lab_retention.AutoSize = true;
+            this.lab_retention.Font = new System.Drawing.Font("Hobo Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_retention.Location = new System.Drawing.Point(12, 433);
+            this.lab_retention.Name = "lab_retention";
+            this.lab_retention.Size = new System.Drawing.Size(79, 21);
+            this.lab_retention.TabIndex = 35;
+            this.lab_retention.Text = "Retention";
+            // 
+            // trbar_retention
+            // 
+            this.trbar_retention.Location = new System.Drawing.Point(15, 460);
+            this.trbar_retention.Maximum = 9;
+            this.trbar_retention.Minimum = 1;
+            this.trbar_retention.Name = "trbar_retention";
+            this.trbar_retention.Size = new System.Drawing.Size(123, 45);
+            this.trbar_retention.TabIndex = 33;
+            this.trbar_retention.Value = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 517);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lab_iterative);
+            this.Controls.Add(this.trbar_iterative);
+            this.Controls.Add(this.lab_retention);
+            this.Controls.Add(this.trbar_retention);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -338,29 +436,31 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtbox_namegen);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bttn_nFeature);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtbox_unlock);
+            this.Controls.Add(this.rtxtbox_soft_descri);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.trackBar2);
+            this.Controls.Add(this.trbar_popularity);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.trbar_random);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtbox_softname);
+            this.Controls.Add(this.bttn_modCreate);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Software Inc. Modding Program by amensch";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_random)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_popularity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_iterative)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbar_retention)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,24 +468,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button bttn_modCreate;
+        private System.Windows.Forms.TextBox txtbox_softname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar trbar_random;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TrackBar trbar_popularity;
+        private System.Windows.Forms.RichTextBox rtxtbox_soft_descri;
+        private System.Windows.Forms.TextBox txtbox_unlock;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bttn_nFeature;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbox_namegen;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -394,6 +494,14 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lab_iterative;
+        private System.Windows.Forms.TrackBar trbar_iterative;
+        private System.Windows.Forms.Label lab_retention;
+        private System.Windows.Forms.TrackBar trbar_retention;
     }
 }
 

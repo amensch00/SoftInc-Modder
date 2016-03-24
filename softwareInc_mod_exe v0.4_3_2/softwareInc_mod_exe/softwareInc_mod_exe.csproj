@@ -61,7 +61,8 @@
     <ManifestCertificateThumbprint>5930825C2E5E4C2BC6F9AF809CB4A0DE90D28069</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>softwareInc_mod_exe_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

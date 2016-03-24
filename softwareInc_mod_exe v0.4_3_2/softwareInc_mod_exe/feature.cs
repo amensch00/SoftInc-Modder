@@ -1,4 +1,19 @@
-﻿using System;
+﻿//This file is part of SoftInc Modder.
+
+//SoftInc Modder is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+
+//SoftInc Modder is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+//GNU General Public License for more details.
+
+//You should have received a copy of the GNU General Public License
+//along with SoftInc Modder.  If not, see<http://www.gnu.org/licenses/>.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +29,9 @@ namespace softwareInc_mod_exe
     public partial class feature_form : Form
     {
         Form1 vater;
+        Settings_ m_vater;
+        Boolean m_showhelp; 
+
         string[] Dependencies = new string[100];
         int anzahlDependencies = 0;
         
@@ -22,9 +40,11 @@ namespace softwareInc_mod_exe
             InitializeComponent();
         }
 
-        public void Starten(Form1 meinVater)
+        public void Starten(Form1 meinVater, Settings_ mm_vater, Boolean ShowHelp)
         {
             vater = meinVater;
+            m_vater = mm_vater;
+            m_showhelp = ShowHelp;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,8 +99,8 @@ namespace softwareInc_mod_exe
             erg = erg + "CodeArt;";
             erg = erg + ze3 + "#";
 
-            double r;
-            r = (double)trackBar6.Value / 10.0;
+            string r;
+            r = textBox3.Text;
             string r2, r3;
             r2 = r.ToString();
             r3 = r2.Replace(",", ".");
@@ -110,6 +130,24 @@ namespace softwareInc_mod_exe
                 Dependencies[anzahlDependencies] = comboBox2.SelectedItem.ToString();
                 anzahlDependencies = anzahlDependencies + 1;
             }
+        }
+
+        private void feature_form_Load(object sender, EventArgs e)
+        {
+            if (m_showhelp == false)
+            {
+                _hh1.Visible = false;
+                _hh2.Visible = false;
+                _hh3.Visible = false;
+                _hh4.Visible = false;
+                _hh5.Visible = false;
+                _hh6.Visible = false;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("How many mbps this feature will need per active user. MMO uses 0.002, which would be around 5 gbps at any given time for a 1 million user game in 2010.");
         }
     }
 }
