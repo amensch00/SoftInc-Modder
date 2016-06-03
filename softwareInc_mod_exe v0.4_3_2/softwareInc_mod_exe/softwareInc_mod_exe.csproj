@@ -289,6 +289,7 @@
     <None Include="Resources\fragezeichen.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\france.jpg" />
     <Content Include="Softinc_modder_ico.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
