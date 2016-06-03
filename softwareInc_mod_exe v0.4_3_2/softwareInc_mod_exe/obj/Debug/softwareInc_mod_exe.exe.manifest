@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4536832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4538368">
       <assemblyIdentity name="softwareInc_mod_exe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+cDZEfKsqUjfiEXhXhOwEG1Ib69WqAl84IDy2++t83A=</dsig:DigestValue>
+        <dsig:DigestValue>2juj1TSGFgLMAZum2gXcgG78p5TH3iW/6JfTDclUGYk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

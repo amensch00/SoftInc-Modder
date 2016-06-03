@@ -47,14 +47,37 @@ namespace softwareInc_mod_exe
         {
             switch (Properties.Settings.Default.Language)
             {
-                case "fr": { 
-                    
-                        
-                    
-                    
+                case "fr": {
+
+                    label_soft_name.Text = "Nom";
+                    label_soft_description.Text = "Description";
+                    label_year.Text = "Année de dévérouillage";
+                    label_namegen.Text = "Nom du générateur de noms";
+                    label_random.Text = "Aléatoire";
+                    label_popularity.Text = "Popularité";
+                    checkBox_os.Text = "Dépend d'un OS";
+                    checkBox_client.Text = "Un client";
+                    checkBox_inhouse.Text = "Usage interne";
+                    label_needs.Text = "Besoins";
+
+                    comboBox_needs.Items.Clear();
+                    comboBox_category.Items.Clear();
+
+                    string[] items_needs = new string[] { "Outil Visuel", "Outil Audio", "Système d'exploitation", "Editeur de texte", "Nagivateur", "Lecteur vidéo" };
+                    string[] items_cat = new string[] { "Logiciel", "Gaming", "Etude informatique", "Web" };
+
+                    foreach (string item in items_needs) comboBox_needs.Items.Add(item);
+                    foreach (string item in items_cat) comboBox_category.Items.Add(item);
+
+                    label_category.Text = "Catégorie";
+                    button_add.Text = "Ajouter";
+                    bttn_nFeature.Text = "Ajouter la fonctionnalité";
+                    bttn_modCreate.Text = "Créer le mod";
+                  
                             break; 
                             }
-                case "en": { break; }
+
+                case "it": { break; }
                 case "de": { break; }
                 default: { break; } //English
             }
@@ -159,13 +182,13 @@ namespace softwareInc_mod_exe
                 
                 //MessageBox.Show(comboBox1.SelectedText);
 
-                if (comboBox1.Text == "")
+                if (comboBox_category.Text == "")
                 {
                     xmlWriter.WriteElementString("Category", "Software");
                 }
                 else
                 {
-                    xmlWriter.WriteElementString("Category", comboBox1.Text);
+                    xmlWriter.WriteElementString("Category", comboBox_category.Text);
                 }
 
                 if (anzahlKomponenten > 0)
@@ -267,7 +290,7 @@ namespace softwareInc_mod_exe
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Needs added!");
-            komponenten[anzahlKomponenten] = comboBox2.Text;
+            komponenten[anzahlKomponenten] = comboBox_needs.Text;
             anzahlKomponenten = anzahlKomponenten + 1;
         }
 

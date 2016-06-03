@@ -41,8 +41,8 @@
             this.txtbox_unlock = new System.Windows.Forms.TextBox();
             this.label_year = new System.Windows.Forms.Label();
             this.label_category = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_category = new System.Windows.Forms.ComboBox();
+            this.comboBox_needs = new System.Windows.Forms.ComboBox();
             this.label_needs = new System.Windows.Forms.Label();
             this.bttn_nFeature = new System.Windows.Forms.Button();
             this.button_add = new System.Windows.Forms.Button();
@@ -181,36 +181,36 @@
             this.label_category.TabIndex = 15;
             this.label_category.Text = "Category";
             // 
-            // comboBox1
+            // comboBox_category
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_category.FormattingEnabled = true;
+            this.comboBox_category.Items.AddRange(new object[] {
             "Software",
             "Gaming",
             "Digital-Forensic",
             "Web",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(594, 220);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 28);
-            this.comboBox1.TabIndex = 11;
+            this.comboBox_category.Location = new System.Drawing.Point(594, 220);
+            this.comboBox_category.Name = "comboBox_category";
+            this.comboBox_category.Size = new System.Drawing.Size(160, 28);
+            this.comboBox_category.TabIndex = 11;
             // 
-            // comboBox2
+            // comboBox_needs
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBox_needs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_needs.FormattingEnabled = true;
+            this.comboBox_needs.Items.AddRange(new object[] {
             "Visual Tool",
             "Audio Tool",
             "Operating System",
             "Text Editor",
             "Browser",
             "Video Player"});
-            this.comboBox2.Location = new System.Drawing.Point(350, 220);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 28);
-            this.comboBox2.TabIndex = 10;
+            this.comboBox_needs.Location = new System.Drawing.Point(350, 220);
+            this.comboBox_needs.Name = "comboBox_needs";
+            this.comboBox_needs.Size = new System.Drawing.Size(160, 28);
+            this.comboBox_needs.TabIndex = 10;
             // 
             // label_needs
             // 
@@ -439,9 +439,9 @@
             this.Controls.Add(this.txtbox_namegen);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.bttn_nFeature);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox_needs);
             this.Controls.Add(this.label_needs);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_category);
             this.Controls.Add(this.label_category);
             this.Controls.Add(this.label_year);
             this.Controls.Add(this.txtbox_unlock);
@@ -481,9 +481,9 @@
         private System.Windows.Forms.TextBox txtbox_unlock;
         private System.Windows.Forms.Label label_year;
         private System.Windows.Forms.Label label_category;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_category;
         private System.Windows.Forms.Label label_needs;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_needs;
         private System.Windows.Forms.Button bttn_nFeature;
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.TextBox txtbox_namegen;
