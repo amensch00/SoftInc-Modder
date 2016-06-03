@@ -65,8 +65,11 @@ namespace softwareInc_mod_exe
 
         private void button_fr_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented yet...");
+            MessageBox.Show("En cours de construction...");
             Properties.Settings.Default.Language = "fr";
+            forms_choice forms_choice = new forms_choice();
+            forms_choice.ShowInTaskbar = false;
+            forms_choice.ShowDialog();
         }
 
         private void button_it_Click(object sender, EventArgs e)

@@ -34,9 +34,31 @@ namespace softwareInc_mod_exe
             InitializeComponent();
         }
 
+        private void forms_choice_Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr": {
+                    this.Text += " (traduit par Squalalah)";
+                    SoftwareTypes.Text = "Type de Logiciel";
+                    NameGen.Text = "Générateur de noms";
+                    Scenarios.Text = "Scénarios";
+                    Event.Text = "Évènements";
+                    CompanyTypes.Text = "Type d'entreprise";
+                    Companies.Text = "Entreprises";
+                    button_settings.Text = "Paramètres";
+                            break; 
+                           }
+                case "de": { break; }
+                case "it": { break; }
+                default: { break; } //English
+                   
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 Form1 = new Form1();
+            Form_soft_type Form1 = new Form_soft_type();
             Form1.ShowInTaskbar = false;
             Form1.ShowDialog();
         }
