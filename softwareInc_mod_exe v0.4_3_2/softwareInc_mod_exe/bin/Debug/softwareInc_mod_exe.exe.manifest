@@ -43,17 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4500992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4535808">
       <assemblyIdentity name="softwareInc_mod_exe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>A8G1SjXJ6gfOhgKgyDl4P08QZI6qBDOxlkcicTe3qI8=</dsig:DigestValue>
+        <dsig:DigestValue>o/9CSR7g8VvkhJhFdH4b5pXDKwhvnkxb8z9vWSlYhoE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Resources\france.jpg" size="32909">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UxYYsaD12aj4Wstxhhal2NJDirg6VzNasyLYBz7Vs7k=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Softinc_modder_ico.ico" size="204862">
     <hash>
       <dsig:Transforms>
@@ -63,13 +72,13 @@
       <dsig:DigestValue>h5XH4LK6qP93Z/5uIRygBQzA88fec1RIOjp2PMXZsjc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="softwareInc_mod_exe.exe.config" size="184">
+  <file name="softwareInc_mod_exe.exe.config" size="938">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FqWy0dfMmRS85zkU1NlW07p6LsNOPUHodvLiZcFdgJY=</dsig:DigestValue>
+      <dsig:DigestValue>VA6yJBCcVvOMZWlxbeqTcJQFKOXxOuMZzDFhJNxGzeE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

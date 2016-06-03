@@ -53,22 +53,40 @@ namespace softwareInc_mod_exe
             w.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Not implemented yet...");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            forms_choice forms_choice = new forms_choice();
-            forms_choice.ShowInTaskbar = false;
-            forms_choice.ShowDialog();
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not implemented yet...");
+        }
+
+        private void start_screen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_fr_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet...");
+            Properties.Settings.Default.Language = "fr";
+        }
+
+        private void button_it_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet...");
+            Properties.Settings.Default.Language = "it";
+        }
+
+        private void button_en_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Language = "en";
+            forms_choice forms_choice = new forms_choice();
+            forms_choice.ShowInTaskbar = false;
+            forms_choice.ShowDialog();
+        }
+
+        private void button_de_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet...");
+            Properties.Settings.Default.Language = "de";
         }
     }
 }
