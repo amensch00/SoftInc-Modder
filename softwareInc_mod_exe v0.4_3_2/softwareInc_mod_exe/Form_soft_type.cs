@@ -60,14 +60,14 @@ namespace softwareInc_mod_exe
                     checkBox_inhouse.Text = "Usage interne";
                     label_needs.Text = "Besoins";
 
-                    comboBox_needs.Items.Clear();
+                    /*comboBox_needs.Items.Clear();
                     comboBox_category.Items.Clear();
 
                     string[] items_needs = new string[] { "Outil Visuel", "Outil Audio", "Système d'exploitation", "Editeur de texte", "Nagivateur", "Lecteur vidéo" };
                     string[] items_cat = new string[] { "Logiciel", "Gaming", "Etude informatique", "Web" };
 
                     foreach (string item in items_needs) comboBox_needs.Items.Add(item);
-                    foreach (string item in items_cat) comboBox_category.Items.Add(item);
+                    foreach (string item in items_cat) comboBox_category.Items.Add(item);*/
 
                     label_category.Text = "Catégorie";
                     button_add.Text = "Ajouter";
@@ -85,6 +85,7 @@ namespace softwareInc_mod_exe
 
         private class RoutedEventArgs
         {
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -94,7 +95,6 @@ namespace softwareInc_mod_exe
             feature_form.Starten(this, frm_settings, ShowHelp);
             feature_form.ShowInTaskbar = false;
             feature_form.ShowDialog();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
