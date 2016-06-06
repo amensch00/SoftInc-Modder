@@ -39,6 +39,32 @@ namespace softwareInc_mod_exe
             InitializeComponent();
         }
 
+        private void namegen_Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom du générateur";
+                        label_prefix.Text = "Préfixe";
+                        label_base.Text = "Premier mot";
+                        label_end.Text = "Dernier mot";
+                        button_add_prefix.Text = "Ajouter le préfixe";
+                        button_add_base.Text = "Ajouter le premier mot";
+                        button_add_end.Text = "Ajouter le dernier mot";
+                        button_back.Text = "Retour";
+                        button_create.Text = "Créer le générateur";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: { break; } //English
+
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
