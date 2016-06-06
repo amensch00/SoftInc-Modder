@@ -45,6 +45,10 @@ namespace softwareInc_mod_exe
             {
                 case "fr":
                     {
+                        button_add_prefix.Size = new Size(198, 61);
+                        button_add_base.Size = new Size(198, 61);
+                        button_add_end.Size = new Size(198, 61);
+
                         this.Text += " (traduit par Squalalah)";
                         label_name.Text = "Nom du générateur";
                         label_prefix.Text = "Préfixe";
