@@ -34,6 +34,13 @@ namespace softwareInc_mod_exe
         string[] base2 = new string[100];
         int anzahlBase2 = 0;
 
+        // Strings for MessageBoxes
+
+        string MsgDone;
+
+
+
+
         public namegen()
         {
             InitializeComponent();
@@ -45,6 +52,8 @@ namespace softwareInc_mod_exe
             {
                 case "fr":
                     {
+                        MsgDone = "Action effectuée !";
+
                         button_add_prefix.Size = new Size(198, 61);
                         button_add_base.Size = new Size(198, 61);
                         button_add_end.Size = new Size(198, 61);
@@ -64,7 +73,13 @@ namespace softwareInc_mod_exe
                     }
                 case "de": { break; }
                 case "it": { break; }
-                default: { break; } //English
+                default: 
+                    {
+                        MsgDone = "Done!";
+
+                        break; 
+                    
+                    } //English
 
             }
         }
@@ -93,7 +108,7 @@ namespace softwareInc_mod_exe
             }
 
             w.Close();
-            MessageBox.Show("Done!");
+            MessageBox.Show(MsgDone);
 
         }
 
