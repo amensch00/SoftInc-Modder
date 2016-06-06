@@ -33,14 +33,50 @@ namespace softwareInc_mod_exe
         string[] company = new string[100];
         int companyAnzahl = 0;
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgCompanyAdded,
+            MsgDone;
+
         public Event_()
         {
             InitializeComponent();
         }
 
+        private void Event__Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        MsgCompanyAdded = "Entreprise ajouté !";
+                        MsgDone = "Action effectuée !";
+
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom de l'évènement";
+                        label_company.Text = "Entreprise";
+                        button_add_company.Text = "Ajouter l'entreprise";
+                        button_add_event.Text = "Ajouter l'évènement";
+                        break;
+
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: 
+                    {
+                        MsgCompanyAdded = "Company added!";
+                        MsgDone = "Done!";
+                        
+                        break; 
+                    } //English
+
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Company added!");
+            MessageBox.Show(MsgCompanyAdded);
             company[companyAnzahl] = textBox2.Text;
             companyAnzahl = companyAnzahl + 1;
             textBox2.Text = "";
@@ -72,29 +108,8 @@ namespace softwareInc_mod_exe
 
                     xmlWriter.WriteEndElement();
                 }
-            MessageBox.Show("Done!");
+            MessageBox.Show(MsgDone);
             this.Close();
-        }
-
-        private void Event__Load(object sender, EventArgs e)
-        {
-            switch (Properties.Settings.Default.Language)
-            {
-                case "fr":
-                    {
-                        this.Text += " (traduit par Squalalah)";
-                        label_name.Text = "Nom de l'évènement";
-                        label_company.Text = "Entreprise";
-                        button_add_company.Text = "Ajouter l'entreprise";
-                        button_add_event.Text = "Ajouter l'évènement";
-                        break;
-
-                    }
-                case "de": { break; }
-                case "it": { break; }
-                default: { break; } //English
-
-            }
         }
     }
 }
