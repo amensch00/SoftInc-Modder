@@ -66,7 +66,7 @@ namespace softwareInc_mod_exe
                     MsgEnterNeed = "Veuillez entrer au moins une dépendance";
                     MsgEnterFeature = "Veuillez ajouter au moins une fonctionnalité";
                     MsgDone = "Action effectuée !";
-                    MsgSavedDirectory = "Sauvegardé dans: " + @"C:\Users\" + userName + @"\Desktop\Mod";
+                    MsgSavedDirectory = "Sauvegardé dans: " + Properties.Settings.Default.Path + @"\Mod";
                     MsgNeedsAdded = "Dépendances ajoutées !";
 
                     label_soft_name.Text = "Nom";
@@ -106,7 +106,7 @@ namespace softwareInc_mod_exe
                         MsgEnterNeed = "Please enter atleast one Need!";
                         MsgEnterFeature = "Please add atleast one Feature!";
                         MsgDone = "Done!";
-                        MsgSavedDirectory = "Saved in: " + @"C:\Users\" + userName + @"\Desktop\Mod";
+                        MsgSavedDirectory = "Saved in: " + Properties.Settings.Default.Path + @"\Mod";
                         MsgNeedsAdded = "Needs added!";
 
                         break; 
@@ -138,7 +138,7 @@ namespace softwareInc_mod_exe
             settings.NewLineOnAttributes = false;
             settings.ConformanceLevel = ConformanceLevel.Auto;
 
-            using (XmlWriter xmlWriter = XmlWriter.Create(@"C:\Users\" + userName + @"\Desktop\Mod\SoftwareTypes\" + txtbox_softname.Text + ".xml", settings))
+            using (XmlWriter xmlWriter = XmlWriter.Create(Properties.Settings.Default.Path + @"\Mod\SoftwareTypes\" + txtbox_softname.Text + ".xml", settings))
             {                
                 xmlWriter.WriteStartElement("SoftwareType");
 
@@ -194,7 +194,7 @@ namespace softwareInc_mod_exe
                 // ~~ NAMEGEN ~~
                 if (txtbox_namegen.Text == "")
                 {
-                    System.IO.StreamWriter w = new System.IO.StreamWriter(@"C:\Users\" + userName + @"\Desktop\Mod\NameGenerators\NameGen_1.txt");
+                    System.IO.StreamWriter w = new System.IO.StreamWriter(Properties.Settings.Default.Path + @"\Mod\NameGenerators\NameGen_1.txt");
 
                     w.WriteLine("-start(base,pre)");
                     w.WriteLine("-pre(base)");                    

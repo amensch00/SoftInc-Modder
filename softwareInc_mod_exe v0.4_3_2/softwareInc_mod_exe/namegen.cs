@@ -88,7 +88,7 @@ namespace softwareInc_mod_exe
         {
             string userName = Environment.UserName;
 
-            System.IO.StreamWriter w = new System.IO.StreamWriter(@"C:\Users\" + userName + @"\Desktop\Mod\NameGenerators\" + textBox1.Text + ".txt");
+            System.IO.StreamWriter w = new System.IO.StreamWriter(Properties.Settings.Default.Path + @"\Mod\NameGenerators\" + textBox1.Text + ".txt");
 
             w.WriteLine("-start(base,pre)");
             w.WriteLine("-pre(base)");

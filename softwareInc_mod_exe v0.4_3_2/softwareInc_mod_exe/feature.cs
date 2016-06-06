@@ -40,6 +40,49 @@ namespace softwareInc_mod_exe
             InitializeComponent();
         }
 
+        private void feature_form_Load(object sender, EventArgs e)
+        {
+            if (m_showhelp == false)
+            {
+                _hh1.Visible = false;
+                _hh2.Visible = false;
+                _hh3.Visible = false;
+                _hh4.Visible = false;
+                _hh5.Visible = false;
+                _hh6.Visible = false;
+            }
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom de la fonctionnalité";
+                        label_description.Text = "Description de la fonctionnalité";
+                        label_dev.Text = "Temps de Dev.";
+                        label_art.Text = "Art";
+                        label_innovation.Text = "Innovation";
+                        label_server.Text = "Serveur";
+                        label_usability.Text = "Ergonomique";
+                        label_stability.Text = "Stabilité";
+                        label_from.Text = "Via";
+                        label_dependencies.Text = "Dépendances";
+                        radioButton_forced.Text = "Forcé";
+                        button_add_dependency.Text = "Ajouter la dépendance";
+                        button_create_feature.Text = "Créer la fonctionnalité";
+          
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default:
+                    {
+                        break;
+                    } //English
+
+            }
+        }
+
         public void Starten(Form_soft_type meinVater, Settings_ mm_vater, Boolean ShowHelp)
         {
             vater = meinVater;
@@ -114,7 +157,7 @@ namespace softwareInc_mod_exe
                 erg = erg + Dependencies[n] + "#";
             }
 
-            vater.ErstelleFeature(erg, radioButton1.Checked);
+            vater.ErstelleFeature(erg, radioButton_forced.Checked);
             Close();
         }
 
@@ -132,22 +175,14 @@ namespace softwareInc_mod_exe
             }
         }
 
-        private void feature_form_Load(object sender, EventArgs e)
-        {
-            if (m_showhelp == false)
-            {
-                _hh1.Visible = false;
-                _hh2.Visible = false;
-                _hh3.Visible = false;
-                _hh4.Visible = false;
-                _hh5.Visible = false;
-                _hh6.Visible = false;
-            }
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("How many mbps this feature will need per active user. MMO uses 0.002, which would be around 5 gbps at any given time for a 1 million user game in 2010.");
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

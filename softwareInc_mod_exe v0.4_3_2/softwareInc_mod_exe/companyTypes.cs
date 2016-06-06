@@ -109,7 +109,7 @@ namespace softwareInc_mod_exe
 
             string userName = Environment.UserName;
 
-            using (XmlWriter xmlWriter = XmlWriter.Create(@"C:\Users\" + userName + @"\Desktop\Mod\CompanyTypes\" + textBox1.Text + ".xml", settings))
+            using (XmlWriter xmlWriter = XmlWriter.Create(Properties.Settings.Default.Path + @"\Mod\CompanyTypes\" + textBox1.Text + ".xml", settings))
             {
                 xmlWriter.WriteStartElement("CompanyType");
 
