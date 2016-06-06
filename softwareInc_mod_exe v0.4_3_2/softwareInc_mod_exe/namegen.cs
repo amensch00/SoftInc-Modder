@@ -34,9 +34,54 @@ namespace softwareInc_mod_exe
         string[] base2 = new string[100];
         int anzahlBase2 = 0;
 
+        // Strings for MessageBoxes
+
+        string MsgDone;
+
+
+
+
         public namegen()
         {
             InitializeComponent();
+        }
+
+        private void namegen_Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        MsgDone = "Action effectuée !";
+
+                        button_add_prefix.Size = new Size(198, 61);
+                        button_add_base.Size = new Size(198, 61);
+                        button_add_end.Size = new Size(198, 61);
+
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom du générateur";
+                        label_prefix.Text = "Préfixe";
+                        label_base.Text = "Premier mot";
+                        label_end.Text = "Dernier mot";
+                        button_add_prefix.Text = "Ajouter le préfixe";
+                        button_add_base.Text = "Ajouter le premier mot";
+                        button_add_end.Text = "Ajouter le dernier mot";
+                        button_back.Text = "Retour";
+                        button_create.Text = "Créer le générateur";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: 
+                    {
+                        MsgDone = "Done!";
+
+                        break; 
+                    
+                    } //English
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,7 +108,7 @@ namespace softwareInc_mod_exe
             }
 
             w.Close();
-            MessageBox.Show("Done!");
+            MessageBox.Show(MsgDone);
 
         }
 

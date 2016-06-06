@@ -41,9 +41,82 @@ namespace softwareInc_mod_exe
         string popularity = "";
         string need = "";
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgNeeds,
+            MsgProductAdded,
+            MsgChooseFeature,
+            MsgChooseNeed,
+            MsgHelpYear,
+            MsgHelpSequel,
+            MsgHelpOS;
+
         public companiesProduct()
         {
             InitializeComponent();
+        }
+
+        private void companiesProduct_Load(object sender, EventArgs e)
+        {
+            if (m_ShowHelp == false)
+            {
+                hh2.Visible = false;
+                _hh.Visible = false;
+                hh3.Visible = false;
+            }
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        MsgNeeds = "Merci d'entrer au moins une dépendance !";
+                        MsgProductAdded = "Produit ajouté !";
+                        MsgChooseFeature = "Veuillez sélectionner une fonctionnalité";
+                        MsgChooseNeed = "Veuillez sélectionner une dépendance";
+                        MsgHelpYear = "Année de sortie. Les dépendances doivent être renseignées correctement! En premier le mois, puis l'année séparés d'un '-'.\nEx: 11-2012 ou 6-1981...";
+                        MsgHelpSequel = "La même chose que le bouton 'Suite de' en jeu. Cela doit être un nom valide et existant, sinon cela ne fonctionnera pas!";
+                        MsgHelpOS = "Le(s) nom(s) des OS sur lequel le produit fonctionnera. Vous pouvez laisser le champ vide, sinon le nom doit être valide,  dans le cas contraire cela ne fonctionnera pas !";
+
+                        button_add_feature.Size = new Size(294, 41);
+                        button_add_need.Size = new Size(211, 62);
+
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom du produit";
+                        label_date.Text = "Date de sortie";
+                        label_type.Text = "Type de produit";
+                        label_feature.Text = "Fonctionnalité";
+                        label_quality.Text = "Qualité";
+                        label_popularity.Text = "Popularité";
+                        label_sequel.Text = "Suite de ..";
+                        label_needs.Text = "Dépendance..";
+
+                        checkBox_inhouse.Text = "Usage interne";
+
+                        button_add_need.Text = "Ajouter la dépendance";
+                        button_add_feature.Text = "Ajouter la fonctionnalité";
+                        button_create.Text = "Créer le produit";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: 
+                    {
+                        MsgNeeds = "Please add atleast one need!";
+                        MsgProductAdded = "Product added!";
+                        MsgChooseFeature = "Please choose a feature!";
+                        MsgChooseNeed = "Please choose a need!";
+                        MsgHelpYear = "Year of the release. Needs to be in a specific Format! First the month, then the year and between a minus.\nShould look like this: 11-2012 or 6-1981.....";
+                        MsgHelpSequel = "This is the same as the In-Game 'Sequel to' thing. It must be a valid name of a Software, otherwise it won't work!";
+                        MsgHelpOS = "The name(s) of the OS it's working on. It can be left free! The name has to be valid, otherwise it won't work!";
+
+                        break; 
+                    } //English
+
+            }
+
+            //MessageBox.Show(m_ShowHelp.ToString());
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -63,8 +136,8 @@ namespace softwareInc_mod_exe
             r3 = r2.Replace(",", ".");
             quality = quality + r3;
 
-            erg = erg + WahrFalsch(checkBox2.Checked) + "#";
-            erg = erg + WahrFalsch(checkBox1.Checked) + "#";
+            erg = erg + WahrFalsch(checkBox_opensource.Checked) + "#";
+            erg = erg + WahrFalsch(checkBox_inhouse.Checked) + "#";
 
             int n = trackBar2.Value;
             string n2, n3;
@@ -90,12 +163,12 @@ namespace softwareInc_mod_exe
             }
             else
             {
-                MessageBox.Show("Please add atleast one need!");
+                MessageBox.Show(MsgNeeds);
                 return;
             }
             
 
-            MessageBox.Show("Product added!");
+            MessageBox.Show(MsgProductAdded);
             MessageBox.Show(erg);
             mutter.ErstelleProduct(erg, quality, feature, reception, popularity, need);
             Close();
@@ -105,7 +178,7 @@ namespace softwareInc_mod_exe
         {
             if (comboBox1.Text == "")
             {
-                MessageBox.Show("Please choose a feature!");
+                MessageBox.Show(MsgChooseFeature);
             }
             else
             {
@@ -119,7 +192,7 @@ namespace softwareInc_mod_exe
         {
             if (comboBox3.Text == "")
             {
-                MessageBox.Show("Please choose a need!");
+                MessageBox.Show(MsgChooseNeed);
             }
             else
             {
@@ -136,30 +209,19 @@ namespace softwareInc_mod_exe
             mutter = m_mutter;
         }
 
-        private void companiesProduct_Load(object sender, EventArgs e)
-        {
-            if (m_ShowHelp == false)
-            {
-                hh2.Visible = false;
-                _hh.Visible = false;
-                hh3.Visible = false;              
-            }
-            //MessageBox.Show(m_ShowHelp.ToString());
-        }
-
         private void _hh_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Year of the release. Needs to be in a specific Format! First the month, then the year and between a minus.\nShould look like this: 11-2012 or 6-1981.....");               
+            MessageBox.Show(MsgHelpYear);               
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This is the same as the In-Game 'Sequel to' thing. It must be a valid name of a Software, otherwise it won't work!");
+            MessageBox.Show(MsgHelpSequel);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The name(s) of the OS it's working on. It can be left free! The name has to be valid, otherwise it won't work!");
+            MessageBox.Show(MsgHelpOS);
         }
 
         private string WahrFalsch(Boolean wert)

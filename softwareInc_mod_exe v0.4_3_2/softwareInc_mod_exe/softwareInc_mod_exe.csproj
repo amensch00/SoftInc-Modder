@@ -165,11 +165,11 @@
     <Compile Include="feature.Designer.cs">
       <DependentUpon>feature.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_soft_type.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_soft_type.Designer.cs">
+      <DependentUpon>Form_soft_type.cs</DependentUpon>
     </Compile>
     <Compile Include="forms_choice.cs">
       <SubType>Form</SubType>
@@ -218,8 +218,8 @@
     <EmbeddedResource Include="feature.resx">
       <DependentUpon>feature.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_soft_type.resx">
+      <DependentUpon>Form_soft_type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms_choice.resx">
       <DependentUpon>forms_choice.cs</DependentUpon>

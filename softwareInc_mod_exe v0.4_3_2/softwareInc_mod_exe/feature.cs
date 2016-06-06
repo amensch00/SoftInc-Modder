@@ -28,7 +28,7 @@ namespace softwareInc_mod_exe
 {
     public partial class feature_form : Form
     {
-        Form1 vater;
+        Form_soft_type vater;
         Settings_ m_vater;
         Boolean m_showhelp; 
 
@@ -40,7 +40,7 @@ namespace softwareInc_mod_exe
             InitializeComponent();
         }
 
-        public void Starten(Form1 meinVater, Settings_ mm_vater, Boolean ShowHelp)
+        public void Starten(Form_soft_type meinVater, Settings_ mm_vater, Boolean ShowHelp)
         {
             vater = meinVater;
             m_vater = mm_vater;

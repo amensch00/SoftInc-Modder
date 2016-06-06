@@ -32,16 +32,47 @@ namespace softwareInc_mod_exe
         forms_choice m_Vater;
         //Boolean m_ShowHelp;
 
+        string msgCheck, msgCheckHead; //msg + msg's head for MessageBox when new version is found
+
         public Settings_()
         {
             InitializeComponent();
+        }
+
+        private void Settings__Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        this.Text += " (traduit par Squalalah)";
+                        checkBox_tutorial.Text = "Tutoriel";
+                        button_check.Text = "Vérifier les mises à jours";
+
+                        msgCheck = "Vérification terminée!\nMise à jour disponible, voulez vous la télécharger?";
+                        msgCheckHead = "Mise à jour disponible";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: 
+                    {
+
+                        msgCheck = "Done checking!\nNew updates avaiable, do you want to download them?";
+                        msgCheckHead = "Confirm";
+                    
+                        break; 
+                    } //English
+
+            }
         }
 
         public void Start(forms_choice vater, Boolean ShowHelp)
         {
             m_Vater = vater;
             //m_ShowHelp = ShowHelp;
-            checkBox1.Checked = ShowHelp;
+            checkBox_tutorial.Checked = ShowHelp;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,12 +104,12 @@ namespace softwareInc_mod_exe
                                         newVersion = reader.Value;
                                         if (newVersion.ToString() != oldVersion)
                                         {
-                                            MessageBox.Show("Done checking!\nNew updates avaiable, do you want to download them?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                            MessageBox.Show(msgCheck, msgCheckHead, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                                             Process.Start("http://www.dropbox.com");
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Hallo");
+                                            MessageBox.Show("[DEBUG] Hallo");
                                             break;
                                         }
                                         break;
@@ -110,7 +141,7 @@ namespace softwareInc_mod_exe
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            m_Vater.ShowHelp = checkBox1.Checked;
+            m_Vater.ShowHelp = checkBox_tutorial.Checked;
         }
     }
 }

@@ -29,14 +29,53 @@ namespace softwareInc_mod_exe
     {
         public Boolean ShowHelp = true;
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgWarningType,
+            MsgWarningSettings;
+
         public forms_choice()
         {
             InitializeComponent();
         }
 
+        private void forms_choice_Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr": {
+
+                    MsgWarningType = "!!!ATTENTION!!!\nCette fonctionnalité n'est pas encore finie et ne fonctionnera probablement pas!!";
+                    MsgWarningSettings= "!!!ATTENTION!!!\nLa vérification des mises à jour n'est pas complète! Vérifier les mises à jour sur le forum, le lien est dans le fichier readme.txt";
+
+
+                    this.Text += " (traduit par Squalalah)";
+                    SoftwareTypes.Text = "Type de Logiciel";
+                    NameGen.Text = "Générateur de noms";
+                    Scenarios.Text = "Scénarios";
+                    Event.Text = "Évènements";
+                    CompanyTypes.Text = "Type d'entreprise";
+                    Companies.Text = "Entreprises";
+                    button_settings.Text = "Paramètres";
+                            break; 
+                           }
+                case "de": { break; }
+                case "it": { break; }
+                default: 
+                    {
+                        MsgWarningType = "!!!ATTENTION!!!\nThis is not yet completed and problaly won't work!!";
+                        MsgWarningSettings = "!!!ATTENTION!!!\nThe Update Feature isn't working yet! For Updates check the Forum! Link in the Readme.txt!";
+
+                        break; 
+                    } //English
+                   
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 Form1 = new Form1();
+            Form_soft_type Form1 = new Form_soft_type();
             Form1.ShowInTaskbar = false;
             Form1.ShowDialog();
         }
@@ -65,7 +104,7 @@ namespace softwareInc_mod_exe
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("!!!ATTENTION!!!\nThis is not yet completed and problaly won't work!!");
+            MessageBox.Show(MsgWarningType);
             companyTypes companyTypes = new companyTypes();
             companyTypes.ShowInTaskbar = false;
             companyTypes.ShowDialog();
@@ -82,7 +121,7 @@ namespace softwareInc_mod_exe
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("!!!ATTENTION!!!\nThe Update Feature isn't working yet! For Updates check the Forum! Link in the Readme.txt!");
+            MessageBox.Show(MsgWarningSettings);
             Settings_ Settings = new Settings_();
             Settings.ShowInTaskbar = false;
             Settings.Start(this, ShowHelp);

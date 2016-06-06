@@ -29,169 +29,170 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(namegen));
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_create = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_name = new System.Windows.Forms.Label();
+            this.button_back = new System.Windows.Forms.Button();
+            this.label_prefix = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_base = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_end = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button_add_prefix = new System.Windows.Forms.Button();
+            this.button_add_base = new System.Windows.Forms.Button();
+            this.button_add_end = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // button_create
             // 
-            this.button1.Font = new System.Drawing.Font("Hobo Std", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(349, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 83);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create Namegen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_create.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_create.Location = new System.Drawing.Point(349, 364);
+            this.button_create.Name = "button_create";
+            this.button_create.Size = new System.Drawing.Size(195, 83);
+            this.button_create.TabIndex = 0;
+            this.button_create.Text = "Create Namegen";
+            this.button_create.UseVisualStyleBackColor = true;
+            this.button_create.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(13, 40);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 30);
+            this.textBox1.Size = new System.Drawing.Size(233, 29);
             this.textBox1.TabIndex = 1;
             // 
-            // label1
+            // label_name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 27);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Enter namegen name";
+            this.label_name.AutoSize = true;
+            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name.Location = new System.Drawing.Point(12, 9);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(212, 24);
+            this.label_name.TabIndex = 2;
+            this.label_name.Text = "Enter namegen name";
             // 
-            // button2
+            // button_back
             // 
-            this.button2.Font = new System.Drawing.Font("Hobo Std", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 83);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_back.Location = new System.Drawing.Point(12, 364);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(195, 83);
+            this.button_back.TabIndex = 6;
+            this.button_back.Text = "Back";
+            this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label2
+            // label_prefix
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 27);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Enter Prefix";
+            this.label_prefix.AutoSize = true;
+            this.label_prefix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_prefix.Location = new System.Drawing.Point(12, 88);
+            this.label_prefix.Name = "label_prefix";
+            this.label_prefix.Size = new System.Drawing.Size(119, 24);
+            this.label_prefix.TabIndex = 8;
+            this.label_prefix.Text = "Enter Prefix";
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(13, 119);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 30);
+            this.textBox2.Size = new System.Drawing.Size(233, 29);
             this.textBox2.TabIndex = 7;
             // 
-            // label3
+            // label_base
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 27);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Enter 1st Base word";
+            this.label_base.AutoSize = true;
+            this.label_base.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_base.Location = new System.Drawing.Point(12, 174);
+            this.label_base.Name = "label_base";
+            this.label_base.Size = new System.Drawing.Size(196, 24);
+            this.label_base.TabIndex = 10;
+            this.label_base.Text = "Enter 1st Base word";
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(13, 205);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 30);
+            this.textBox3.Size = new System.Drawing.Size(233, 29);
             this.textBox3.TabIndex = 9;
             // 
-            // label4
+            // label_end
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 262);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 27);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Enter End Word";
+            this.label_end.AutoSize = true;
+            this.label_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_end.Location = new System.Drawing.Point(12, 262);
+            this.label_end.Name = "label_end";
+            this.label_end.Size = new System.Drawing.Size(160, 24);
+            this.label_end.TabIndex = 12;
+            this.label_end.Text = "Enter End Word";
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(13, 293);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 30);
+            this.textBox4.Size = new System.Drawing.Size(233, 29);
             this.textBox4.TabIndex = 11;
             // 
-            // button3
+            // button_add_prefix
             // 
-            this.button3.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(297, 100);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 48);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Add Prefix";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_add_prefix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add_prefix.Location = new System.Drawing.Point(297, 100);
+            this.button_add_prefix.Name = "button_add_prefix";
+            this.button_add_prefix.Size = new System.Drawing.Size(198, 48);
+            this.button_add_prefix.TabIndex = 13;
+            this.button_add_prefix.Text = "Add Prefix";
+            this.button_add_prefix.UseVisualStyleBackColor = true;
+            this.button_add_prefix.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button_add_base
             // 
-            this.button4.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(297, 187);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(198, 48);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Add 1st Base Word";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_add_base.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add_base.Location = new System.Drawing.Point(297, 187);
+            this.button_add_base.Name = "button_add_base";
+            this.button_add_base.Size = new System.Drawing.Size(198, 48);
+            this.button_add_base.TabIndex = 14;
+            this.button_add_base.Text = "Add 1st Base Word";
+            this.button_add_base.UseVisualStyleBackColor = true;
+            this.button_add_base.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // button_add_end
             // 
-            this.button5.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(297, 275);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(198, 48);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Add End Word";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button_add_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add_end.Location = new System.Drawing.Point(297, 275);
+            this.button_add_end.Name = "button_add_end";
+            this.button_add_end.Size = new System.Drawing.Size(198, 48);
+            this.button_add_end.TabIndex = 15;
+            this.button_add_end.Text = "Add End Word";
+            this.button_add_end.UseVisualStyleBackColor = true;
+            this.button_add_end.Click += new System.EventHandler(this.button5_Click);
             // 
             // namegen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 459);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button_add_end);
+            this.Controls.Add(this.button_add_base);
+            this.Controls.Add(this.button_add_prefix);
+            this.Controls.Add(this.label_end);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_base);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_prefix);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button_back);
+            this.Controls.Add(this.label_name);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_create);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "namegen";
             this.Text = "NameGenerator";
+            this.Load += new System.EventHandler(this.namegen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,18 +200,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_create;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_name;
+        private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.Label label_prefix;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_base;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_end;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_add_prefix;
+        private System.Windows.Forms.Button button_add_base;
+        private System.Windows.Forms.Button button_add_end;
     }
 }

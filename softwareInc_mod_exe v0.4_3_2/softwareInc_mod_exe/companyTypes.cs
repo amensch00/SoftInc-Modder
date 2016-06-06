@@ -35,9 +35,68 @@ namespace softwareInc_mod_exe
         string[] erg1 = new string[100];
         int erg1Anzahl = 0;
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgDone;
+
         public companyTypes()
         {
             InitializeComponent();
+        }
+
+        private void companyTypes_Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        MsgDone = "Action effectuée !";
+
+                        this.Text += " (traduit par Squalalah)";
+
+                        label_specialization.Text = "Spécialisation";
+                        label_soft_year.Text = "Nombre de logiciel par an";
+
+                        label_small1.Text = "Petit";
+                        label_small2.Text = "Petit";
+                        label_small3.Text = "Petit";
+                        checkBox_random1.Text = "Aléatoire";
+
+                        label_min_release.Text = "Minimum de logiciels sortis par an";
+
+                        label_medium1.Text = "Moyen";
+                        label_medium2.Text = "Moyen";
+                        label_medium3.Text = "Moyen";
+                        checkBox_random2.Text = "Aléatoire";
+
+                        label_max_release.Text = "Maximum de logiciels sortis par an";
+
+                        label_large1.Text = "Grand";
+                        label_large2.Text = "Grand";
+                        label_large3.Text = "Grand";
+                        checkBox_random3.Text = "Aléatoire";
+
+                        label_soft_year.Text = "Type de logiciel sorti";
+                        label_number.Text = "Nombre";
+
+                        button_add_soft.Text = "Ajouter le logiciel";
+                        button_add_company.Text = "Ajouter ce type d'entreprise";
+
+
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: 
+                    {
+                        MsgDone = "Done!";
+                        
+                        break; 
+                    } //English
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,7 +117,7 @@ namespace softwareInc_mod_exe
 
 
                 //Per year
-                if (checkBox1.Checked)
+                if (checkBox_random1.Checked)
                 {
                     Random rnd = new Random();
                     xmlWriter.WriteStartElement("PerYear");
@@ -77,7 +136,7 @@ namespace softwareInc_mod_exe
                 }
 
                 //Min Software per year
-                if (checkBox2.Checked)
+                if (checkBox_random2.Checked)
                 {
                     Random rnd = new Random();
                     xmlWriter.WriteStartElement("Min");
@@ -96,7 +155,7 @@ namespace softwareInc_mod_exe
                 }
 
                 //Max Software per year
-                if (checkBox2.Checked)
+                if (checkBox_random2.Checked)
                 {
                     Random rnd = new Random();
                     xmlWriter.WriteStartElement("Max");
@@ -129,7 +188,7 @@ namespace softwareInc_mod_exe
                 xmlWriter.Flush();
                 xmlWriter.Close();
 
-                MessageBox.Show("Done!");
+                MessageBox.Show(MsgDone);
             }
         }
 
