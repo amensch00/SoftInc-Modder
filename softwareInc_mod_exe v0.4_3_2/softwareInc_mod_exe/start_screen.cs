@@ -33,15 +33,15 @@ namespace softwareInc_mod_exe
         {
             InitializeComponent();
             string userName = Environment.UserName;
-            DirectoryInfo ModHaupt = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod");
-            DirectoryInfo UnterO1 = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod\Companies");
-            DirectoryInfo UnterO2 = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod\CompanyTypes");
-            DirectoryInfo UnterO3 = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod\Events");
-            DirectoryInfo UnterO4 = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod\NameGenerators");
-            DirectoryInfo UnterO5 = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod\Scenarios");
-            DirectoryInfo UnterO6 = Directory.CreateDirectory(@"C:\Users\" + userName + @"\Desktop\Mod\SoftwareTypes");
+            DirectoryInfo ModHaupt = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod");
+            DirectoryInfo UnterO1 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\Companies");
+            DirectoryInfo UnterO2 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\CompanyTypes");
+            DirectoryInfo UnterO3 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\Events");
+            DirectoryInfo UnterO4 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\NameGenerators");
+            DirectoryInfo UnterO5 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\Scenarios");
+            DirectoryInfo UnterO6 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\SoftwareTypes");
 
-            System.IO.StreamWriter w = new System.IO.StreamWriter(@"C:\Users\" + userName + @"\Desktop\Mod\Readme.txt");
+            System.IO.StreamWriter w = new System.IO.StreamWriter(@"%userprofile%\Desktop\Mod\Readme.txt");
 
             w.WriteLine("~~~ MADE WITH SOFTINC MODDER FROM AMENSCH ~~~");
             w.WriteLine("~~~ A FREE PROGRAM TO MAKE MODS FOR SOFTWARE INC ~~~");

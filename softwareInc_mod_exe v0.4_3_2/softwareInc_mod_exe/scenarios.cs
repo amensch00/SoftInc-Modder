@@ -141,7 +141,7 @@ namespace softwareInc_mod_exe
 
             string userName = Environment.UserName;
 
-            using (XmlWriter xmlWriter = XmlWriter.Create(@"C:\Users\" + userName + @"\Desktop\Mod\Scenarios\" + textBox1.Text + ".xml", settings))
+            using (XmlWriter xmlWriter = XmlWriter.Create(@"%userprofile%\Desktop\Mod\Scenarios\" + textBox1.Text + ".xml", settings))
             {
                 xmlWriter.WriteStartElement("Scenario");
 
