@@ -75,5 +75,26 @@ namespace softwareInc_mod_exe
             MessageBox.Show("Done!");
             this.Close();
         }
+
+        private void Event__Load(object sender, EventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom de l'évènement";
+                        label_company.Text = "Entreprise";
+                        button_add_company.Text = "Ajouter l'entreprise";
+                        button_add_event.Text = "Ajouter l'évènement";
+                        break;
+
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: { break; } //English
+
+            }
+        }
     }
 }
