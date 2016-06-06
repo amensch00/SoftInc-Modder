@@ -35,6 +35,18 @@ namespace softwareInc_mod_exe
         string[] feature = new string[50];
         int anzahlFeature = 0;
         bool[] Attr1 = new bool[50];
+        string userName = Environment.UserName;
+
+        // Strings for MessagBoxes
+
+        string
+            MsgEnterName,
+            MsgEnterDesc,
+            MsgEnterNeed,
+            MsgEnterFeature,
+            MsgDone,
+            MsgSavedDirectory,
+            MsgNeedsAdded;
 
         bool ShowHelp;
 
@@ -48,6 +60,14 @@ namespace softwareInc_mod_exe
             switch (Properties.Settings.Default.Language)
             {
                 case "fr": {
+
+                    MsgEnterName = "Veuillez entrer un nom";
+                    MsgEnterDesc = "Veuillez entrer une description";
+                    MsgEnterNeed = "Veuillez entrer au moins une dépendance";
+                    MsgEnterFeature = "Veuillez ajouter au moins une fonctionnalité";
+                    MsgDone = "Action effectuée !";
+                    MsgSavedDirectory = "Sauvegardé dans: " + @"C:\Users\" + userName + @"\Desktop\Mod";
+                    MsgNeedsAdded = "Dépendances ajoutées !";
 
                     label_soft_name.Text = "Nom";
                     label_soft_description.Text = "Description";
@@ -79,7 +99,19 @@ namespace softwareInc_mod_exe
 
                 case "it": { break; }
                 case "de": { break; }
-                default: { break; } //English
+                default: 
+                    {
+                        MsgEnterName = "Please enter a Name!";
+                        MsgEnterDesc = "Please enter a Description!";
+                        MsgEnterNeed = "Please enter atleast one Need!";
+                        MsgEnterFeature = "Please add atleast one Feature!";
+                        MsgDone = "Done!";
+                        MsgSavedDirectory = "Saved in: " + @"C:\Users\" + userName + @"\Desktop\Mod";
+                        MsgNeedsAdded = "Needs added!";
+
+                        break; 
+                    
+                    } //English
             }
         }
 
@@ -106,16 +138,14 @@ namespace softwareInc_mod_exe
             settings.NewLineOnAttributes = false;
             settings.ConformanceLevel = ConformanceLevel.Auto;
 
-            string userName = Environment.UserName;
-
             using (XmlWriter xmlWriter = XmlWriter.Create(@"C:\Users\" + userName + @"\Desktop\Mod\SoftwareTypes\" + txtbox_softname.Text + ".xml", settings))
             {                
                 xmlWriter.WriteStartElement("SoftwareType");
 
                 if (txtbox_softname.Text == "")
                 {
-                    MessageBox.Show("Please enter a Name!");
-                    txtbox_softname.Text = ("Please enter a Name!");
+                    MessageBox.Show(MsgEnterName);
+                    txtbox_softname.Text = (MsgEnterName);
                     return;
                 }
                 else
@@ -125,8 +155,8 @@ namespace softwareInc_mod_exe
 
                 if (rtxtbox_soft_descri.Text == "")
                 {   
-                    MessageBox.Show("Please enter a Description!");
-                    rtxtbox_soft_descri.Text = ("Please enter a Description!");
+                    MessageBox.Show(MsgEnterDesc);
+                    rtxtbox_soft_descri.Text = (MsgEnterDesc);
                     return;
                 }
                 else
@@ -202,7 +232,7 @@ namespace softwareInc_mod_exe
                 }
                 else
                 {
-                    MessageBox.Show("Please enter atleast one Need!");
+                    MessageBox.Show(MsgEnterNeed);
                     return;
                 }
 
@@ -261,14 +291,14 @@ namespace softwareInc_mod_exe
                 }
                 else
                 {
-                    MessageBox.Show("Please add atleast one Feature!");
+                    MessageBox.Show(MsgEnterFeature);
                     return;
                 }
 
                 xmlWriter.Flush();
                 xmlWriter.Close();
-                MessageBox.Show("Done!");
-                MessageBox.Show("Saved in: " + @"C:\Users\" + userName + @"\Desktop\Mod");
+                MessageBox.Show(MsgDone);
+                MessageBox.Show(MsgSavedDirectory);
                 this.Close();
             }
         }
@@ -289,7 +319,7 @@ namespace softwareInc_mod_exe
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Needs added!");
+            MessageBox.Show(MsgNeedsAdded);
             komponenten[anzahlKomponenten] = comboBox_needs.Text;
             anzahlKomponenten = anzahlKomponenten + 1;
         }
