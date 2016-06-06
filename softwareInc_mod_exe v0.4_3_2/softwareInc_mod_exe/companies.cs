@@ -43,20 +43,15 @@ namespace softwareInc_mod_exe
         string[] needS = new string[100];
         int anzNeed = 0;
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgHelpYear,
+            MsgDone;
+
         public companies()
         {
             InitializeComponent();
-        }
-
-        public void Start(forms_choice vater, Boolean ShowHelp)
-        {
-            m_Vater = vater;
-            m_ShowHelp = ShowHelp;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Year when the company was founded, or be founded. Needs to be in a specific Format! First the month, then the year and between a minus.\nShould look like this: 11-2012 or 6-1981.....");
         }
 
         private void companies_Load(object sender, EventArgs e)
@@ -70,6 +65,9 @@ namespace softwareInc_mod_exe
             {
                 case "fr":
                     {
+                        MsgHelpYear = "Année à laquelle l'entreprise sera ou a été fondé. Les dépendances doient être correctes! En premier le mois, puis l'année séparé d'un '-'.\nex: 11-2012 ou 6-1981...";
+                        MsgDone = "Action effectuée !";
+
                         this.Text += " (traduit par Squalalah)";
 
                         label_name.Text = "Nom de l'entreprise";
@@ -86,10 +84,27 @@ namespace softwareInc_mod_exe
                     }
                 case "de": { break; }
                 case "it": { break; }
-                default: { break; } //English
+                default: 
+                    {
+                        MsgHelpYear = "Year when the company was founded, or be founded. Needs to be in a specific Format! First the month, then the year and between a minus.\nShould look like this: 11-2012 or 6-1981.....";
+                        MsgDone = "Finished!";
+
+                        break; 
+                    } //English
 
             }
 
+        }
+
+        public void Start(forms_choice vater, Boolean ShowHelp)
+        {
+            m_Vater = vater;
+            m_ShowHelp = ShowHelp;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(MsgHelpYear);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -219,7 +234,7 @@ namespace softwareInc_mod_exe
                 xmlWriter.WriteEndElement();
                 xmlWriter.Flush();
                 xmlWriter.Close();
-                MessageBox.Show("Finished!");
+                MessageBox.Show(MsgDone);
                 this.Close();
             }
         }
