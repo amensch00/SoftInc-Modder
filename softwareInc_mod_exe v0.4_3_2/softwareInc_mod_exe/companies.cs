@@ -65,6 +65,31 @@ namespace softwareInc_mod_exe
             {
                 _hh.Visible = false;
             }
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        this.Text += " (traduit par Squalalah)";
+
+                        label_name.Text = "Nom de l'entreprise";
+                        label_money.Text = "Capital";
+                        label_reputation.Text = "Réputation";
+                        label_founder.Text = "Fondé en..";
+
+                        button_add_product.Size = new Size(265, 85);
+                        button_add_product.Location = new Point(270, 174);
+                        button_add_product.Text = "Ajouter un produit";
+                        button_add_company.Text = "Ajouter l'entreprise";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: { break; } //English
+
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)

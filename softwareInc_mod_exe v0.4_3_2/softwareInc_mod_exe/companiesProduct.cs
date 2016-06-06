@@ -63,8 +63,8 @@ namespace softwareInc_mod_exe
             r3 = r2.Replace(",", ".");
             quality = quality + r3;
 
-            erg = erg + WahrFalsch(checkBox2.Checked) + "#";
-            erg = erg + WahrFalsch(checkBox1.Checked) + "#";
+            erg = erg + WahrFalsch(checkBox_opensource.Checked) + "#";
+            erg = erg + WahrFalsch(checkBox_inhouse.Checked) + "#";
 
             int n = trackBar2.Value;
             string n2, n3;
@@ -144,6 +144,38 @@ namespace softwareInc_mod_exe
                 _hh.Visible = false;
                 hh3.Visible = false;              
             }
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        button_add_feature.Size = new Size(294, 41);
+                        button_add_need.Size = new Size(211, 62);
+
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom du produit";
+                        label_date.Text = "Date de sortie";
+                        label_type.Text = "Type de produit";
+                        label_feature.Text = "Fonctionnalité";
+                        label_quality.Text = "Qualité";
+                        label_popularity.Text = "Popularité";
+                        label_sequel.Text = "Suite de ..";
+                        label_needs.Text = "Dépendance..";
+
+                        checkBox_inhouse.Text = "Usage interne";
+
+                        button_add_need.Text = "Ajouter la dépendance";
+                        button_add_feature.Text = "Ajouter la fonctionnalité";
+                        button_create.Text = "Créer le produit";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: { break; } //English
+
+            }
+
             //MessageBox.Show(m_ShowHelp.ToString());
         }
 
