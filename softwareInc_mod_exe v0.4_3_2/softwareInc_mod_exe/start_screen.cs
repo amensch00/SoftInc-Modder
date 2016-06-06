@@ -29,19 +29,44 @@ namespace softwareInc_mod_exe
 {
     public partial class start_screen : Form
     {
+
+        private FolderBrowserDialog path;
+
         public start_screen()
         {
+            Properties.Settings.Default.Path = "";
             InitializeComponent();
             string userName = Environment.UserName;
-            DirectoryInfo ModHaupt = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod");
-            DirectoryInfo UnterO1 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\Companies");
-            DirectoryInfo UnterO2 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\CompanyTypes");
-            DirectoryInfo UnterO3 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\Events");
-            DirectoryInfo UnterO4 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\NameGenerators");
-            DirectoryInfo UnterO5 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\Scenarios");
-            DirectoryInfo UnterO6 = Directory.CreateDirectory(@"%userprofile%\Desktop\Mod\SoftwareTypes");
 
-            System.IO.StreamWriter w = new System.IO.StreamWriter(@"%userprofile%\Desktop\Mod\Readme.txt");
+            if (Properties.Settings.Default.Path == "")
+            {
+                MessageBox.Show("It's the first start of the program, please select where your mod will be placed\nIf you cancel, the mod folder will be placed on your Desktop", "First Start", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                path = new FolderBrowserDialog();
+
+                if (path.ShowDialog(this) == DialogResult.OK)
+                {
+                    Properties.Settings.Default.Path = path.SelectedPath;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    MessageBox.Show("Your mod will be placed at the root of your partition (" + Path.GetPathRoot(Environment.SystemDirectory) + ").\nTo modify this path, choice your language and click on 'Setting'");
+                    Properties.Settings.Default.Path = @"" + Path.GetPathRoot(Environment.SystemDirectory);
+                    Properties.Settings.Default.Save();
+                }
+            }
+
+            string userpath = Properties.Settings.Default.Path;
+
+            DirectoryInfo ModHaupt = Directory.CreateDirectory(userpath + @"\Mod");
+            DirectoryInfo UnterO1 = Directory.CreateDirectory(userpath + @"\Mod\Companies");
+            DirectoryInfo UnterO2 = Directory.CreateDirectory(userpath + @"\Mod\CompanyTypes");
+            DirectoryInfo UnterO3 = Directory.CreateDirectory(userpath + @"\Mod\Events");
+            DirectoryInfo UnterO4 = Directory.CreateDirectory(userpath + @"\Mod\NameGenerators");
+            DirectoryInfo UnterO5 = Directory.CreateDirectory(userpath + @"\Mod\Scenarios");
+            DirectoryInfo UnterO6 = Directory.CreateDirectory(userpath + @"\Mod\SoftwareTypes");
+
+            System.IO.StreamWriter w = new System.IO.StreamWriter(userpath + @"\Mod\Readme.txt");
 
             w.WriteLine("~~~ MADE WITH SOFTINC MODDER FROM AMENSCH ~~~");
             w.WriteLine("~~~ A FREE PROGRAM TO MAKE MODS FOR SOFTWARE INC ~~~");
@@ -53,14 +78,14 @@ namespace softwareInc_mod_exe
             w.Close();
         }
 
+        private void start_screen_Load(object sender, EventArgs e)
+        {
+   
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not implemented yet...");
-        }
-
-        private void start_screen_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button_fr_Click(object sender, EventArgs e)
