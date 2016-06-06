@@ -35,6 +35,11 @@ namespace softwareInc_mod_exe
         string[] erg1 = new string[100];
         int erg1Anzahl = 0;
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgDone;
+
         public companyTypes()
         {
             InitializeComponent();
@@ -46,6 +51,8 @@ namespace softwareInc_mod_exe
             {
                 case "fr":
                     {
+                        MsgDone = "Action effectuée !";
+
                         this.Text += " (traduit par Squalalah)";
 
                         label_specialization.Text = "Spécialisation";
@@ -82,7 +89,12 @@ namespace softwareInc_mod_exe
                     }
                 case "de": { break; }
                 case "it": { break; }
-                default: { break; } //English
+                default: 
+                    {
+                        MsgDone = "Done!";
+                        
+                        break; 
+                    } //English
 
             }
         }
@@ -176,7 +188,7 @@ namespace softwareInc_mod_exe
                 xmlWriter.Flush();
                 xmlWriter.Close();
 
-                MessageBox.Show("Done!");
+                MessageBox.Show(MsgDone);
             }
         }
 
