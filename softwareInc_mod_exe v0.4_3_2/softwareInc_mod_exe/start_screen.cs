@@ -34,7 +34,7 @@ namespace softwareInc_mod_exe
 
         public start_screen()
         {
-            Properties.Settings.Default.Path = "";
+            //Properties.Settings.Default.Path = "";
             InitializeComponent();
             string userName = Environment.UserName;
 
