@@ -47,6 +47,45 @@ namespace softwareInc_mod_exe
             InitializeComponent();
         }
 
+        private void scenarios_Load(object sender, EventArgs e)
+        {
+            if (m_ShowHelp == false)
+            {
+                _hh2.Visible = false;
+                _hh1.Visible = false;
+                _hh3.Visible = false;
+                _hh4.Visible = false;
+                _hh5.Visible = false;
+            }
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case "fr":
+                    {
+                        this.Text += " (traduit par Squalalah)";
+                        label_name.Text = "Nom du scénario";
+                        label_year.Text = "Année de départ";
+                        label_money.Text = "Capital de départ";
+                        label_goals.Text = "Objectif";
+                        label_money_reach.Text = "Capital à atteindre";
+                        label_year_reach.Text = "Année à atteindre";
+                        label_events.Text = "Évènements";
+
+                        button_year.Text = "Ajouter";
+                        button_money.Text = "Ajouter";
+                        button_goal.Text = "Ajouter l'objectif";
+                        button_event.Text = "Ajouter l'évènement";
+                        button_add_scenario.Text = "Ajouter le scénario";
+
+                        break;
+                    }
+                case "de": { break; }
+                case "it": { break; }
+                default: { break; } //English
+
+            }
+        }
+
         public void Start(forms_choice vater, Boolean ShowHelp)
         {
             m_Vater = vater;
@@ -97,7 +136,7 @@ namespace softwareInc_mod_exe
                 }       
                 xmlWriter.WriteEndElement();
 
-                xmlWriter.WriteElementString("Simulation", WahrFalsch(checkBox1.Checked));   
+                xmlWriter.WriteElementString("Simulation", WahrFalsch(checkBox1_simulation.Checked));   
                 xmlWriter.WriteEndElement();
 
                 MessageBox.Show("Done!");
@@ -178,16 +217,5 @@ namespace softwareInc_mod_exe
             MessageBox.Show("Put in your event's name and press ''Add event'' to add it. For multiple events, just repeat the last steps...\nEvents are stored in another folder.\nYou have to name the event exact how the event is called! Otherwise it won't work!");
         }
 
-        private void scenarios_Load(object sender, EventArgs e)
-        {
-            if (m_ShowHelp == false)
-            {
-                _hh2.Visible = false;
-                _hh1.Visible = false;
-                _hh3.Visible = false;
-                _hh4.Visible = false;
-                _hh5.Visible = false;
-            }
-        }
     }
 }

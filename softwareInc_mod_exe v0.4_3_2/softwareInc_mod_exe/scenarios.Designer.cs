@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(scenarios));
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_name = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_year = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_money = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button_money = new System.Windows.Forms.Button();
+            this.button_year = new System.Windows.Forms.Button();
+            this.label_year_reach = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_money_reach = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button_goal = new System.Windows.Forms.Button();
+            this.label_goals = new System.Windows.Forms.Label();
+            this.checkBox1_simulation = new System.Windows.Forms.CheckBox();
             this._hh2 = new System.Windows.Forms.Button();
             this._hh1 = new System.Windows.Forms.Button();
             this._hh3 = new System.Windows.Forms.Button();
             this._hh4 = new System.Windows.Forms.Button();
             this._hh5 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.button_event = new System.Windows.Forms.Button();
+            this.label_events = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_add_scenario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // label_name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Scenario name";
+            this.label_name.AutoSize = true;
+            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name.Location = new System.Drawing.Point(12, 9);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(129, 20);
+            this.label_name.TabIndex = 4;
+            this.label_name.Text = "Scenario name";
             // 
             // textBox1
             // 
@@ -73,15 +73,15 @@
             this.textBox1.Size = new System.Drawing.Size(266, 29);
             this.textBox1.TabIndex = 3;
             // 
-            // label2
+            // label_year
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Start year";
+            this.label_year.AutoSize = true;
+            this.label_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_year.Location = new System.Drawing.Point(12, 75);
+            this.label_year.Name = "label_year";
+            this.label_year.Size = new System.Drawing.Size(88, 20);
+            this.label_year.TabIndex = 6;
+            this.label_year.Text = "Start year";
             // 
             // textBox2
             // 
@@ -91,15 +91,15 @@
             this.textBox2.Size = new System.Drawing.Size(221, 29);
             this.textBox2.TabIndex = 5;
             // 
-            // label3
+            // label_money
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(300, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Start Money";
+            this.label_money.AutoSize = true;
+            this.label_money.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_money.Location = new System.Drawing.Point(300, 72);
+            this.label_money.Name = "label_money";
+            this.label_money.Size = new System.Drawing.Size(106, 20);
+            this.label_money.TabIndex = 8;
+            this.label_money.Text = "Start Money";
             // 
             // textBox3
             // 
@@ -109,37 +109,37 @@
             this.textBox3.Size = new System.Drawing.Size(281, 29);
             this.textBox3.TabIndex = 7;
             // 
-            // button1
+            // button_money
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(304, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(281, 51);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add Money";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_money.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_money.Location = new System.Drawing.Point(304, 134);
+            this.button_money.Name = "button_money";
+            this.button_money.Size = new System.Drawing.Size(281, 51);
+            this.button_money.TabIndex = 9;
+            this.button_money.Text = "Add Money";
+            this.button_money.UseVisualStyleBackColor = true;
+            this.button_money.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button_year
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(11, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 51);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Add Year";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_year.Location = new System.Drawing.Point(11, 134);
+            this.button_year.Name = "button_year";
+            this.button_year.Size = new System.Drawing.Size(221, 51);
+            this.button_year.TabIndex = 10;
+            this.button_year.Text = "Add Year";
+            this.button_year.UseVisualStyleBackColor = true;
+            this.button_year.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label4
+            // label_year_reach
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(301, 253);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(240, 18);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Year when it has to be reached";
+            this.label_year_reach.AutoSize = true;
+            this.label_year_reach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_year_reach.Location = new System.Drawing.Point(301, 253);
+            this.label_year_reach.Name = "label_year_reach";
+            this.label_year_reach.Size = new System.Drawing.Size(240, 18);
+            this.label_year_reach.TabIndex = 14;
+            this.label_year_reach.Text = "Year when it has to be reached";
             // 
             // textBox4
             // 
@@ -149,15 +149,15 @@
             this.textBox4.Size = new System.Drawing.Size(281, 29);
             this.textBox4.TabIndex = 13;
             // 
-            // label5
+            // label_money_reach
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 256);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Money to reach";
+            this.label_money_reach.AutoSize = true;
+            this.label_money_reach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_money_reach.Location = new System.Drawing.Point(12, 256);
+            this.label_money_reach.Name = "label_money_reach";
+            this.label_money_reach.Size = new System.Drawing.Size(132, 20);
+            this.label_money_reach.TabIndex = 12;
+            this.label_money_reach.Text = "Money to reach";
             // 
             // textBox5
             // 
@@ -167,38 +167,38 @@
             this.textBox5.Size = new System.Drawing.Size(221, 29);
             this.textBox5.TabIndex = 11;
             // 
-            // button3
+            // button_goal
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(304, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(281, 51);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Add Goal";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_goal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_goal.Location = new System.Drawing.Point(304, 315);
+            this.button_goal.Name = "button_goal";
+            this.button_goal.Size = new System.Drawing.Size(281, 51);
+            this.button_goal.TabIndex = 15;
+            this.button_goal.Text = "Add Goal";
+            this.button_goal.UseVisualStyleBackColor = true;
+            this.button_goal.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label6
+            // label_goals
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 31);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Goals";
+            this.label_goals.AutoSize = true;
+            this.label_goals.BackColor = System.Drawing.Color.Transparent;
+            this.label_goals.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_goals.Location = new System.Drawing.Point(12, 218);
+            this.label_goals.Name = "label_goals";
+            this.label_goals.Size = new System.Drawing.Size(90, 31);
+            this.label_goals.TabIndex = 16;
+            this.label_goals.Text = "Goals";
             // 
-            // checkBox1
+            // checkBox1_simulation
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(454, 416);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 29);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Simulation";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1_simulation.AutoSize = true;
+            this.checkBox1_simulation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1_simulation.Location = new System.Drawing.Point(454, 416);
+            this.checkBox1_simulation.Name = "checkBox1_simulation";
+            this.checkBox1_simulation.Size = new System.Drawing.Size(141, 29);
+            this.checkBox1_simulation.TabIndex = 17;
+            this.checkBox1_simulation.Text = "Simulation";
+            this.checkBox1_simulation.UseVisualStyleBackColor = true;
             // 
             // _hh2
             // 
@@ -255,26 +255,26 @@
             this._hh5.UseVisualStyleBackColor = true;
             this._hh5.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // button_event
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(14, 475);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(266, 51);
-            this.button10.TabIndex = 25;
-            this.button10.Text = "Add event";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button_event.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_event.Location = new System.Drawing.Point(14, 475);
+            this.button_event.Name = "button_event";
+            this.button_event.Size = new System.Drawing.Size(266, 51);
+            this.button_event.TabIndex = 25;
+            this.button_event.Text = "Add event";
+            this.button_event.UseVisualStyleBackColor = true;
+            this.button_event.Click += new System.EventHandler(this.button10_Click);
             // 
-            // label7
+            // label_events
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 410);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 25);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Events";
+            this.label_events.AutoSize = true;
+            this.label_events.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_events.Location = new System.Drawing.Point(13, 410);
+            this.label_events.Name = "label_events";
+            this.label_events.Size = new System.Drawing.Size(84, 25);
+            this.label_events.TabIndex = 24;
+            this.label_events.Text = "Events";
             // 
             // textBox6
             // 
@@ -284,16 +284,16 @@
             this.textBox6.Size = new System.Drawing.Size(266, 29);
             this.textBox6.TabIndex = 23;
             // 
-            // button4
+            // button_add_scenario
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(11, 548);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(580, 51);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Add Scenario";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_add_scenario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add_scenario.Location = new System.Drawing.Point(11, 548);
+            this.button_add_scenario.Name = "button_add_scenario";
+            this.button_add_scenario.Size = new System.Drawing.Size(580, 51);
+            this.button_add_scenario.TabIndex = 18;
+            this.button_add_scenario.Text = "Add Scenario";
+            this.button_add_scenario.UseVisualStyleBackColor = true;
+            this.button_add_scenario.Click += new System.EventHandler(this.button4_Click);
             // 
             // scenarios
             // 
@@ -301,28 +301,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 611);
             this.Controls.Add(this._hh5);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button_event);
+            this.Controls.Add(this.label_events);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this._hh4);
             this.Controls.Add(this._hh3);
             this.Controls.Add(this._hh1);
             this.Controls.Add(this._hh2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button_add_scenario);
+            this.Controls.Add(this.checkBox1_simulation);
+            this.Controls.Add(this.label_goals);
+            this.Controls.Add(this.button_goal);
+            this.Controls.Add(this.label_year_reach);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label_money_reach);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button_year);
+            this.Controls.Add(this.button_money);
+            this.Controls.Add(this.label_money);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_year);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_name);
             this.Controls.Add(this.textBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "scenarios";
@@ -335,29 +335,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_year;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_money;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_money;
+        private System.Windows.Forms.Button button_year;
+        private System.Windows.Forms.Label label_year_reach;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_money_reach;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button_goal;
+        private System.Windows.Forms.Label label_goals;
+        private System.Windows.Forms.CheckBox checkBox1_simulation;
         private System.Windows.Forms.Button _hh2;
         private System.Windows.Forms.Button _hh1;
         private System.Windows.Forms.Button _hh3;
         private System.Windows.Forms.Button _hh4;
         private System.Windows.Forms.Button _hh5;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button_event;
+        private System.Windows.Forms.Label label_events;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_add_scenario;
     }
 }
