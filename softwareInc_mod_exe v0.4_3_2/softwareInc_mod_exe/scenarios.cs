@@ -42,6 +42,20 @@ namespace softwareInc_mod_exe
         forms_choice m_Vater;
         Boolean m_ShowHelp;
 
+        //Strings for MessageBoxes
+
+        string 
+            MsgDone,
+            MsgMoneyAdded,
+            MsgYearAdded,
+            MsgGoalAdded,
+            MsgEventAdded,
+            MsgHelpYear,
+            MsgHelpMoney,
+            MsgHelpMoneyReach,
+            MsgHelpYearReach,
+            MsgHelpEvent;
+
         public scenarios()
         {
             InitializeComponent();
@@ -62,6 +76,17 @@ namespace softwareInc_mod_exe
             {
                 case "fr":
                     {
+                        MsgDone = "Action effectuée !";
+                        MsgMoneyAdded = "Capital ajouté !";
+                        MsgYearAdded = "Année ajoutée !";
+                        MsgGoalAdded = "Objectif ajouté !";
+                        MsgEventAdded = "Évènement ajouté !";
+                        MsgHelpYear = "Ecrivez l'année à laquelle vous voulez que le scénario commence.\nSi vous voulez proposer + d'années, écrivez l'année\ndans la zone de texte puis cliquez sur 'Ajouter'.";
+                        MsgHelpMoney = "Ecrivez le capital souhaité lors du lancement du scénario.\nSi vous voulez proposer + d'argent, écrivez la somme\ndans la zone de texte puis cliquez sur 'Ajouter'.";
+                        MsgHelpMoneyReach = "Capital à atteindre à l'année choisie";
+                        MsgHelpYearReach = "Vous devez préciser l'année à atteindre pour l'objectif. Vous devez écrire en premier le mois puis l'année. Ex.: 11-2011 , écrivez le ''-'' aussi!";
+                        MsgHelpEvent = "Ecrivez le nom de votre évènement puis cliquez sur ''Ajouter l'évènement'' pour l'ajouter. Pour plusieurs évènements, repetez simplement ce que vous avez fait...\nLes évènements sont stockés à un autre endroit.\nVous devez donc écrire le nom de l'evènement exactement comme son nom de base! Sinon cela ne fonctionnera pas!";
+
                         this.Text += " (traduit par Squalalah)";
                         label_name.Text = "Nom du scénario";
                         label_year.Text = "Année de départ";
@@ -81,7 +106,21 @@ namespace softwareInc_mod_exe
                     }
                 case "de": { break; }
                 case "it": { break; }
-                default: { break; } //English
+                default: 
+                    {
+                        MsgDone = "Done!";
+                        MsgMoneyAdded = "Money added!";
+                        MsgYearAdded = "Year added!";
+                        MsgGoalAdded = "Goal added!";
+                        MsgEventAdded = "Event added!";
+                        MsgHelpYear = "Put in the year in what your scenario should start.\nIf you want to put more then one into it, you have to put the year\nin the Textfield and then press Add year.";
+                        MsgHelpMoney = "Put in the money with what you want to start.\nIf you want to put more then one start money into it, you have to put the money\nin the Textfield and then press Add money.";
+                        MsgHelpMoneyReach = "The money you have to reach at the specified year.";
+                        MsgHelpYearReach = "The year when you have to reach the set goal. You have to put in first the month then the year. Ex.: 11-2011 Write the minus ''-'' too!";
+                        MsgHelpEvent = "Put in your event's name and press ''Add event'' to add it. For multiple events, just repeat the last steps...\nEvents are stored in another folder.\nYou have to name the event exact how the event is called! Otherwise it won't work!";
+
+                        break; 
+                    } //English
 
             }
         }
@@ -139,13 +178,13 @@ namespace softwareInc_mod_exe
                 xmlWriter.WriteElementString("Simulation", WahrFalsch(checkBox1_simulation.Checked));   
                 xmlWriter.WriteEndElement();
 
-                MessageBox.Show("Done!");
+                MessageBox.Show(MsgDone);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Money added!");
+            MessageBox.Show(MsgMoneyAdded);
             money[moneyAnzahl] = textBox3.Text;
             moneyAnzahl = moneyAnzahl + 1;
             textBox3.Text = "";
@@ -154,7 +193,7 @@ namespace softwareInc_mod_exe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Year added!");
+            MessageBox.Show(MsgYearAdded);
             years[yearsAnzahl] = textBox2.Text;
             yearsAnzahl = yearsAnzahl + 1;
             textBox2.Text = "";
@@ -163,7 +202,7 @@ namespace softwareInc_mod_exe
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Goal added!");
+            MessageBox.Show(MsgGoalAdded);
             goals[goalsAnzahl] = "Money " + textBox5.Text + ",Date " + textBox4.Text;
             goalsAnzahl = goalsAnzahl + 1;
             textBox4.Text = "";
@@ -172,7 +211,7 @@ namespace softwareInc_mod_exe
 
         private void button10_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Event added!");
+            MessageBox.Show(MsgEventAdded);
             events[eventsAnzahl] = textBox6.Text;
             eventsAnzahl = eventsAnzahl + 1;
             textBox6.Text = "";
@@ -194,27 +233,27 @@ namespace softwareInc_mod_exe
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Put in the year in what your scenario should start.\nIf you want to put more then one into it, you have to put the year\nin the Textfield and then press Add year.");
+            MessageBox.Show(MsgHelpYear);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Put in the money with what you want to start.\nIf you want to put more then one start money into it, you have to put the money\nin the Textfield and then press Add money.");
+            MessageBox.Show(MsgHelpMoney);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The money you have to reach at the specified year.");
+            MessageBox.Show(MsgHelpMoneyReach);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The year when you have to reach the set goal. You have to put in first the month then the year. Ex.: 11-2011 Write the minus ''-'' too!");
+            MessageBox.Show(MsgHelpYearReach);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Put in your event's name and press ''Add event'' to add it. For multiple events, just repeat the last steps...\nEvents are stored in another folder.\nYou have to name the event exact how the event is called! Otherwise it won't work!");
+            MessageBox.Show(MsgHelpEvent);
         }
 
     }
