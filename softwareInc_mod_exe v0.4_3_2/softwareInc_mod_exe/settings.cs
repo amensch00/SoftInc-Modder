@@ -32,7 +32,7 @@ namespace softwareInc_mod_exe
         forms_choice m_Vater;
         //Boolean m_ShowHelp;
 
-        string msgCheck, msgCheckHead;
+        string msgCheck, msgCheckHead; //msg + msg's head for MessageBox when new version is found
 
         public Settings_()
         {
