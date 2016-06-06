@@ -67,7 +67,7 @@ namespace softwareInc_mod_exe
                     MsgEnterFeature = "Veuillez ajouter au moins une fonctionnalité";
                     MsgDone = "Action effectuée !";
                     MsgSavedDirectory = "Sauvegardé dans: " + Properties.Settings.Default.Path + @"\Mod";
-                    MsgNeedsAdded = "Dépendances ajoutées !";
+                    MsgNeedsAdded = "Dépendance ajoutée !";
 
                     label_soft_name.Text = "Nom";
                     label_soft_description.Text = "Description";
@@ -91,7 +91,7 @@ namespace softwareInc_mod_exe
 
                     label_category.Text = "Catégorie";
                     button_add.Text = "Ajouter";
-                    bttn_nFeature.Text = "Ajouter la fonctionnalité";
+                    bttn_nFeature.Text = "Ajouter une fonctionnalité";
                     bttn_modCreate.Text = "Créer le mod";
                   
                             break; 
