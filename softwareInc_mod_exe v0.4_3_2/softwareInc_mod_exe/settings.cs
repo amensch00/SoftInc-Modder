@@ -24,6 +24,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.IO;
 
 namespace softwareInc_mod_exe
 {
@@ -32,7 +33,15 @@ namespace softwareInc_mod_exe
         forms_choice m_Vater;
         //Boolean m_ShowHelp;
 
-        string msgCheck, msgCheckHead; //msg + msg's head for MessageBox when new version is found
+        string 
+            msgCheck,
+            msgCheckHead, //msg + msg's head for MessageBox when new version is found
+            msgErrorPath,
+            msgAskMoveMod,
+            msgNewPath,
+            msgSuccessPath; 
+
+        private FolderBrowserDialog path;
 
         public Settings_()
         {
@@ -41,6 +50,8 @@ namespace softwareInc_mod_exe
 
         private void Settings__Load(object sender, EventArgs e)
         {
+            label_path.Text = Properties.Settings.Default.Path;
+
             switch (Properties.Settings.Default.Language)
             {
                 case "fr":
@@ -51,6 +62,10 @@ namespace softwareInc_mod_exe
 
                         msgCheck = "Vérification terminée!\nMise à jour disponible, voulez vous la télécharger?";
                         msgCheckHead = "Mise à jour disponible";
+                        msgErrorPath = "[ERREUR] Le chemin choisi est le même que l'ancien !";
+                        msgAskMoveMod = "Voulez vous qu'on déplace votre dossier de mod déjà présent dans le nouveau chemin ?";
+                        msgNewPath = "Le nouveau chemin de vos futurs mod est :";
+                        msgSuccessPath = "Action effectuée !";
 
                         break;
                     }
@@ -61,7 +76,11 @@ namespace softwareInc_mod_exe
 
                         msgCheck = "Done checking!\nNew updates avaiable, do you want to download them?";
                         msgCheckHead = "Confirm";
-                    
+                        msgErrorPath = "[ERROR] The new path is the same as the old path!";
+                        msgAskMoveMod = "Do you want move your mod folder to the new path ?";
+                        msgNewPath = "Your new mod path is :";
+                        msgSuccessPath = "Done!";
+
                         break; 
                     } //English
 
@@ -142,6 +161,55 @@ namespace softwareInc_mod_exe
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             m_Vater.ShowHelp = checkBox_tutorial.Checked;
+        }
+
+        private void button_path_Click(object sender, EventArgs e)
+        {
+            path = new FolderBrowserDialog();
+
+            if (path.ShowDialog(this) == DialogResult.OK)
+            {
+                if (path.SelectedPath == Properties.Settings.Default.Path) MessageBox.Show(msgErrorPath);
+                else
+                {
+                    if (Directory.Exists(Properties.Settings.Default.Path + @"\Mod"))
+                    {
+                        MessageBox.Show(Properties.Settings.Default.Path + @"\Mod");
+                        if (MessageBox.Show(msgAskMoveMod, "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            Directory.Move(Properties.Settings.Default.Path + @"\Mod", path.SelectedPath + @"\Mod");
+                        }
+                        else
+                        {
+                            string modpath = path.SelectedPath;
+
+                            DirectoryInfo ModHaupt = Directory.CreateDirectory(modpath + @"\Mod");
+                            DirectoryInfo UnterO1 = Directory.CreateDirectory(modpath + @"\Mod\Companies");
+                            DirectoryInfo UnterO2 = Directory.CreateDirectory(modpath + @"\Mod\CompanyTypes");
+                            DirectoryInfo UnterO3 = Directory.CreateDirectory(modpath + @"\Mod\Events");
+                            DirectoryInfo UnterO4 = Directory.CreateDirectory(modpath + @"\Mod\NameGenerators");
+                            DirectoryInfo UnterO5 = Directory.CreateDirectory(modpath + @"\Mod\Scenarios");
+                            DirectoryInfo UnterO6 = Directory.CreateDirectory(modpath + @"\Mod\SoftwareTypes");
+
+                            System.IO.StreamWriter w = new System.IO.StreamWriter(modpath + @"\Mod\Readme.txt");
+
+                            w.WriteLine("~~~ MADE WITH SOFTINC MODDER FROM AMENSCH ~~~");
+                            w.WriteLine("~~~ A FREE PROGRAM TO MAKE MODS FOR SOFTWARE INC ~~~");
+                            w.WriteLine("~~~ FOR MORE INFOS AND DOWNLOADS VISIT: http://softwareinc.coredumping.com/forum/index.php?topic=323.0 ~~~");
+                            w.WriteLine("");
+                            w.WriteLine("");
+                            w.WriteLine("~~~ STAY TUNED FOR MORE UPDATES ~~~");
+
+                            w.Close();
+                        }
+                    }
+
+                    Properties.Settings.Default.Path = path.SelectedPath;
+                    MessageBox.Show(msgNewPath + Properties.Settings.Default.Path + @"\Mod", msgSuccessPath, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Properties.Settings.Default.Save();
+                    label_path.Text = Properties.Settings.Default.Path;
+                }
+            }
         }
     }
 }

@@ -53,7 +53,6 @@ namespace softwareInc_mod_exe
             }
 
             string modpath = Properties.Settings.Default.Path;
-            label_path.Text = modpath;
 
             DirectoryInfo ModHaupt = Directory.CreateDirectory(modpath + @"\Mod");
             DirectoryInfo UnterO1 = Directory.CreateDirectory(modpath + @"\Mod\Companies");
@@ -91,7 +90,8 @@ namespace softwareInc_mod_exe
             Properties.Settings.Default.Language = "fr";
             forms_choice forms_choice = new forms_choice();
             forms_choice.ShowInTaskbar = false;
-            forms_choice.ShowDialog();
+            forms_choice.ShowDialog(this);
+            
         }
 
         private void button_it_Click(object sender, EventArgs e)
@@ -106,12 +106,18 @@ namespace softwareInc_mod_exe
             forms_choice forms_choice = new forms_choice();
             forms_choice.ShowInTaskbar = false;
             forms_choice.ShowDialog();
+            this.Close();
         }
 
         private void button_de_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not implemented yet...");
             Properties.Settings.Default.Language = "de";
+        }
+
+        public void Main_Text(string a)
+        {
+            this.Text = a;
         }
     }
 }

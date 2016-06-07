@@ -34,8 +34,6 @@
             this.button_en = new System.Windows.Forms.Button();
             this.button_de = new System.Windows.Forms.Button();
             this.button_fr = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label_path = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -102,28 +100,6 @@
             this.button_fr.UseVisualStyleBackColor = true;
             this.button_fr.Click += new System.EventHandler(this.button_fr_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Mod path :";
-            // 
-            // label_path
-            // 
-            this.label_path.AutoSize = true;
-            this.label_path.BackColor = System.Drawing.Color.Transparent;
-            this.label_path.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_path.Location = new System.Drawing.Point(141, 22);
-            this.label_path.Name = "label_path";
-            this.label_path.Size = new System.Drawing.Size(106, 25);
-            this.label_path.TabIndex = 6;
-            this.label_path.Text = "%PATH%";
-            // 
             // start_screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,8 +107,6 @@
             this.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources._2015_06_09_00001;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(817, 539);
-            this.Controls.Add(this.label_path);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button_fr);
             this.Controls.Add(this.button_de);
             this.Controls.Add(this.button_en);
@@ -154,7 +128,5 @@
         private System.Windows.Forms.Button button_en;
         private System.Windows.Forms.Button button_de;
         private System.Windows.Forms.Button button_fr;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label_path;
     }
 }
