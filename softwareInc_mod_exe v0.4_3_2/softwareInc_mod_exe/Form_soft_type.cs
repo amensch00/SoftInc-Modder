@@ -99,7 +99,7 @@ namespace softwareInc_mod_exe
 
                 case "it": { break; }
                 case "de": { break; }
-                default: 
+                default: //When you make translation, PLEASE use these vars below (for MessageBoxes)
                     {
                         MsgEnterName = "Please enter a Name!";
                         MsgEnterDesc = "Please enter a Description!";
@@ -131,6 +131,8 @@ namespace softwareInc_mod_exe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            double z, f;
+            string z2, z3, f2, f3;
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -138,59 +140,59 @@ namespace softwareInc_mod_exe
             settings.NewLineOnAttributes = false;
             settings.ConformanceLevel = ConformanceLevel.Auto;
 
+
+            z = (double)trbar_random.Value / 10.0;
+            z2 = z.ToString();
+            z3 = z2.Replace(",", ".");
+
+            f = (double)trbar_popularity.Value / 10.0;
+            f2 = f.ToString();
+            f3 = f2.Replace(",", ".");
+
+            int result = CheckValidation();
+            if (result != -1) { Errorlog(result); return; } //If there's an error while checking all verification controls, this method will return the error on MessageBox.
+            
+
             using (XmlWriter xmlWriter = XmlWriter.Create(Properties.Settings.Default.Path + @"\Mod\SoftwareTypes\" + txtbox_softname.Text + ".xml", settings))
-            {                
-                xmlWriter.WriteStartElement("SoftwareType");
+            {
+                #region <SoftwareTypes></SoftwareTypes>
+                xmlWriter.WriteStartElement("SoftwareType"); // <SoftwareType>  
+                #endregion
 
-                if (txtbox_softname.Text == "")
-                {
-                    MessageBox.Show(MsgEnterName);
-                    txtbox_softname.Text = (MsgEnterName);
-                    return;
-                }
-                else
-                {
-                    xmlWriter.WriteElementString("Name", txtbox_softname.Text);
-                }
+                #region <Name></Name>
+                xmlWriter.WriteElementString("Name", txtbox_softname.Text); // <Name>txtbox_sotfname.Text</Name>
+                #endregion
 
-                if (rtxtbox_soft_descri.Text == "")
-                {   
-                    MessageBox.Show(MsgEnterDesc);
-                    rtxtbox_soft_descri.Text = (MsgEnterDesc);
-                    return;
-                }
-                else
-                {
-                    xmlWriter.WriteElementString("Description", rtxtbox_soft_descri.Text);
-                }   
+                #region <Description></Description>
+                xmlWriter.WriteElementString("Description", rtxtbox_soft_descri.Text); // <Description>rtxtbox_soft_descri.Text</Description>
+                #endregion
 
-                double z;
-                z = (double)trbar_random.Value / 10.0;
-                string z2, z3;
-                z2 = z.ToString();
-                z3 = z2.Replace(",", ".");
-                xmlWriter.WriteElementString("Random", z3);
+                #region <Random></Random>
+                xmlWriter.WriteElementString("Random", z3); // <Random>z3</Random>
+                #endregion
 
-                double f;
-                f = (double)trbar_popularity.Value / 10.0;
-                string f2, f3;
-                f2 = f.ToString();
-                f3 = f2.Replace(",", ".");
-                xmlWriter.WriteElementString("Popularity", f3);
+                #region <Popularity></Popularity>
+                xmlWriter.WriteElementString("Popularity", f3); // <Popularity>f3</Popularity>
+                #endregion
 
-                xmlWriter.WriteElementString("OSSpecific", WahrFalsch(checkBox_os.Checked));
-                xmlWriter.WriteElementString("OneClient", WahrFalsch(checkBox_inhouse.Checked));
-                xmlWriter.WriteElementString("InHouse", WahrFalsch(checkBox_client.Checked));
-                
-                if (txtbox_unlock.Text == "")
-                {
-                    xmlWriter.WriteElementString("Unlock", "1970");
-                }
-                else
-                {
-                    xmlWriter.WriteElementString("Unlock", txtbox_unlock.Text);
-                }                
+                #region <OSSpecific></OSSpecific>
+                xmlWriter.WriteElementString("OSSpecific", WahrFalsch(checkBox_os.Checked)); // <OSSpecific>checkbox_os.Checked</OSSpecific>
+                #endregion
 
+                #region <OneClient></OneClient>
+                xmlWriter.WriteElementString("OneClient", WahrFalsch(checkBox_client.Checked)); // <OneClient>checkbox_client.Checked</OneClient>
+                #endregion
+
+                #region <InHouse></InHouse>
+                xmlWriter.WriteElementString("InHouse", WahrFalsch(checkBox_inhouse.Checked)); // <InHouse>checkBox_inhouse.Checked</InHouse>
+                #endregion
+
+                #region <Unlock></Unlock>
+                if (txtbox_unlock.Text == "") xmlWriter.WriteElementString("Unlock", "1970"); // <Unlock>1970</Unlock>
+                else xmlWriter.WriteElementString("Unlock", txtbox_unlock.Text); // <Unlock>txtbox_unlock.Text</Unlock>      
+                #endregion
+
+                #region <NameGenerator></NameGenerator>
                 // ~~ NAMEGEN ~~
                 if (txtbox_namegen.Text == "")
                 {
@@ -203,97 +205,86 @@ namespace softwareInc_mod_exe
 
                     w.Close();
 
-                    xmlWriter.WriteElementString("NameGenerator", "NameGen_1");
+                    xmlWriter.WriteElementString("NameGenerator", "NameGen_1"); // <NameGenerator>NameGen_1</NameGenerator>
                 }
-                else
-                {
-                    xmlWriter.WriteElementString("NameGenerator", txtbox_namegen.Text);
-                }
-                
+                else xmlWriter.WriteElementString("NameGenerator", txtbox_namegen.Text); // <NameGenerator>txtbox_namegen.Text</NameGenerator>
+                #endregion
+
                 //MessageBox.Show(comboBox1.SelectedText);
 
-                if (comboBox_category.Text == "")
-                {
-                    xmlWriter.WriteElementString("Category", "Software");
-                }
-                else
-                {
-                    xmlWriter.WriteElementString("Category", comboBox_category.Text);
-                }
+                #region <Category></Category>
+                if (comboBox_category.Text == "") xmlWriter.WriteElementString("Category", "Software"); // <Category>Software</Category>
+                else xmlWriter.WriteElementString("Category", comboBox_category.Text); // <Category>comboBox_category.Text</Category>
+                #endregion
 
-                if (anzahlKomponenten > 0)
+                #region <Needs></Needs>
+                xmlWriter.WriteStartElement("Needs"); // <Needs>               
+                for (int x = 0; x < anzahlKomponenten; x = x + 1)
                 {
-                    xmlWriter.WriteStartElement("Needs");               
-                    for (int x = 0; x < anzahlKomponenten; x = x + 1)
+                    #region <Name></Name>
+                    xmlWriter.WriteElementString("Name", komponenten[x]); // <Name> komponenten[x] </Name>
+                    #endregion
+                }
+                xmlWriter.WriteEndElement(); // </Needs>
+                #endregion
+
+                #region <Features></Features>
+                xmlWriter.WriteStartElement("Features"); // <Features>
+                bool istDependeny = false;
+                for (int x = 0; x < anzahlFeature; x = x + 1)
+                {
+                    #region <Feature Forced=bool></Feature>
+                    string a = feature[x];
+                    string[] teile = a.Split('#');
+                    xmlWriter.WriteStartElement("Feature"); // <Feature>
+                    xmlWriter.WriteAttributeString("Forced", Attr1[x].ToString()); // <Feature Forced=Attr1[x]>
+
+                    foreach (string teil in teile)
                     {
-                            xmlWriter.WriteElementString("Name", komponenten[x]);
-                    }
-                    xmlWriter.WriteEndElement();
-                }
-                else
-                {
-                    MessageBox.Show(MsgEnterNeed);
-                    return;
-                }
-
-                if (anzahlFeature > 0)
-                {
-                    xmlWriter.WriteStartElement("Features");
-                    bool istDependeny = false;
-                    for (int x = 0; x < anzahlFeature; x = x + 1)
-                    {
-                        string a = feature[x];
-                        string[] teile = a.Split('#');
-                        xmlWriter.WriteStartElement("Feature");
-                        xmlWriter.WriteAttributeString("Forced", Attr1[x].ToString());
-
-                        foreach (string teil in teile)
+                        string[] teile2 = teil.Split(';');
+                        if (teile2[0] != "")
                         {
-                            string[] teile2 = teil.Split(';');
-                            if (teile2[0] != "")
+                            #region <Dependencies></Dependencies>
+                            if (teile2[0] == "Dependency")
                             {
-
-                                if (teile2[0] == "Dependency")
+                                
+                                if (istDependeny == false)
                                 {
-                                    if (istDependeny == false)
-                                    {
-                                        xmlWriter.WriteStartElement("Dependencies");
-                                        istDependeny = true;
-                                    }
-
-                                    string[] teile3 = teile2[1].Split('>');
-
-                                    xmlWriter.WriteStartElement(teile2[0]);
-                                    xmlWriter.WriteAttributeString("Software", teile3[0]);
-                                    xmlWriter.WriteString(teile3[1]);
-                                    xmlWriter.WriteEndElement();
+                                    xmlWriter.WriteStartElement("Dependencies"); // <Dependencies>
+                                    istDependeny = true;
                                 }
-                                else
-                                {
-                                    if (istDependeny == true)
-                                    {
-                                        xmlWriter.WriteEndElement();
-                                        istDependeny = false;
-                                    }
-                                    xmlWriter.WriteElementString(teile2[0], teile2[1]);
-                                }
+
+                                #region <Dependency Sotfware=name></Dependency>
+                                string[] teile3 = teile2[1].Split('>');
+                                xmlWriter.WriteStartElement(teile2[0]); // <Dependency>
+                                xmlWriter.WriteAttributeString("Software", teile3[0]); // <Dependency Software=teile3[0]>
+                                xmlWriter.WriteString(teile3[1]); // teile3[1]
+                                xmlWriter.WriteEndElement(); // </Dependency>
+                                #endregion
                             }
+                            else
+                            {
+                                if (istDependeny == true)
+                                {
+                                    xmlWriter.WriteEndElement(); // </Dependencies>
+                                    istDependeny = false;
+                                }
+                                xmlWriter.WriteElementString(teile2[0], teile2[1]);
+                            }
+                            #endregion
                         }
-                        if (istDependeny == true)
-                        {
-                            xmlWriter.WriteEndElement();
-                            istDependeny = false;
-                        }
-                        xmlWriter.WriteEndElement();
                     }
-
-                    xmlWriter.WriteEndElement();
+                    if (istDependeny == true)
+                    {
+                        xmlWriter.WriteEndElement(); // <Dependencies />
+                        istDependeny = false;
+                    }
+                    xmlWriter.WriteEndElement(); // </Feature>
+                    #endregion
                 }
-                else
-                {
-                    MessageBox.Show(MsgEnterFeature);
-                    return;
-                }
+                
+                xmlWriter.WriteEndElement(); // </Features>
+                #endregion
 
                 xmlWriter.Flush();
                 xmlWriter.Close();
@@ -331,7 +322,51 @@ namespace softwareInc_mod_exe
             anzahlFeature = anzahlFeature + 1;
         }
 
-       
+        #region Methods
+        public int CheckValidation() //Check validation of all verification controls (empty textboxes etc...)
+        {
+            if (txtbox_softname.Text == "") return 1;
+            if (rtxtbox_soft_descri.Text == "") return 2;
+            if (anzahlKomponenten <= 0) return 3;
+            if (anzahlFeature <= 0) return 4;
+            return -1; //return -1 if everything is ok
+        }
+
+        public void Errorlog(int a)
+        {
+            switch (a)
+            {
+                case 1:
+                    {
+                        MessageBox.Show(MsgEnterName);
+                        txtbox_softname.Text = (MsgEnterName);
+                        break;
+                    }
+                case 2:
+                    {
+                        MessageBox.Show(MsgEnterDesc);
+                        rtxtbox_soft_descri.Text = (MsgEnterDesc);
+                        break;
+                    }
+
+                case 3:
+                    {
+                        MessageBox.Show(MsgEnterNeed);
+                        break;
+                    }
+                case 4:
+                    {
+                        MessageBox.Show(MsgEnterFeature);
+                        break;
+                    }
+            }
+
+
+        }
+
+        #endregion
+
+
     }
 }
 
