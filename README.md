@@ -13,5 +13,5 @@ Files for my SoftInc Modder
 
 # Future updates
 
-- Convert Features into Classes (for more understanding)
+- Convert Features into objects (for more understanding)
 - Additionnal window on Form_soft_type.cs to see current features for this software type.
