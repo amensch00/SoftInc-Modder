@@ -103,6 +103,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(217, 29);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label_description
             // 
@@ -122,6 +124,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(297, 66);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // trackBar1
             // 
@@ -261,9 +265,9 @@
             this.label_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_from.Location = new System.Drawing.Point(448, 18);
             this.label_from.Name = "label_from";
-            this.label_from.Size = new System.Drawing.Size(50, 20);
+            this.label_from.Size = new System.Drawing.Size(188, 20);
             this.label_from.TabIndex = 24;
-            this.label_from.Text = "From";
+            this.label_from.Text = "From (Parent Feature)";
             // 
             // comboBox1
             // 
