@@ -11,7 +11,7 @@ Files for my SoftInc Modder
 
 
 
-# Future updates (0.4.4.5)
+# Future updates
 
 - Convert Features into objects (for more understanding)
 - Additionnal window on Form_soft_type.cs to see current features for this software type.
