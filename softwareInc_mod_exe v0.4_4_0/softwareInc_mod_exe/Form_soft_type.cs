@@ -37,6 +37,8 @@ namespace softwareInc_mod_exe
         bool[] Attr1 = new bool[50];
         string userName = Environment.UserName;
 
+        List<classes.class_Feature> features;
+
         // Strings for MessagBoxes
 
         string
@@ -52,6 +54,7 @@ namespace softwareInc_mod_exe
 
         public Form_soft_type()
         {
+            features = new List<classes.class_Feature>();
             InitializeComponent();
         }
 
@@ -120,7 +123,7 @@ namespace softwareInc_mod_exe
 
         private void button3_Click(object sender, EventArgs e)
         {
-            feature_form feature_form = new feature_form();
+            feature_form feature_form = new feature_form(features, this);
             Settings_ frm_settings = new Settings_();
             feature_form.Starten(this, frm_settings, ShowHelp);
             feature_form.ShowInTaskbar = false;
@@ -218,7 +221,35 @@ namespace softwareInc_mod_exe
                 #region <Features></Features>
                 xmlWriter.WriteStartElement("Features"); // <Features>
                 bool istDependeny = false;
-                for (int x = 0; x < anzahlFeature; x = x + 1)
+
+                foreach (classes.class_Feature i in features)
+                {
+                    xmlWriter.WriteStartElement("Feature");
+                    xmlWriter.WriteAttributeString("Vital", i.Forced.ToString());
+
+                    xmlWriter.WriteElementString("Name", i.Name);
+                    xmlWriter.WriteElementString("Description", i.Description);
+                    xmlWriter.WriteElementString("DevTime", i.Devtime);
+                    xmlWriter.WriteElementString("CodeArt", i.Codeart);
+                    xmlWriter.WriteElementString("Innovation", i.Innovation);
+                    xmlWriter.WriteElementString("Usability", i.Usability);
+                    xmlWriter.WriteElementString("Stability", i.Stability);
+
+
+                    // NEED A FIX, COMPILER DIDN'T LIKE WRITEATTRIBUTESTRING on WRITeELEMENTSTRING
+                    /*foreach (string b in i.Dependencies) 
+                    {
+                        string[] depend = b.Split('>');
+                        xmlWriter.WriteElementString("Dependency", depend[1]);
+                        xmlWriter.WriteAttributeString("Software", depend[0]);
+                        xmlWriter.WriteEndElement();
+
+                    }*/
+                    xmlWriter.WriteEndElement();
+                }
+                
+                #region old code
+                /*for (int x = 0; x < anzahlFeature; x = x + 1)
                 {
                     #region <Feature Forced=bool></Feature>
                     string a = feature[x];
@@ -268,8 +299,9 @@ namespace softwareInc_mod_exe
                     }
                     xmlWriter.WriteEndElement(); // </Feature>
                     #endregion
-                }
-                
+                }*/
+                #endregion
+
                 xmlWriter.WriteEndElement(); // </Features>
                 #endregion
 
@@ -314,7 +346,8 @@ namespace softwareInc_mod_exe
             if (txtbox_softname.Text == "") return 1;
             if (rtxtbox_soft_descri.Text == "") return 2;
             //if (anzahlKomponenten <= 0) return 3;
-            if (anzahlFeature <= 0) return 4;
+            //old code if (anzahlFeature <= 0) return 4;
+            if (features.Count <= 0) return 4;
             return -1; //return -1 if everything is ok
         }
 
@@ -347,10 +380,20 @@ namespace softwareInc_mod_exe
                     }
             }
 
-
         }
 
         #endregion
+
+        private void button_refresh_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
+
+        public void UpdateGrid()
+        {
+            dataGridView_features.Rows.Clear();
+            foreach (classes.class_Feature i in features) dataGridView_features.Rows.Add(i.Name);
+        }
 
 
     }

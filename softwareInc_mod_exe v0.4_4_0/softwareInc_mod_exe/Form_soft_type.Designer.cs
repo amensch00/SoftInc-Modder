@@ -60,10 +60,14 @@
             this.trbar_iterative = new System.Windows.Forms.TrackBar();
             this.lab_retention = new System.Windows.Forms.Label();
             this.trbar_retention = new System.Windows.Forms.TrackBar();
+            this.dataGridView_features = new System.Windows.Forms.DataGridView();
+            this.button_refresh = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.trbar_random)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbar_popularity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbar_iterative)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbar_retention)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_features)).BeginInit();
             this.SuspendLayout();
             // 
             // bttn_modCreate
@@ -375,11 +379,43 @@
             this.trbar_retention.TabIndex = 33;
             this.trbar_retention.Value = 1;
             // 
+            // dataGridView_features
+            // 
+            this.dataGridView_features.AllowUserToAddRows = false;
+            this.dataGridView_features.AllowUserToDeleteRows = false;
+            this.dataGridView_features.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_features.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id});
+            this.dataGridView_features.Location = new System.Drawing.Point(488, 149);
+            this.dataGridView_features.Name = "dataGridView_features";
+            this.dataGridView_features.ReadOnly = true;
+            this.dataGridView_features.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_features.Size = new System.Drawing.Size(280, 150);
+            this.dataGridView_features.TabIndex = 41;
+            // 
+            // button_refresh
+            // 
+            this.button_refresh.Location = new System.Drawing.Point(390, 265);
+            this.button_refresh.Name = "button_refresh";
+            this.button_refresh.Size = new System.Drawing.Size(75, 23);
+            this.button_refresh.TabIndex = 42;
+            this.button_refresh.Text = "Refresh";
+            this.button_refresh.UseVisualStyleBackColor = true;
+            this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
             // Form_soft_type
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 517);
+            this.Controls.Add(this.button_refresh);
+            this.Controls.Add(this.dataGridView_features);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -419,6 +455,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trbar_popularity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbar_iterative)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbar_retention)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_features)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,6 +494,9 @@
         private System.Windows.Forms.TrackBar trbar_iterative;
         private System.Windows.Forms.Label lab_retention;
         private System.Windows.Forms.TrackBar trbar_retention;
+        private System.Windows.Forms.DataGridView dataGridView_features;
+        private System.Windows.Forms.Button button_refresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }
 

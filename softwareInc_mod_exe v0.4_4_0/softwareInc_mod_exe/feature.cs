@@ -32,17 +32,23 @@ namespace softwareInc_mod_exe
     {
         Form_soft_type vater;
         Settings_ m_vater;
-        Boolean m_showhelp; 
+        Boolean m_showhelp;
+
+        Form_soft_type owner;
 
         //string[] Dependencies = new string[100];
         int anzahlDependencies = 0;
 
-        List<string> Dependencies;
+        List<classes.class_Feature> feature;
+        List<string> dependencies;
         
-        public feature_form()
+        public feature_form(List<classes.class_Feature> a, Form_soft_type own)
         {
-            Dependencies = new List<string>();
+            dependencies = new List<string>();
+            feature = new List<classes.class_Feature>();
+            feature = a;
             InitializeComponent();
+            owner = own;
         }
 
         private void feature_form_Load(object sender, EventArgs e)
@@ -109,8 +115,11 @@ namespace softwareInc_mod_exe
 
             bool forced = radioButton_forced.Checked;
 
-            classes.class_Feature Feature = new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, Dependencies);
+            feature.Add(new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, dependencies));
 
+            owner.Refresh();
+            owner.UpdateGrid();
+            MessageBox.Show(""+feature.Count);
             #region old code
             // Servers will be available soon
 
@@ -195,7 +204,7 @@ namespace softwareInc_mod_exe
             else
             {
                 MessageBox.Show("Dependency added!");
-                Dependencies.Add(comboBox_depend.SelectedItem.ToString());
+                dependencies.Add(comboBox_depend.SelectedItem.ToString());
                 //Dependencies[anzahlDependencies] = comboBox_depend.SelectedItem.ToString();
                 //anzahlDependencies++;
             }
