@@ -42,10 +42,7 @@
             this.label_year = new System.Windows.Forms.Label();
             this.label_category = new System.Windows.Forms.Label();
             this.comboBox_category = new System.Windows.Forms.ComboBox();
-            this.comboBox_needs = new System.Windows.Forms.ComboBox();
-            this.label_needs = new System.Windows.Forms.Label();
             this.bttn_nFeature = new System.Windows.Forms.Button();
-            this.button_add = new System.Windows.Forms.Button();
             this.txtbox_namegen = new System.Windows.Forms.TextBox();
             this.label_namegen = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -175,7 +172,7 @@
             // 
             this.label_category.AutoSize = true;
             this.label_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_category.Location = new System.Drawing.Point(589, 190);
+            this.label_category.Location = new System.Drawing.Point(346, 220);
             this.label_category.Name = "label_category";
             this.label_category.Size = new System.Drawing.Size(93, 24);
             this.label_category.TabIndex = 15;
@@ -191,58 +188,21 @@
             "Digital-Forensic",
             "Web",
             ""});
-            this.comboBox_category.Location = new System.Drawing.Point(594, 220);
+            this.comboBox_category.Location = new System.Drawing.Point(461, 220);
             this.comboBox_category.Name = "comboBox_category";
             this.comboBox_category.Size = new System.Drawing.Size(160, 28);
             this.comboBox_category.TabIndex = 11;
             // 
-            // comboBox_needs
-            // 
-            this.comboBox_needs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_needs.FormattingEnabled = true;
-            this.comboBox_needs.Items.AddRange(new object[] {
-            "Visual Tool",
-            "Audio Tool",
-            "Operating System",
-            "Text Editor",
-            "Browser",
-            "Video Player"});
-            this.comboBox_needs.Location = new System.Drawing.Point(350, 220);
-            this.comboBox_needs.Name = "comboBox_needs";
-            this.comboBox_needs.Size = new System.Drawing.Size(160, 28);
-            this.comboBox_needs.TabIndex = 10;
-            // 
-            // label_needs
-            // 
-            this.label_needs.AutoSize = true;
-            this.label_needs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_needs.Location = new System.Drawing.Point(345, 190);
-            this.label_needs.Name = "label_needs";
-            this.label_needs.Size = new System.Drawing.Size(71, 24);
-            this.label_needs.TabIndex = 18;
-            this.label_needs.Text = "Needs";
-            // 
             // bttn_nFeature
             // 
             this.bttn_nFeature.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttn_nFeature.Location = new System.Drawing.Point(350, 306);
+            this.bttn_nFeature.Location = new System.Drawing.Point(354, 305);
             this.bttn_nFeature.Name = "bttn_nFeature";
             this.bttn_nFeature.Size = new System.Drawing.Size(416, 70);
             this.bttn_nFeature.TabIndex = 12;
             this.bttn_nFeature.Text = "Create new feature";
             this.bttn_nFeature.UseVisualStyleBackColor = true;
             this.bttn_nFeature.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button_add
-            // 
-            this.button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_add.Location = new System.Drawing.Point(350, 257);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(160, 35);
-            this.button_add.TabIndex = 23;
-            this.button_add.Text = "Add Needed";
-            this.button_add.UseVisualStyleBackColor = true;
-            this.button_add.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtbox_namegen
             // 
@@ -437,10 +397,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label_namegen);
             this.Controls.Add(this.txtbox_namegen);
-            this.Controls.Add(this.button_add);
             this.Controls.Add(this.bttn_nFeature);
-            this.Controls.Add(this.comboBox_needs);
-            this.Controls.Add(this.label_needs);
             this.Controls.Add(this.comboBox_category);
             this.Controls.Add(this.label_category);
             this.Controls.Add(this.label_year);
@@ -482,10 +439,7 @@
         private System.Windows.Forms.Label label_year;
         private System.Windows.Forms.Label label_category;
         private System.Windows.Forms.ComboBox comboBox_category;
-        private System.Windows.Forms.Label label_needs;
-        private System.Windows.Forms.ComboBox comboBox_needs;
         private System.Windows.Forms.Button bttn_nFeature;
-        private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.TextBox txtbox_namegen;
         private System.Windows.Forms.Label label_namegen;
         private System.Windows.Forms.Label label9;

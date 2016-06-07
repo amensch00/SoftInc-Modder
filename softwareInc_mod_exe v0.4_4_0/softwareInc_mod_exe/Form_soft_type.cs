@@ -78,7 +78,6 @@ namespace softwareInc_mod_exe
                     checkBox_os.Text = "Dépend d'un OS";
                     checkBox_client.Text = "Un client";
                     checkBox_inhouse.Text = "Usage interne";
-                    label_needs.Text = "Besoins";
 
                     /*comboBox_needs.Items.Clear();
                     comboBox_category.Items.Clear();
@@ -90,7 +89,6 @@ namespace softwareInc_mod_exe
                     foreach (string item in items_cat) comboBox_category.Items.Add(item);*/
 
                     label_category.Text = "Catégorie";
-                    button_add.Text = "Ajouter";
                     bttn_nFeature.Text = "Ajouter une fonctionnalité";
                     bttn_modCreate.Text = "Créer le mod";
                   
@@ -217,17 +215,6 @@ namespace softwareInc_mod_exe
                 else xmlWriter.WriteElementString("Category", comboBox_category.Text); // <Category>comboBox_category.Text</Category>
                 #endregion
 
-                #region <Needs></Needs>
-                xmlWriter.WriteStartElement("Needs"); // <Needs>               
-                for (int x = 0; x < anzahlKomponenten; x = x + 1)
-                {
-                    #region <Name></Name>
-                    xmlWriter.WriteElementString("Name", komponenten[x]); // <Name> komponenten[x] </Name>
-                    #endregion
-                }
-                xmlWriter.WriteEndElement(); // </Needs>
-                #endregion
-
                 #region <Features></Features>
                 xmlWriter.WriteStartElement("Features"); // <Features>
                 bool istDependeny = false;
@@ -311,7 +298,6 @@ namespace softwareInc_mod_exe
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show(MsgNeedsAdded);
-            komponenten[anzahlKomponenten] = comboBox_needs.Text;
             anzahlKomponenten = anzahlKomponenten + 1;
         }
 

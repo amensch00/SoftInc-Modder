@@ -59,7 +59,7 @@
             this.button_check.TabIndex = 9;
             this.button_check.Text = "Check for updates";
             this.button_check.UseVisualStyleBackColor = true;
-            this.button_check.Click += new System.EventHandler(this.button1_Click);
+            this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
             // button_path
             // 

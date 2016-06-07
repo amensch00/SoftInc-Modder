@@ -94,7 +94,7 @@ namespace softwareInc_mod_exe
             checkBox_tutorial.Checked = ShowHelp;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_check_Click(object sender, EventArgs e)
         {
             string newVersion = null;
             string xmlURL = @".\xml.xml";
@@ -102,7 +102,7 @@ namespace softwareInc_mod_exe
             string url = "";
             XmlTextReader reader = new XmlTextReader(xmlURL);
             try
-            {       
+            {
                 reader.MoveToContent();
                 string elementName = "";
                 if ((reader.NodeType == XmlNodeType.Element) &&
@@ -154,7 +154,7 @@ namespace softwareInc_mod_exe
             //}
             //else
             //{
-                
+
             //}
         }
 
