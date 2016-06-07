@@ -172,7 +172,7 @@
             // 
             this.label_category.AutoSize = true;
             this.label_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_category.Location = new System.Drawing.Point(346, 220);
+            this.label_category.Location = new System.Drawing.Point(350, 184);
             this.label_category.Name = "label_category";
             this.label_category.Size = new System.Drawing.Size(93, 24);
             this.label_category.TabIndex = 15;
@@ -188,7 +188,7 @@
             "Digital-Forensic",
             "Web",
             ""});
-            this.comboBox_category.Location = new System.Drawing.Point(461, 220);
+            this.comboBox_category.Location = new System.Drawing.Point(322, 220);
             this.comboBox_category.Name = "comboBox_category";
             this.comboBox_category.Size = new System.Drawing.Size(160, 28);
             this.comboBox_category.TabIndex = 11;
