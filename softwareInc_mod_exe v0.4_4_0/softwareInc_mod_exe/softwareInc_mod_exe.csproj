@@ -135,6 +135,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\class_Feature.cs" />
     <Compile Include="companies.cs">
       <SubType>Form</SubType>
     </Compile>

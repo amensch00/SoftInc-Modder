@@ -24,6 +24,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace softwareInc_mod_exe
 {
     public partial class feature_form : Form
@@ -32,11 +34,14 @@ namespace softwareInc_mod_exe
         Settings_ m_vater;
         Boolean m_showhelp; 
 
-        string[] Dependencies = new string[100];
+        //string[] Dependencies = new string[100];
         int anzahlDependencies = 0;
+
+        List<string> Dependencies;
         
         public feature_form()
         {
+            Dependencies = new List<string>();
             InitializeComponent();
         }
 
@@ -92,7 +97,25 @@ namespace softwareInc_mod_exe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String erg = "";
+            string
+                name = textBox_name.Text,
+                desc = textBox_desc.Text,
+                dev = ConvertTrackBarValue(trackBar1.Value),
+                art = ConvertTrackBarValue(trackBar5.Value),
+                inno = ConvertTrackBarValue(trackBar2.Value),
+                usa = ConvertTrackBarValue(trackBar3.Value),
+                sta = ConvertTrackBarValue(trackBar4.Value),
+                from = "nothing";
+
+            bool forced = radioButton_forced.Checked;
+
+            classes.class_Feature Feature = new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, Dependencies);
+
+            #region old code
+            // Servers will be available soon
+
+
+            /*String erg = "";
             erg = erg + "Name;";
             erg = erg + textBox2.Text + "#";
 
@@ -102,13 +125,21 @@ namespace softwareInc_mod_exe
                 erg = erg + textBox1.Text + "#";
             }
 
-            double f;
-            f = (double)trackBar1.Value;
+            double f; // f = 2
+            f = (double)trackBar1.Value; // f = double(2)
             string f2, f3;
-            f2 = f.ToString();
-            f3 = f2.Replace(",", ".");
+            f2 = f.ToString(); // f2 = "2"
+            f3 = f2.Replace(",", "."); // f3 = 
             erg = erg + "DevTime;";
             erg = erg + f3 + "#";
+         
+            double ze;
+            ze = (double)trackBar5.Value / 10.0;
+            string ze2, ze3;
+            ze2 = ze.ToString();
+            ze3 = ze2.Replace(",", ".");
+            erg = erg + "CodeArt;";
+            erg = erg + ze3 + "#";
 
             double es;
             es = (double)trackBar2.Value / 10.0;
@@ -134,14 +165,6 @@ namespace softwareInc_mod_exe
             erg = erg + "Stability;";
             erg = erg + q3 + "#";
 
-            double ze;
-            ze = (double)trackBar5.Value / 10.0;
-            string ze2, ze3;
-            ze2 = ze.ToString();
-            ze3 = ze2.Replace(",", ".");
-            erg = erg + "CodeArt;";
-            erg = erg + ze3 + "#";
-
             string r;
             r = textBox3.Text;
             string r2, r3;
@@ -157,21 +180,24 @@ namespace softwareInc_mod_exe
                 erg = erg + Dependencies[n] + "#";
             }
 
-            vater.ErstelleFeature(erg, radioButton_forced.Checked);
+            vater.ErstelleFeature(erg, radioButton_forced.Checked);*/
+            #endregion
+
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox2.Text == "")
+            if (comboBox_depend.Text == "")
             {
                 MessageBox.Show("Please choose a dependency!");
             }
             else
             {
                 MessageBox.Show("Dependency added!");
-                Dependencies[anzahlDependencies] = comboBox2.SelectedItem.ToString();
-                anzahlDependencies = anzahlDependencies + 1;
+                Dependencies.Add(comboBox_depend.SelectedItem.ToString());
+                //Dependencies[anzahlDependencies] = comboBox_depend.SelectedItem.ToString();
+                //anzahlDependencies++;
             }
         }
 
@@ -197,12 +223,26 @@ namespace softwareInc_mod_exe
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text.Contains('>') || textBox1.Text.Contains('<')) textBox1.Text = "";
+            if (textBox_desc.Text.Contains('>') || textBox_desc.Text.Contains('<')) textBox_desc.Text = "";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            MessageBox.Show(trackBar1.Value.ToString());
+        }
+
+        private string ConvertTrackBarValue(int track)
+        {
+            double ze;
+            ze = (double)track / 10.0;
+            string ze2, ze3;
+            ze2 = ze.ToString();
+            return ze3 = ze2.Replace(",", ".");
         }
     }
 }

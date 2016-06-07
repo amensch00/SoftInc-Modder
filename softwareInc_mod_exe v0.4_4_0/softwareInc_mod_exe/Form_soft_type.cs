@@ -313,7 +313,7 @@ namespace softwareInc_mod_exe
         {
             if (txtbox_softname.Text == "") return 1;
             if (rtxtbox_soft_descri.Text == "") return 2;
-            if (anzahlKomponenten <= 0) return 3;
+            //if (anzahlKomponenten <= 0) return 3;
             if (anzahlFeature <= 0) return 4;
             return -1; //return -1 if everything is ok
         }
