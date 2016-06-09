@@ -237,14 +237,16 @@ namespace softwareInc_mod_exe
 
 
                     // NEED A FIX, COMPILER DIDN'T LIKE WRITEATTRIBUTESTRING on WRITeELEMENTSTRING
-                    /*foreach (string b in i.Dependencies) 
+                    foreach (string b in i.Dependencies) 
                     {
                         string[] depend = b.Split('>');
-                        xmlWriter.WriteElementString("Dependency", depend[1]);
+
+                        xmlWriter.WriteStartElement("Dependency");
                         xmlWriter.WriteAttributeString("Software", depend[0]);
+                        xmlWriter.WriteString(depend[1]);
                         xmlWriter.WriteEndElement();
 
-                    }*/
+                    }
                     xmlWriter.WriteEndElement();
                 }
                 
