@@ -34,6 +34,8 @@
             this.button_en = new System.Windows.Forms.Button();
             this.button_de = new System.Windows.Forms.Button();
             this.button_fr = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_version = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +102,28 @@
             this.button_fr.UseVisualStyleBackColor = true;
             this.button_fr.Click += new System.EventHandler(this.button_fr_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Version :";
+            // 
+            // label_version
+            // 
+            this.label_version.AutoSize = true;
+            this.label_version.BackColor = System.Drawing.Color.Transparent;
+            this.label_version.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_version.Location = new System.Drawing.Point(93, 20);
+            this.label_version.Name = "label_version";
+            this.label_version.Size = new System.Drawing.Size(11, 13);
+            this.label_version.TabIndex = 6;
+            this.label_version.Text = "-";
+            // 
             // start_screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +131,8 @@
             this.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources._2015_06_09_00001;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(817, 539);
+            this.Controls.Add(this.label_version);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button_fr);
             this.Controls.Add(this.button_de);
             this.Controls.Add(this.button_en);
@@ -128,5 +154,7 @@
         private System.Windows.Forms.Button button_en;
         private System.Windows.Forms.Button button_de;
         private System.Windows.Forms.Button button_fr;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_version;
     }
 }

@@ -25,6 +25,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
+using System.Net;
 
 namespace softwareInc_mod_exe
 {
@@ -96,7 +97,40 @@ namespace softwareInc_mod_exe
 
         private void button_check_Click(object sender, EventArgs e)
         {
-            string newVersion = null;
+            // WIP (Squalalah)
+
+            /*
+            WebClient web = new WebClient();
+            String text;
+            System.IO.Stream stream = web.OpenRead("http://www.lol.com");
+            using (System.IO.StreamReader reader = new System.IO.StreamReader(stream))
+            {
+                text = reader.ReadToEnd();
+            }
+
+            string[] versionstext = text.Split('.');
+            string[] versionsApp = Properties.Settings.Default.Version.Split('.');
+
+            int[] versions = new int[4];
+            int[] versionsapp = new int[4];
+
+            for (int i = 0; i < versionstext.Length; i++)
+            {
+                versions[i] = Convert.ToInt32(versionstext[i]);
+                versionsapp[i] = Convert.ToInt32(versionsApp[i]);
+            }
+
+            if (CheckUpdate(versions, versionsapp))
+            {
+                if (MessageBox.Show("Update available, do you want to download it ?", "New update !", 
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    
+                }
+            }*/
+
+            #region old code
+            /*string newVersion = null;
             string xmlURL = @".\xml.xml";
             string oldVersion = "0.04";
             string url = "";
@@ -155,7 +189,8 @@ namespace softwareInc_mod_exe
             //else
             //{
 
-            //}
+            //}*/
+            #endregion
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -210,6 +245,19 @@ namespace softwareInc_mod_exe
                     label_path.Text = Properties.Settings.Default.Path;
                 }
             }
+        }
+
+        private  bool CheckUpdate(int[] remote, int[] local)
+        {
+            // EX : remote = 5.4.2.0 , local = 0.4.4.0
+            if (remote[0] < local[0]) return false; // 5 > 0, on continue
+            if (remote[0] == local[0] && remote[1] < local[1]) return false; // si 5 =
+            if (remote[0] == local[0] && remote[1] == local[1] && remote[2] < local[2]) return false;
+            if (remote[0] == local[0] && remote[1] == local[1] && remote[2] == local[2] && remote[3] < local[3]) return false;
+            if (remote[0] == local[0] && remote[1] == local[1] && remote[2] == local[2] && remote[3] == local[3] && remote[4] < local[4]) return false;
+            if (remote[0] == local[0] && remote[1] == local[1] && remote[2] == local[2] && remote[3] == local[3] && remote[4] == local[4]) return false;
+
+            return true;
         }
     }
 }
