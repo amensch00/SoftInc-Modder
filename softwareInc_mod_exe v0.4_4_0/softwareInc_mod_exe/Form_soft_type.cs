@@ -132,8 +132,6 @@ namespace softwareInc_mod_exe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double z, f;
-            string z2, z3, f2, f3;
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -142,13 +140,8 @@ namespace softwareInc_mod_exe
             settings.ConformanceLevel = ConformanceLevel.Auto;
 
 
-            z = (double)trbar_random.Value / 10.0;
-            z2 = z.ToString();
-            z3 = z2.Replace(",", ".");
-
-            f = (double)trbar_popularity.Value / 10.0;
-            f2 = f.ToString();
-            f3 = f2.Replace(",", ".");
+            string z = ((double)trbar_random.Value / 10.0).ToString().Replace(',', '.');
+            string f = ((double)trbar_popularity.Value / 10.0).ToString().Replace(',','.');
 
             int result = CheckValidation();
             if (result != -1) { Errorlog(result); return; } //If there's an error while checking all verification controls, this method will return the error on MessageBox.
@@ -169,11 +162,11 @@ namespace softwareInc_mod_exe
                 #endregion
 
                 #region <Random></Random>
-                xmlWriter.WriteElementString("Random", z3); // <Random>z3</Random>
+                xmlWriter.WriteElementString("Random", z); // <Random>z3</Random>
                 #endregion
 
                 #region <Popularity></Popularity>
-                xmlWriter.WriteElementString("Popularity", f3); // <Popularity>f3</Popularity>
+                xmlWriter.WriteElementString("Popularity", f); // <Popularity>f3</Popularity>
                 #endregion
 
                 #region <OSSpecific></OSSpecific>
