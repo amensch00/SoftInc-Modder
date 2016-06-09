@@ -142,78 +142,7 @@ namespace softwareInc_mod_exe
                 owner.Refresh();
                 owner.UpdateGrid();
                 //MessageBox.Show("" + feature.Count); Dev debugging
-                #region old code
-                // Servers will be available soon
-
-
-                /*String erg = "";
-                erg = erg + "Name;";
-                erg = erg + textBox2.Text + "#";
-
-                if (textBox1.Text != "")
-                {
-                    erg = erg + "Description;";
-                    erg = erg + textBox1.Text + "#";
-                }
-
-                double f; // f = 2
-                f = (double)trackBar1.Value; // f = double(2)
-                string f2, f3;
-                f2 = f.ToString(); // f2 = "2"
-                f3 = f2.Replace(",", "."); // f3 = 
-                erg = erg + "DevTime;";
-                erg = erg + f3 + "#";
-         
-                double ze;
-                ze = (double)trackBar5.Value / 10.0;
-                string ze2, ze3;
-                ze2 = ze.ToString();
-                ze3 = ze2.Replace(",", ".");
-                erg = erg + "CodeArt;";
-                erg = erg + ze3 + "#";
-
-                double es;
-                es = (double)trackBar2.Value / 10.0;
-                string es2, es3;
-                es2 = es.ToString();
-                es3 = es2.Replace(",", ".");
-                erg = erg + "Innovation;";
-                erg = erg + es3 + "#";
-
-                double fs;
-                fs = (double)trackBar3.Value;
-                string fs2, fs3;
-                fs2 = fs.ToString();
-                fs3 = fs2.Replace(",", ".");
-                erg = erg + "Usability;";
-                erg = erg + fs3 + "#";
-
-                double q;
-                q = (double)trackBar4.Value / 10.0;
-                string q2, q3;
-                q2 = q.ToString();
-                q3 = q2.Replace(",", ".");
-                erg = erg + "Stability;";
-                erg = erg + q3 + "#";
-
-                string r;
-                r = textBox3.Text;
-                string r2, r3;
-                r2 = r.ToString();
-                r3 = r2.Replace(",", ".");
-                erg = erg + "Server;";
-                erg = erg + r3 + "#";
-
-
-                for (int n = 0; n < anzahlDependencies; n = n + 1)
-                {
-                    erg = erg + "Dependency;";
-                    erg = erg + Dependencies[n] + "#";
-                }
-
-                vater.ErstelleFeature(erg, radioButton_forced.Checked);*/
-                #endregion
-
+                
                 Close();
             }
             else Errorlog(result);
