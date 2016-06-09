@@ -141,7 +141,7 @@ namespace softwareInc_mod_exe
 
                 owner.Refresh();
                 owner.UpdateGrid();
-                MessageBox.Show("" + feature.Count);
+                //MessageBox.Show("" + feature.Count); Dev debugging
                 #region old code
                 // Servers will be available soon
 
