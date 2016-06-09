@@ -18,7 +18,7 @@ So, you MUST :
 
 1- create a website from a github repository (it's free, but this is a link like www.mykerbal.github.com but it doesn't matter)
 
-2- create a "version.txt" with only ONE line (the version, always x.x.x.x)
+2- create a "version.txt" with only ONE line (the version, always x.x.x.x) IN the website repository
 
 3- create a release on your SoftInc-Modder repository (pre-release if the first number of version is 0), and upload a .zip of your software (.zip called "SoftInc-modder-version" where version si the update version like 0.4.4.0)
 
