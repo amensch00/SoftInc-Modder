@@ -1,8 +1,15 @@
+#title
+{
+  font-size: 45px;
+  font-weight: bold; 
+}
+
 body
 {
   background-color: #9e9e9e;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  text-align: center;
 }
 
 .button
@@ -18,6 +25,7 @@ body
   border-radius: 15%;
   border: 2px solid #ffffff;
   transition-duration: 0.4s;
+  align-content: center;
 }
 
 .button:hover
