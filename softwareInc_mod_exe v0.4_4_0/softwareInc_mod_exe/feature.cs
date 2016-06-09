@@ -37,7 +37,6 @@ namespace softwareInc_mod_exe
         Form_soft_type owner;
 
         //string[] Dependencies = new string[100];
-        int anzahlDependencies = 0;
 
         List<classes.class_Feature> feature;
         List<string> dependencies;

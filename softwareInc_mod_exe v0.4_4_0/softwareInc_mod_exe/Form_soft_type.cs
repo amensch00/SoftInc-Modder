@@ -220,7 +220,6 @@ namespace softwareInc_mod_exe
 
                 #region <Features></Features>
                 xmlWriter.WriteStartElement("Features"); // <Features>
-                bool istDependeny = false;
 
                 foreach (classes.class_Feature i in features)
                 {
@@ -235,8 +234,6 @@ namespace softwareInc_mod_exe
                     xmlWriter.WriteElementString("Usability", i.Usability);
                     xmlWriter.WriteElementString("Stability", i.Stability);
 
-
-                    // NEED A FIX, COMPILER DIDN'T LIKE WRITEATTRIBUTESTRING on WRITeELEMENTSTRING
                     foreach (string b in i.Dependencies) 
                     {
                         string[] depend = b.Split('>');
@@ -249,60 +246,6 @@ namespace softwareInc_mod_exe
                     }
                     xmlWriter.WriteEndElement();
                 }
-                
-                #region old code
-                /*for (int x = 0; x < anzahlFeature; x = x + 1)
-                {
-                    #region <Feature Forced=bool></Feature>
-                    string a = feature[x];
-                    string[] teile = a.Split('#');
-                    xmlWriter.WriteStartElement("Feature"); // <Feature>
-                    xmlWriter.WriteAttributeString("Forced", Attr1[x].ToString()); // <Feature Forced=Attr1[x]>
-
-                    foreach (string teil in teile)
-                    {
-                        string[] teile2 = teil.Split(';');
-                        if (teile2[0] != "")
-                        {
-                            #region <Dependencies></Dependencies>
-                            if (teile2[0] == "Dependency")
-                            {
-                                
-                                if (istDependeny == false)
-                                {
-                                    xmlWriter.WriteStartElement("Dependencies"); // <Dependencies>
-                                    istDependeny = true;
-                                }
-
-                                #region <Dependency Sotfware=name></Dependency>
-                                string[] teile3 = teile2[1].Split('>');
-                                xmlWriter.WriteStartElement(teile2[0]); // <Dependency>
-                                xmlWriter.WriteAttributeString("Software", teile3[0]); // <Dependency Software=teile3[0]>
-                                xmlWriter.WriteString(teile3[1]); // teile3[1]
-                                xmlWriter.WriteEndElement(); // </Dependency>
-                                #endregion
-                            }
-                            else
-                            {
-                                if (istDependeny == true)
-                                {
-                                    xmlWriter.WriteEndElement(); // </Dependencies>
-                                    istDependeny = false;
-                                }
-                                xmlWriter.WriteElementString(teile2[0], teile2[1]);
-                            }
-                            #endregion
-                        }
-                    }
-                    if (istDependeny == true)
-                    {
-                        xmlWriter.WriteEndElement(); // <Dependencies />
-                        istDependeny = false;
-                    }
-                    xmlWriter.WriteEndElement(); // </Feature>
-                    #endregion
-                }*/
-                #endregion
 
                 xmlWriter.WriteEndElement(); // </Features>
                 #endregion
