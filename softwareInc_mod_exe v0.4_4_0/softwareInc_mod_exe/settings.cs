@@ -155,7 +155,7 @@ namespace softwareInc_mod_exe
                 }
                 else MessageBox.Show(msgErrorUpDate);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show(msgErrorDL);
             }

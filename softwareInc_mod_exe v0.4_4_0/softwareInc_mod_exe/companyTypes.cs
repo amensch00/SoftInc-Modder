@@ -31,9 +31,7 @@ namespace softwareInc_mod_exe
         string erg = "";
         string[] types = new string[100];
         string[] typesNumber = new string[100];
-        int anzahlTypes = 0;
         string[] erg1 = new string[100];
-        int erg1Anzahl = 0;
 
         List<string> softwares;
 

@@ -177,15 +177,15 @@ namespace softwareInc_mod_exe
                 #endregion
 
                 #region <OSSpecific></OSSpecific>
-                xmlWriter.WriteElementString("OSSpecific", WahrFalsch(checkBox_os.Checked)); // <OSSpecific>checkbox_os.Checked</OSSpecific>
+                xmlWriter.WriteElementString("OSSpecific", checkBox_os.Checked.ToString()); // <OSSpecific>checkbox_os.Checked</OSSpecific>
                 #endregion
 
                 #region <OneClient></OneClient>
-                xmlWriter.WriteElementString("OneClient", WahrFalsch(checkBox_client.Checked)); // <OneClient>checkbox_client.Checked</OneClient>
+                xmlWriter.WriteElementString("OneClient", checkBox_client.Checked.ToString()); // <OneClient>checkbox_client.Checked</OneClient>
                 #endregion
 
                 #region <InHouse></InHouse>
-                xmlWriter.WriteElementString("InHouse", WahrFalsch(checkBox_inhouse.Checked)); // <InHouse>checkBox_inhouse.Checked</InHouse>
+                xmlWriter.WriteElementString("InHouse", checkBox_inhouse.Checked.ToString()); // <InHouse>checkBox_inhouse.Checked</InHouse>
                 #endregion
 
                 #region <Unlock></Unlock>
@@ -211,8 +211,6 @@ namespace softwareInc_mod_exe
                 else xmlWriter.WriteElementString("NameGenerator", txtbox_namegen.Text); // <NameGenerator>txtbox_namegen.Text</NameGenerator>
                 #endregion
 
-                //MessageBox.Show(comboBox1.SelectedText);
-
                 #region <Category></Category>
                 if (comboBox_category.Text == "") xmlWriter.WriteElementString("Category", "Software"); // <Category>Software</Category>
                 else xmlWriter.WriteElementString("Category", comboBox_category.Text); // <Category>comboBox_category.Text</Category>
@@ -221,6 +219,7 @@ namespace softwareInc_mod_exe
                 #region <Features></Features>
                 xmlWriter.WriteStartElement("Features"); // <Features>
 
+                #region <feature></feature>
                 foreach (classes.class_Feature i in features)
                 {
                     xmlWriter.WriteStartElement("Feature");
@@ -234,6 +233,7 @@ namespace softwareInc_mod_exe
                     xmlWriter.WriteElementString("Usability", i.Usability);
                     xmlWriter.WriteElementString("Stability", i.Stability);
 
+                    #region <Dependency />
                     foreach (string b in i.Dependencies) 
                     {
                         string[] depend = b.Split('>');
@@ -245,7 +245,9 @@ namespace softwareInc_mod_exe
 
                     }
                     xmlWriter.WriteEndElement();
+                    #endregion
                 }
+                #endregion
 
                 xmlWriter.WriteEndElement(); // </Features>
                 #endregion
@@ -256,20 +258,6 @@ namespace softwareInc_mod_exe
                 MessageBox.Show(MsgSavedDirectory);
                 this.Close();
             }
-        }
-
-        private string WahrFalsch(bool wert)
-        {
-            string erg = "";
-            if (wert == true)
-            {
-                erg = "TRUE";
-            }
-            else
-            { 
-                erg = "FALSE";
-            }
-            return erg;
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -210,7 +210,7 @@
             // 
             // _hh
             // 
-            this._hh.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh.Location = new System.Drawing.Point(198, 203);
             this._hh.Name = "_hh";
