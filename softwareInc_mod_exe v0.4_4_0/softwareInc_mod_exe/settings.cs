@@ -228,7 +228,7 @@ namespace softwareInc_mod_exe
 
                             System.IO.StreamWriter w = new System.IO.StreamWriter(modpath + @"\Mod\Readme.txt");
 
-                            w.WriteLine("~~~ MADE WITH SOFTINC MODDER FROM AMENSCH ~~~");
+                            w.WriteLine("~~~ MADE WITH SOFTINC MODDER ~~~");
                             w.WriteLine("~~~ A FREE PROGRAM TO MAKE MODS FOR SOFTWARE INC ~~~");
                             w.WriteLine("~~~ FOR MORE INFOS AND DOWNLOADS VISIT: http://softwareinc.coredumping.com/forum/index.php?topic=323.0 ~~~");
                             w.WriteLine("");
