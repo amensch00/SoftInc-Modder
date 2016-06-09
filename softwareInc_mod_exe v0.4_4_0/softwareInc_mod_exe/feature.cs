@@ -159,8 +159,6 @@ namespace softwareInc_mod_exe
                 MessageBox.Show(MsgDependAdded);
                 dependencies.Add(comboBox_depend.SelectedItem.ToString());
                 comboBox_depend.Items.RemoveAt(comboBox_depend.SelectedIndex);
-                //Dependencies[anzahlDependencies] = comboBox_depend.SelectedItem.ToString();
-                //anzahlDependencies++;
             }
         }
 
