@@ -5,6 +5,7 @@ Files for my SoftInc Modder
 
 - Add DataGrid to show software's features.
 - User able to make Company Types, but not totally (<Force> and Category on <Type> is missing, WIP)
+- Revision of the XML creation code.
 
 # 0.4.4.1
 
