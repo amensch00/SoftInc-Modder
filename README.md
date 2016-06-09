@@ -8,7 +8,7 @@ Files for my SoftInc Modder
 - User able to make Company Types, but not totally (<Force> and Category on <Type> is missing, WIP)
 - Revision of the XML creation code.
 - User able to modify mod's path (Settings)
-- <Needs> deleted from Software Types, no longer available on v8.x
+- Needs deleted from Software Types, no longer available on v8.x
 
 # 0.4.4.1
 
