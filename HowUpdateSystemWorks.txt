@@ -16,7 +16,7 @@ http://www.github.com/mykerbal/SoftInc-Modder/releases/4.4.4.0/download/SoftInc-
 
 So, you MUST :
 
-1- create a website from a github repository (it's free, but this a link like www.mykerbal.github.com but it doesn't matter)
+1- create a website from a github repository (it's free, but this is a link like www.mykerbal.github.com but it doesn't matter)
 
 2- create a "version.txt" with only ONE line (the version, always x.x.x.x)
 
