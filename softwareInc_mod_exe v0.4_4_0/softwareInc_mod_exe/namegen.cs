@@ -166,15 +166,13 @@ namespace softwareInc_mod_exe
         private void button5_Click(object sender, EventArgs e)
         {
             endword.Add(textBox4.Text);
-            anzahlBase2 = anzahlBase2 + 1;
             textBox4.Text = "";
             textBox4.Focus();
         }
 
         private int CheckValidation()
         {
-
-
+            //Potential verifications to avoid user error's.
             return -1;
         }
     }
