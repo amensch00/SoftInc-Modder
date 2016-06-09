@@ -43,7 +43,11 @@ namespace softwareInc_mod_exe
 
         string
             MsgErrorName,
-            MsgErrorDesc;
+            MsgErrorDesc,
+            MsgServerTips,
+            MsgSelectDepend,
+            MsgDependAdded;
+
         
         public feature_form(List<classes.class_Feature> a, Form_soft_type own)
         {
@@ -87,7 +91,10 @@ namespace softwareInc_mod_exe
 
                         MsgErrorName = "Le nom de la fonctionnalité est vide !";
                         MsgErrorDesc = "La description de la fonctionnalité est vide !";
-          
+                        MsgServerTips = "Combien de méga bits par seconde cette fonctionnalité aura besoin pour chaque utilisateur. les MMOS consomment 0.002 mbps,ce qui équivaut à peu près à 5 gbps pour 1 million de joueur connecté en 2010.";
+                        MsgSelectDepend = "Veuillez choisir au moins une dépendance !";
+                        MsgDependAdded = "Dépendance ajoutée !";
+
                         break;
                     }
                 case "de": { break; }
@@ -96,6 +103,10 @@ namespace softwareInc_mod_exe
                     {
                         MsgErrorName = "Feature's name is empty !";
                         MsgErrorDesc = "Feature's description is empty !";
+                        MsgServerTips = "How many mbps this feature will need per active user. MMO uses 0.002, which would be around 5 gbps at any given time for a 1 million user game in 2010.";
+                        MsgSelectDepend = "Please choose a dependency!";
+                        MsgDependAdded = "Dependency added!";
+
                         break;
                     } //English
 
@@ -212,11 +223,11 @@ namespace softwareInc_mod_exe
         {
             if (comboBox_depend.Text == "")
             {
-                MessageBox.Show("Please choose a dependency!");
+                MessageBox.Show(MsgSelectDepend);
             }
             else
             {
-                MessageBox.Show("Dependency added!");
+                MessageBox.Show(MsgDependAdded);
                 dependencies.Add(comboBox_depend.SelectedItem.ToString());
                 comboBox_depend.Items.RemoveAt(comboBox_depend.SelectedIndex);
                 //Dependencies[anzahlDependencies] = comboBox_depend.SelectedItem.ToString();
@@ -226,7 +237,7 @@ namespace softwareInc_mod_exe
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("How many mbps this feature will need per active user. MMO uses 0.002, which would be around 5 gbps at any given time for a 1 million user game in 2010.");
+            MessageBox.Show(MsgServerTips);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
