@@ -32,6 +32,8 @@ namespace softwareInc_mod_exe
         string[] base1 = new string[100];
         int anzahlBase1 = 0;
         string[] base2 = new string[100];
+
+        List<string> prefix, baseword, endword;
         int anzahlBase2 = 0;
 
         // Strings for MessageBoxes
@@ -44,6 +46,9 @@ namespace softwareInc_mod_exe
         public namegen()
         {
             InitializeComponent();
+            prefix = new List<string>();
+            baseword = new List<string>();
+            endword = new List<string>();
         }
 
         private void namegen_Load(object sender, EventArgs e)
@@ -90,25 +95,52 @@ namespace softwareInc_mod_exe
 
             System.IO.StreamWriter w = new System.IO.StreamWriter(Properties.Settings.Default.Path + @"\Mod\NameGenerators\" + textBox1.Text + ".txt");
 
-            w.WriteLine("-start(base,pre)");
-            w.WriteLine("-pre(base)");
-            for (int x = 0; x < anzahlPrefixe; x = x + 1)
+            int check = CheckValidation();
+            if (check == -1)
             {
-                w.WriteLine(prefixe[x] + "-");
-            }
-            w.WriteLine("-base(base2)");
-            for (int x = 0; x < anzahlBase1; x = x + 1)
-            {
-                w.WriteLine(base1[x]);
-            }
-            w.WriteLine("-base2(stop)");
-            for (int x = 0; x < anzahlBase2; x = x + 1)
-            {
-                w.WriteLine(base2[x]);
-            }
 
-            w.Close();
-            MessageBox.Show(MsgDone);
+                w.WriteLine("-start(base,pre)");
+                w.WriteLine("-pre(base)");
+
+                foreach (string i in prefix)
+                {
+                    w.WriteLine(i + "-");
+                }
+
+                w.WriteLine("-base(base2)");
+
+                foreach (string i in baseword)
+                {
+                    w.WriteLine(baseword);
+                }
+
+                w.WriteLine("-base2(stop)");
+
+                foreach (string i in endword)
+                {
+                    w.WriteLine(endword);
+                }
+
+                #region old code
+                /*for (int x = 0; x < anzahlPrefixe; x = x + 1)
+                {
+                    w.WriteLine(prefixe[x] + "-");
+                }
+                w.WriteLine("-base(base2)");
+                for (int x = 0; x < anzahlBase1; x = x + 1)
+                {
+                    w.WriteLine(base1[x]);
+                }
+                w.WriteLine("-base2(stop)");
+                for (int x = 0; x < anzahlBase2; x = x + 1)
+                {
+                    w.WriteLine(base2[x]);
+                }*/
+                #endregion
+
+                w.Close();
+                MessageBox.Show(MsgDone);
+            }
 
         }
 
@@ -119,26 +151,31 @@ namespace softwareInc_mod_exe
 
         private void button3_Click(object sender, EventArgs e)
         {
-            prefixe[anzahlPrefixe] = textBox2.Text;
-            anzahlPrefixe = anzahlPrefixe + 1;
+            prefix.Add(textBox2.Text);
             textBox2.Text = "";
             textBox2.Focus();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            base1[anzahlBase1] = textBox3.Text;
-            anzahlBase1 = anzahlBase1 + 1;
+            baseword.Add(textBox3.Text);
             textBox3.Text = "";
             textBox3.Focus();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            base2[anzahlBase2] = textBox4.Text;
+            endword.Add(textBox4.Text);
             anzahlBase2 = anzahlBase2 + 1;
             textBox4.Text = "";
             textBox4.Focus();
+        }
+
+        private int CheckValidation()
+        {
+
+
+            return -1;
         }
     }
 }
