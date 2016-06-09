@@ -4,6 +4,7 @@ Files for my SoftInc Modder
 # 0.4.4.0
 
 - Add DataGrid to show software's features.
+- Convert Features into objects (for more understanding)
 - User able to make Company Types, but not totally (<Force> and Category on <Type> is missing, WIP)
 - Revision of the XML creation code.
 - User able to modify mod's path (Settings)
@@ -24,7 +25,7 @@ Files for my SoftInc Modder
 - Fix verifications on textboxes
 
 
-
 # Future updates
 
-- Convert Features into objects (for more understanding)
+- Add <force> and Category on <type> (CompanyTypes.cs)
+- Add Update system
