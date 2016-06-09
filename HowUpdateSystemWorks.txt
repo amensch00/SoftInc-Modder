@@ -10,7 +10,7 @@ http://www.github.com/mykerbal/SoftInc-Modder/releases/version/download/SoftInc-
 
 version = version.txt version.
 
-(example : if you see "4.4.4.0" in the textfiles, it means :
+(example : if you see "4.4.4.0" in the textfile, it means :
 
 http://www.github.com/mykerbal/SoftInc-Modder/releases/4.4.4.0/download/SoftInc-modder-4.4.4.0.zip
 
