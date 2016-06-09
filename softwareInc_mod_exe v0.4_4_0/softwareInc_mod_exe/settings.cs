@@ -26,6 +26,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.IO;
 using System.Net;
+using System.IO.Compression;
 
 namespace softwareInc_mod_exe
 {
@@ -34,13 +35,17 @@ namespace softwareInc_mod_exe
         forms_choice m_Vater;
         //Boolean m_ShowHelp;
 
-        string 
+        string
             msgCheck,
             msgCheckHead, //msg + msg's head for MessageBox when new version is found
             msgErrorPath,
             msgAskMoveMod,
             msgNewPath,
-            msgSuccessPath; 
+            msgSuccessPath,
+            msgErrorDL,
+            msgErrorUpDate,
+            msgNewUpdate,
+            msgHeadNewUpdate;
 
         private FolderBrowserDialog path;
 
@@ -51,6 +56,8 @@ namespace softwareInc_mod_exe
 
         private void Settings__Load(object sender, EventArgs e)
         {
+            //progressBar_download.Hide(); FOR v0.4.5.0
+
             label_path.Text = Properties.Settings.Default.Path;
 
             switch (Properties.Settings.Default.Language)
@@ -67,6 +74,10 @@ namespace softwareInc_mod_exe
                         msgAskMoveMod = "Voulez vous qu'on déplace votre dossier de mod déjà présent dans le nouveau chemin ?";
                         msgNewPath = "Le nouveau chemin de vos futurs mod est :";
                         msgSuccessPath = "Action effectuée !";
+                        msgErrorDL = "Une erreur s'est produite, merci d'essayer plus tard :)";
+                        msgErrorUpDate = "Le logiciel est à jour !";
+                        msgNewUpdate = "Une mise à jour est disponible, souhaitez vous la télécharger ?";
+                        msgHeadNewUpdate = "Mise à jour disponible !";
 
                         break;
                     }
@@ -81,6 +92,10 @@ namespace softwareInc_mod_exe
                         msgAskMoveMod = "Do you want move your mod folder to the new path ?";
                         msgNewPath = "Your new mod path is :";
                         msgSuccessPath = "Done!";
+                        msgErrorDL = "An error has occured, please retry later :)";
+                        msgErrorUpDate = "The software is up to date !";
+                        msgNewUpdate = "Update available, do you want to download it ?";
+                        msgHeadNewUpdate = "Update available !";
 
                         break; 
                     } //English
@@ -99,36 +114,51 @@ namespace softwareInc_mod_exe
         {
             // WIP (Squalalah)
 
-            /*
+            
             WebClient web = new WebClient();
             String text;
-            System.IO.Stream stream = web.OpenRead("http://www.lol.com");
-            using (System.IO.StreamReader reader = new System.IO.StreamReader(stream))
+            try
             {
-                text = reader.ReadToEnd();
-            }
-
-            string[] versionstext = text.Split('.');
-            string[] versionsApp = Properties.Settings.Default.Version.Split('.');
-
-            int[] versions = new int[4];
-            int[] versionsapp = new int[4];
-
-            for (int i = 0; i < versionstext.Length; i++)
-            {
-                versions[i] = Convert.ToInt32(versionstext[i]);
-                versionsapp[i] = Convert.ToInt32(versionsApp[i]);
-            }
-
-            if (CheckUpdate(versions, versionsapp))
-            {
-                if (MessageBox.Show("Update available, do you want to download it ?", "New update !", 
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                System.IO.Stream stream = web.OpenRead("http://www.anthonymontreuil.me/version.txt");
+                using (System.IO.StreamReader reader = new System.IO.StreamReader(stream))
                 {
-                    
+                    text = reader.ReadToEnd();
                 }
-            }*/
 
+                string[] versionstext = text.Split('.');
+                string[] versionsApp = Properties.Settings.Default.Version.Split('.');
+
+                int[] versions = new int[4];
+                int[] versionsapp = new int[4];
+
+                for (int i = 0; i < versionstext.Length; i++)
+                {
+                    MessageBox.Show("" + versionstext[i]);
+                    versions[i] = Convert.ToInt32(versionstext[i]);
+                    versionsapp[i] = Convert.ToInt32(versionsApp[i]);
+                }
+
+                if (CheckUpdate(versions, versionsapp))
+                {
+                    if (MessageBox.Show(msgNewUpdate, msgHeadNewUpdate,
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        //Process.Start("https://github.com/Squalalah/SoftInc-Modder/releases/download/" + text + "/SoftInc-Modder-" + text + ".zip"); Modification needed
+                        #region FOR 0.4.5.0
+                        // FOR 0.4.5.0
+                        /*progressBar_download.Show();
+                        web.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+                        web.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+                        web.DownloadFileAsync(new Uri("http://anthonymontreuil.me/file.zip"), Properties.Settings.Default.Path + @"\file.zip");*/
+                        #endregion
+                    }
+                }
+                else MessageBox.Show(msgErrorUpDate);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(msgErrorDL);
+            }
             #region old code
             /*string newVersion = null;
             string xmlURL = @".\xml.xml";
@@ -258,6 +288,16 @@ namespace softwareInc_mod_exe
             if (remote[0] == local[0] && remote[1] == local[1] && remote[2] == local[2] && remote[3] == local[3] && remote[4] == local[4]) return false;
 
             return true;
+        }
+
+        private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            //progressBar_download.Value = e.ProgressPercentage; FOR v0.4.5.0
+        }
+
+        private void Completed(object sender, AsyncCompletedEventArgs e)
+        {
+            MessageBox.Show("Download completed!");
         }
     }
 }

@@ -121,5 +121,10 @@ namespace softwareInc_mod_exe
         {
             this.Text = a;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
