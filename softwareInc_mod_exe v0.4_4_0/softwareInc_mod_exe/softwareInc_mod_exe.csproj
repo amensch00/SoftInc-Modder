@@ -247,6 +247,7 @@
     <EmbeddedResource Include="start_screen.resx">
       <DependentUpon>start_screen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
