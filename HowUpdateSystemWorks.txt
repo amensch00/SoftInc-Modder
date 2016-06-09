@@ -1,0 +1,26 @@
+1- The update system scan a .txt file via URL. (ex : anthonymontreuil.me/version.txt) with ONE line (the version).
+
+2- c# split the text, and compare with the application version.
+
+3- if the version.txt version is more recent than the application version, he will propose to download the new updates.
+
+If user click on OK, the application will open his favorite webbrowser with this link:
+
+http://www.github.com/mykerbal/SoftInc-Modder/releases/version/download/SoftInc-modder-version.zip
+
+version = version.txt version.
+
+(example : if you see "4.4.4.0" in the textfiles, it means :
+
+http://www.github.com/mykerbal/SoftInc-Modder/releases/4.4.4.0/download/SoftInc-modder-4.4.4.0.zip
+
+So, you MUST :
+
+1- create a website from a github repository (it's free, but this a link like www.mykerbal.github.com but it doesn't matter)
+
+2- create a "version.txt" with only ONE line (the version, always x.x.x.x)
+
+3- create a release on your SoftInc-Modder repository (pre-release if the first number of version is 0), and upload a .zip of your software (.zip called "SoftInc-modder-version" where version si the update version like 0.4.4.0)
+
+4- That's all !
+
