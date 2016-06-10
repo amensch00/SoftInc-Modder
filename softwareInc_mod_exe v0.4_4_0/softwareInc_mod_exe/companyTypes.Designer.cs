@@ -222,6 +222,7 @@
             this.textBox_number.Size = new System.Drawing.Size(86, 29);
             this.textBox_number.TabIndex = 95;
             this.textBox_number.Text = "1";
+            this.textBox_number.TextChanged += new System.EventHandler(this.textBox_number_TextChanged);
             this.textBox_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_number_KeyPress);
             // 
             // label_number

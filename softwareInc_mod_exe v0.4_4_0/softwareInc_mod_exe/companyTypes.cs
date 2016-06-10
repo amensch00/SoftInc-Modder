@@ -46,6 +46,7 @@ namespace softwareInc_mod_exe
         public companyTypes()
         {
             softwares = new List<string>();
+
             InitializeComponent();
         }
 
@@ -92,7 +93,10 @@ namespace softwareInc_mod_exe
             if (textBox_number.Text == "" || textBox_softwaretype.Text == "") MessageBox.Show(MsgErrorAddSoft);
             else
             {
-                softwares.Add(textBox_softwaretype.Text);
+                softwares.Add(textBox_softwaretype.Text + "/" + textBox_category.Text + "/" + textBox_number.Text);
+                /*softwares.Add(textBox_softwaretype.Text);
+                category.Add(textBox_category.Text);
+                number.Add(textBox_number.Text.Replace(',','.'));*/
                 MessageBox.Show(MsgDone);
             }
         }
@@ -123,86 +127,16 @@ namespace softwareInc_mod_exe
 
                     foreach (string i in softwares)
                     {
+                        string[] content = i.Split('/');
                         xmlWriter.WriteStartElement("Type");
-                        xmlWriter.WriteAttributeString("Software", i);
-                        if (textBox_category.Text != "") xmlWriter.WriteAttributeString("Category", textBox_category.Text);
-                        xmlWriter.WriteString(textBox_number.Text);
+                        xmlWriter.WriteAttributeString("Software", content[0]);
+                        if (content[1] != "") xmlWriter.WriteAttributeString("Category", content[1]);
+                        xmlWriter.WriteString(content[2]);
                         xmlWriter.WriteEndElement();
                     }
 
                     xmlWriter.WriteEndElement(); // </Types>
                     xmlWriter.WriteEndElement(); // </CompanyType>
-
-                    #region old code
-                    //Per year
-                    /*if (checkBox_random1.Checked)
-                    {
-                        Random rnd = new Random();
-                        xmlWriter.WriteStartElement("PerYear");
-                        xmlWriter.WriteElementString("Small", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteElementString("Medium", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteElementString("Large", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteEndElement();
-                    }
-                    else
-                    {
-                        xmlWriter.WriteStartElement("PerYear");
-                        xmlWriter.WriteElementString("Small", TrackBarWert(0, trackBar1.Value, "", ""));
-                        xmlWriter.WriteElementString("Medium", TrackBarWert(0, trackBar2.Value, "", ""));
-                        xmlWriter.WriteElementString("Large", TrackBarWert(0, trackBar3.Value, "", ""));
-                        xmlWriter.WriteEndElement();
-                    }
-
-                    //Min Software per year
-                    if (checkBox_random2.Checked)
-                    {
-                        Random rnd = new Random();
-                        xmlWriter.WriteStartElement("Min");
-                        xmlWriter.WriteElementString("Small", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteElementString("Medium", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteElementString("Large", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteEndElement();
-                    }
-                    else
-                    {
-                        xmlWriter.WriteStartElement("Min");
-                        xmlWriter.WriteElementString("Small", trackBar4.Value.ToString());
-                        xmlWriter.WriteElementString("Medium", trackBar5.Value.ToString());
-                        xmlWriter.WriteElementString("Large", trackBar6.Value.ToString());
-                        xmlWriter.WriteEndElement();
-                    }
-
-                    //Max Software per year
-                    if (checkBox_random2.Checked)
-                    {
-                        Random rnd = new Random();
-                        xmlWriter.WriteStartElement("Max");
-                        xmlWriter.WriteElementString("Small", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteElementString("Medium", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteElementString("Large", rnd.Next(0, 11).ToString());
-                        xmlWriter.WriteEndElement();
-                    }
-                    else
-                    {
-                        xmlWriter.WriteStartElement("Max");
-                        xmlWriter.WriteElementString("Small", trackBar7.Value.ToString());
-                        xmlWriter.WriteElementString("Medium", trackBar8.Value.ToString());
-                        xmlWriter.WriteElementString("Large", trackBar9.Value.ToString());
-                        xmlWriter.WriteEndElement();
-                    }               
-
-                    xmlWriter.WriteStartElement("Types");
-                    for (int x = 0; x < anzahlTypes; x = x + 1)
-                    {
-                        xmlWriter.WriteStartElement("Type");
-                        xmlWriter.WriteAttributeString("Name", types[x]);
-                        xmlWriter.WriteString(typesNumber[x]);
-                        xmlWriter.WriteEndElement();
-                    }
-                    xmlWriter.WriteEndElement();
-
-                    xmlWriter.WriteEndElement();*/
-                    #endregion
 
                     xmlWriter.Flush();
                     xmlWriter.Close();
@@ -263,6 +197,11 @@ namespace softwareInc_mod_exe
                         break;
                     }
             }
+        }
+
+        private void textBox_number_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
