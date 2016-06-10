@@ -53,7 +53,6 @@
             // 
             // button_check
             // 
-            this.button_check.Enabled = false;
             this.button_check.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_check.Location = new System.Drawing.Point(132, 278);
             this.button_check.Name = "button_check";
