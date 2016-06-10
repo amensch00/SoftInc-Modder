@@ -202,7 +202,7 @@
             // 
             // _hh2
             // 
-            this._hh2.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh2.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh2.Location = new System.Drawing.Point(194, 74);
             this._hh2.Name = "_hh2";
@@ -213,7 +213,7 @@
             // 
             // _hh1
             // 
-            this._hh1.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh1.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh1.Location = new System.Drawing.Point(547, 69);
             this._hh1.Name = "_hh1";
@@ -224,7 +224,7 @@
             // 
             // _hh3
             // 
-            this._hh3.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh3.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh3.Location = new System.Drawing.Point(194, 252);
             this._hh3.Name = "_hh3";
@@ -235,7 +235,7 @@
             // 
             // _hh4
             // 
-            this._hh4.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh4.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh4.Location = new System.Drawing.Point(547, 251);
             this._hh4.Name = "_hh4";
@@ -246,7 +246,7 @@
             // 
             // _hh5
             // 
-            this._hh5.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh5.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh5.Location = new System.Drawing.Point(242, 413);
             this._hh5.Name = "_hh5";

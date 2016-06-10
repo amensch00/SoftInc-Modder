@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="HD-German-Flag-Wallpaper-300x168" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="German_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HD-German-Flag-Wallpaper-300x168.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2015-06-09_00001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="main_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2015-06-09_00001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fahne-italienisch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Italian_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fahne-italienisch.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="England_flag-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="England_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\England_flag-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fragezeichen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Help_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fragezeichen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

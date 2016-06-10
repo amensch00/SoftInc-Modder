@@ -30,7 +30,6 @@
         {
             this.label_name = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label_money = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,7 +40,9 @@
             this._hh = new System.Windows.Forms.Button();
             this.button_add_product = new System.Windows.Forms.Button();
             this.button_add_company = new System.Windows.Forms.Button();
+            this.numericUpDown_money = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_money)).BeginInit();
             this.SuspendLayout();
             // 
             // label_name
@@ -62,91 +63,11 @@
             this.textBox1.Size = new System.Drawing.Size(294, 29);
             this.textBox1.TabIndex = 5;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "10",
-            "100",
-            "1000",
-            "10000",
-            "100000",
-            "1000000",
-            "10000000",
-            "100000000",
-            "20",
-            "200",
-            "2000",
-            "20000",
-            "200000",
-            "2000000",
-            "20000000",
-            "200000000",
-            "3000",
-            "30000",
-            "300000",
-            "3000000",
-            "30000000",
-            "300000000",
-            "40",
-            "400",
-            "4000",
-            "40000",
-            "400000",
-            "4000000",
-            "40000000",
-            "400000000",
-            "50",
-            "500",
-            "5000",
-            "50000",
-            "500000",
-            "5000000",
-            "50000000",
-            "500000000",
-            "60",
-            "600",
-            "6000",
-            "60000",
-            "600000",
-            "6000000",
-            "60000000",
-            "600000000",
-            "70",
-            "700",
-            "7000",
-            "70000",
-            "700000",
-            "7000000",
-            "70000000",
-            "700000000",
-            "80",
-            "800",
-            "8000",
-            "80000",
-            "800000",
-            "8000000",
-            "80000000",
-            "800000000",
-            "90",
-            "900",
-            "9000",
-            "90000",
-            "900000",
-            "9000000",
-            "90000000",
-            "900000000"});
-            this.comboBox2.Location = new System.Drawing.Point(321, 31);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(214, 28);
-            this.comboBox2.TabIndex = 24;
-            // 
             // label_money
             // 
             this.label_money.AutoSize = true;
             this.label_money.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_money.Location = new System.Drawing.Point(321, 9);
+            this.label_money.Location = new System.Drawing.Point(343, 9);
             this.label_money.Name = "label_money";
             this.label_money.Size = new System.Drawing.Size(123, 18);
             this.label_money.TabIndex = 25;
@@ -207,10 +128,12 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(221, 29);
             this.textBox4.TabIndex = 35;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // _hh
             // 
-            this._hh.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh.Location = new System.Drawing.Point(198, 203);
             this._hh.Name = "_hh";
@@ -241,11 +164,24 @@
             this.button_add_company.UseVisualStyleBackColor = true;
             this.button_add_company.Click += new System.EventHandler(this.button1_Click);
             // 
+            // numericUpDown_money
+            // 
+            this.numericUpDown_money.Location = new System.Drawing.Point(346, 41);
+            this.numericUpDown_money.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.numericUpDown_money.Name = "numericUpDown_money";
+            this.numericUpDown_money.Size = new System.Drawing.Size(147, 20);
+            this.numericUpDown_money.TabIndex = 39;
+            // 
             // companies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 416);
+            this.Controls.Add(this.numericUpDown_money);
             this.Controls.Add(this.button_add_product);
             this.Controls.Add(this.button_add_company);
             this.Controls.Add(this._hh);
@@ -255,7 +191,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label_reputation);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label_money);
             this.Controls.Add(this.label_name);
             this.Controls.Add(this.textBox1);
@@ -263,6 +198,7 @@
             this.Text = "Companies";
             this.Load += new System.EventHandler(this.companies_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_money)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +208,6 @@
 
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label_money;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
@@ -283,5 +218,6 @@
         private System.Windows.Forms.Button _hh;
         private System.Windows.Forms.Button button_add_product;
         private System.Windows.Forms.Button button_add_company;
+        private System.Windows.Forms.NumericUpDown numericUpDown_money;
     }
 }

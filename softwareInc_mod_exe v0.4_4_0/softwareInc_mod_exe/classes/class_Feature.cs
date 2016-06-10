@@ -21,14 +21,14 @@ namespace softwareInc_mod_exe.classes
             fromparent;
 
             /*server*/
-        private bool forced;
+        private bool forced, vital;
         private List<string> dependencies;
 
         #endregion
 
         #region Constructor
 
-        public class_Feature(string nam, string desc, string dev, string art, string innov, string usa, string sta, string from, bool force, List<string> depend)
+        public class_Feature(string nam, string desc, string dev, string art, string innov, string usa, string sta, string from, bool force, bool vita, List<string> depend)
         {
             dependencies = new List<string>();
 
@@ -42,6 +42,7 @@ namespace softwareInc_mod_exe.classes
             fromparent = from;
             forced = force;
             dependencies = depend;
+            vital = vita;
         }
 
         #endregion
@@ -107,6 +108,12 @@ namespace softwareInc_mod_exe.classes
         {
             get { return dependencies; }
             set { dependencies = value; }
+        }
+
+        public bool Vital
+        {
+            get { return vital; }
+            set { vital = value; }
         }
 
         #endregion

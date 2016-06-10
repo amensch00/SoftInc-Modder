@@ -24,8 +24,30 @@ Files for my SoftInc Modder
 
 - Fix verifications on textboxes
 
+# 0.4.4.4
+
+- Add update checker
+
+# 0.4.4.5
+
+- Remove debugging stuff
+
+# 0.4.4.6
+
+- Add <from><vital><forced> (feature.cs)
+- Add <Category> (companytype.cs)
+
+# 0.4.4.7
+
+- Add 0.4.4.7 in project settings (need to be done at every version)
+
+# 0.4.4.8
+
+- Fixes on company.cs + replace combobox by numericUpDown
+- Add verification on "Founded" textbox (only numerics)
+- Remove messageboxes when clicking on company and settings button
+
 
 # Future updates
 
-- Add <force> and Category on <type> (CompanyTypes.cs)
-- Add Update system
+- Dynamic stuff

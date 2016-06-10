@@ -49,10 +49,11 @@
             this.label1.Size = new System.Drawing.Size(722, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to my Modding Program for Software Inc. the Game";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button_it
             // 
-            this.button_it.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fahne_italienisch;
+            this.button_it.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Italian_flag;
             this.button_it.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_it.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_it.Location = new System.Drawing.Point(12, 338);
@@ -65,7 +66,7 @@
             // 
             // button_en
             // 
-            this.button_en.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.England_flag_5;
+            this.button_en.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.England_flag;
             this.button_en.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_en.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_en.Location = new System.Drawing.Point(208, 338);
@@ -78,7 +79,7 @@
             // 
             // button_de
             // 
-            this.button_de.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.HD_German_Flag_Wallpaper_300x168;
+            this.button_de.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.German_flag;
             this.button_de.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_de.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_de.Location = new System.Drawing.Point(412, 338);
@@ -123,12 +124,13 @@
             this.label_version.Size = new System.Drawing.Size(11, 13);
             this.label_version.TabIndex = 6;
             this.label_version.Text = "-";
+            this.label_version.Click += new System.EventHandler(this.label_version_Click);
             // 
             // start_screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources._2015_06_09_00001;
+            this.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.main_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(817, 539);
             this.Controls.Add(this.label_version);

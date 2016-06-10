@@ -155,14 +155,7 @@ namespace softwareInc_mod_exe
                     xmlWriter.WriteElementString("Name", "EnterName");
                 }
 
-                if (comboBox2.Text != "")
-                {
-                    xmlWriter.WriteElementString("Money", comboBox2.Text);
-                }
-                else
-                {
-                    xmlWriter.WriteElementString("Money", "9999999");
-                }
+                xmlWriter.WriteElementString("Money", numericUpDown_money.Value.ToString());
 
                 if (trackBar1.Value.ToString() != "")
                 {
@@ -237,6 +230,21 @@ namespace softwareInc_mod_exe
                 MessageBox.Show(MsgDone);
                 this.Close();
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != 8) e.Handled = true;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -132,8 +132,6 @@ namespace softwareInc_mod_exe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double z, f;
-            string z2, z3, f2, f3;
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -142,13 +140,8 @@ namespace softwareInc_mod_exe
             settings.ConformanceLevel = ConformanceLevel.Auto;
 
 
-            z = (double)trbar_random.Value / 10.0;
-            z2 = z.ToString();
-            z3 = z2.Replace(",", ".");
-
-            f = (double)trbar_popularity.Value / 10.0;
-            f2 = f.ToString();
-            f3 = f2.Replace(",", ".");
+            string z = ((double)trbar_random.Value / 10.0).ToString().Replace(',', '.');
+            string f = ((double)trbar_popularity.Value / 10.0).ToString().Replace(',','.');
 
             int result = CheckValidation();
             if (result != -1) { Errorlog(result); return; } //If there's an error while checking all verification controls, this method will return the error on MessageBox.
@@ -169,23 +162,23 @@ namespace softwareInc_mod_exe
                 #endregion
 
                 #region <Random></Random>
-                xmlWriter.WriteElementString("Random", z3); // <Random>z3</Random>
+                xmlWriter.WriteElementString("Random", z); // <Random>z3</Random>
                 #endregion
 
                 #region <Popularity></Popularity>
-                xmlWriter.WriteElementString("Popularity", f3); // <Popularity>f3</Popularity>
+                xmlWriter.WriteElementString("Popularity", f); // <Popularity>f3</Popularity>
                 #endregion
 
                 #region <OSSpecific></OSSpecific>
-                xmlWriter.WriteElementString("OSSpecific", WahrFalsch(checkBox_os.Checked)); // <OSSpecific>checkbox_os.Checked</OSSpecific>
+                xmlWriter.WriteElementString("OSSpecific", checkBox_os.Checked.ToString()); // <OSSpecific>checkbox_os.Checked</OSSpecific>
                 #endregion
 
                 #region <OneClient></OneClient>
-                xmlWriter.WriteElementString("OneClient", WahrFalsch(checkBox_client.Checked)); // <OneClient>checkbox_client.Checked</OneClient>
+                xmlWriter.WriteElementString("OneClient", checkBox_client.Checked.ToString()); // <OneClient>checkbox_client.Checked</OneClient>
                 #endregion
 
                 #region <InHouse></InHouse>
-                xmlWriter.WriteElementString("InHouse", WahrFalsch(checkBox_inhouse.Checked)); // <InHouse>checkBox_inhouse.Checked</InHouse>
+                xmlWriter.WriteElementString("InHouse", checkBox_inhouse.Checked.ToString()); // <InHouse>checkBox_inhouse.Checked</InHouse>
                 #endregion
 
                 #region <Unlock></Unlock>
@@ -211,8 +204,6 @@ namespace softwareInc_mod_exe
                 else xmlWriter.WriteElementString("NameGenerator", txtbox_namegen.Text); // <NameGenerator>txtbox_namegen.Text</NameGenerator>
                 #endregion
 
-                //MessageBox.Show(comboBox1.SelectedText);
-
                 #region <Category></Category>
                 if (comboBox_category.Text == "") xmlWriter.WriteElementString("Category", "Software"); // <Category>Software</Category>
                 else xmlWriter.WriteElementString("Category", comboBox_category.Text); // <Category>comboBox_category.Text</Category>
@@ -221,10 +212,13 @@ namespace softwareInc_mod_exe
                 #region <Features></Features>
                 xmlWriter.WriteStartElement("Features"); // <Features>
 
+                #region <feature></feature>
                 foreach (classes.class_Feature i in features)
                 {
                     xmlWriter.WriteStartElement("Feature");
-                    xmlWriter.WriteAttributeString("Vital", i.Forced.ToString());
+                    if (i.Fromparent != "nothing") xmlWriter.WriteAttributeString("FROM", i.Fromparent);
+                    if(i.Forced) xmlWriter.WriteAttributeString("Forced", i.Forced.ToString());
+                    if (i.Vital) xmlWriter.WriteAttributeString("Vital", i.Vital.ToString());
 
                     xmlWriter.WriteElementString("Name", i.Name);
                     xmlWriter.WriteElementString("Description", i.Description);
@@ -234,6 +228,7 @@ namespace softwareInc_mod_exe
                     xmlWriter.WriteElementString("Usability", i.Usability);
                     xmlWriter.WriteElementString("Stability", i.Stability);
 
+                    #region <Dependency />
                     foreach (string b in i.Dependencies) 
                     {
                         string[] depend = b.Split('>');
@@ -245,7 +240,9 @@ namespace softwareInc_mod_exe
 
                     }
                     xmlWriter.WriteEndElement();
+                    #endregion
                 }
+                #endregion
 
                 xmlWriter.WriteEndElement(); // </Features>
                 #endregion
@@ -256,20 +253,6 @@ namespace softwareInc_mod_exe
                 MessageBox.Show(MsgSavedDirectory);
                 this.Close();
             }
-        }
-
-        private string WahrFalsch(bool wert)
-        {
-            string erg = "";
-            if (wert == true)
-            {
-                erg = "TRUE";
-            }
-            else
-            { 
-                erg = "FALSE";
-            }
-            return erg;
         }
 
         private void button4_Click(object sender, EventArgs e)

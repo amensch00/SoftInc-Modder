@@ -29,7 +29,6 @@ namespace softwareInc_mod_exe
     public partial class Event_ : Form
     {
         string[] events = new string[100];
-        int eventAnzahl = 0;
         string[] company = new string[100];
         int companyAnzahl = 0;
 

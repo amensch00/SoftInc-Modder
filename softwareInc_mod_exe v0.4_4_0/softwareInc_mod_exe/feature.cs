@@ -85,7 +85,8 @@ namespace softwareInc_mod_exe
                         label_stability.Text = "Stabilité";
                         label_from.Text = "Via";
                         label_dependencies.Text = "Dépendances";
-                        radioButton_forced.Text = "Forcé";
+                        checkBox_forced.Text = "Forcé";
+                        checkBox_vital.Text = "Vitale";
                         button_add_dependency.Text = "Ajouter la dépendance";
                         button_create_feature.Text = "Créer la fonctionnalité";
 
@@ -130,90 +131,22 @@ namespace softwareInc_mod_exe
                 inno = ConvertTrackBarValue(trackBar2.Value),
                 usa = ConvertTrackBarValue(trackBar3.Value),
                 sta = ConvertTrackBarValue(trackBar4.Value),
-                from = "nothing";
+                from;
+
+            if (textBox_from.Text != "") from = textBox_from.Text;
+            else from = "nothing";
 
             int result = CheckValidation();
-            bool forced = radioButton_forced.Checked;
+            bool forced = checkBox_forced.Checked, vital = checkBox_vital.Checked;
 
             if (result == -1)
             {
-                feature.Add(new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, dependencies));
+                feature.Add(new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, vital, dependencies));
 
                 owner.Refresh();
                 owner.UpdateGrid();
-                MessageBox.Show("" + feature.Count);
-                #region old code
-                // Servers will be available soon
-
-
-                /*String erg = "";
-                erg = erg + "Name;";
-                erg = erg + textBox2.Text + "#";
-
-                if (textBox1.Text != "")
-                {
-                    erg = erg + "Description;";
-                    erg = erg + textBox1.Text + "#";
-                }
-
-                double f; // f = 2
-                f = (double)trackBar1.Value; // f = double(2)
-                string f2, f3;
-                f2 = f.ToString(); // f2 = "2"
-                f3 = f2.Replace(",", "."); // f3 = 
-                erg = erg + "DevTime;";
-                erg = erg + f3 + "#";
-         
-                double ze;
-                ze = (double)trackBar5.Value / 10.0;
-                string ze2, ze3;
-                ze2 = ze.ToString();
-                ze3 = ze2.Replace(",", ".");
-                erg = erg + "CodeArt;";
-                erg = erg + ze3 + "#";
-
-                double es;
-                es = (double)trackBar2.Value / 10.0;
-                string es2, es3;
-                es2 = es.ToString();
-                es3 = es2.Replace(",", ".");
-                erg = erg + "Innovation;";
-                erg = erg + es3 + "#";
-
-                double fs;
-                fs = (double)trackBar3.Value;
-                string fs2, fs3;
-                fs2 = fs.ToString();
-                fs3 = fs2.Replace(",", ".");
-                erg = erg + "Usability;";
-                erg = erg + fs3 + "#";
-
-                double q;
-                q = (double)trackBar4.Value / 10.0;
-                string q2, q3;
-                q2 = q.ToString();
-                q3 = q2.Replace(",", ".");
-                erg = erg + "Stability;";
-                erg = erg + q3 + "#";
-
-                string r;
-                r = textBox3.Text;
-                string r2, r3;
-                r2 = r.ToString();
-                r3 = r2.Replace(",", ".");
-                erg = erg + "Server;";
-                erg = erg + r3 + "#";
-
-
-                for (int n = 0; n < anzahlDependencies; n = n + 1)
-                {
-                    erg = erg + "Dependency;";
-                    erg = erg + Dependencies[n] + "#";
-                }
-
-                vater.ErstelleFeature(erg, radioButton_forced.Checked);*/
-                #endregion
-
+                //MessageBox.Show("" + feature.Count); Dev debugging
+                
                 Close();
             }
             else Errorlog(result);
@@ -230,8 +163,6 @@ namespace softwareInc_mod_exe
                 MessageBox.Show(MsgDependAdded);
                 dependencies.Add(comboBox_depend.SelectedItem.ToString());
                 comboBox_depend.Items.RemoveAt(comboBox_depend.SelectedIndex);
-                //Dependencies[anzahlDependencies] = comboBox_depend.SelectedItem.ToString();
-                //anzahlDependencies++;
             }
         }
 

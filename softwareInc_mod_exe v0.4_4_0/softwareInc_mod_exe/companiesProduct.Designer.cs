@@ -88,7 +88,7 @@
             // 
             // _hh
             // 
-            this._hh.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this._hh.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this._hh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this._hh.Location = new System.Drawing.Point(194, 72);
             this._hh.Name = "_hh";
@@ -324,7 +324,7 @@
             // 
             // hh2
             // 
-            this.hh2.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this.hh2.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this.hh2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.hh2.Location = new System.Drawing.Point(539, 110);
             this.hh2.Name = "hh2";
@@ -353,7 +353,7 @@
             // 
             // hh3
             // 
-            this.hh3.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.fragezeichen;
+            this.hh3.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
             this.hh3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.hh3.Location = new System.Drawing.Point(539, 189);
             this.hh3.Name = "hh3";
