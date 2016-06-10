@@ -47,6 +47,10 @@ Files for my SoftInc Modder
 - Add verification on "Founded" textbox (only numerics)
 - Remove messageboxes when clicking on company and settings button
 
+# 0.5.0.0
+
+- Software is now 100 percent functionnal
+- 
 
 # Future updates
 
