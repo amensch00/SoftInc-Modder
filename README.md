@@ -24,6 +24,18 @@ Files for my SoftInc Modder
 
 - Fix verifications on textboxes
 
+# 0.4.4.4
+
+- Add update checker
+
+# 0.4.4.5
+
+- Remove debugging stuff
+
+# 0.4.4.6
+
+- Add <from><vital><forced> (feature.cs)
+- Add <Category> (companytype.cs)
 
 # Future updates
 
