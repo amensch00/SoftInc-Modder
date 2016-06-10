@@ -54,6 +54,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBox_category = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -214,7 +217,7 @@
             // textBox_number
             // 
             this.textBox_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_number.Location = new System.Drawing.Point(355, 424);
+            this.textBox_number.Location = new System.Drawing.Point(655, 424);
             this.textBox_number.Name = "textBox_number";
             this.textBox_number.Size = new System.Drawing.Size(86, 29);
             this.textBox_number.TabIndex = 95;
@@ -225,7 +228,7 @@
             // 
             this.label_number.AutoSize = true;
             this.label_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_number.Location = new System.Drawing.Point(342, 459);
+            this.label_number.Location = new System.Drawing.Point(642, 459);
             this.label_number.Name = "label_number";
             this.label_number.Size = new System.Drawing.Size(108, 18);
             this.label_number.TabIndex = 96;
@@ -284,12 +287,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(466, 427);
+            this.label5.Location = new System.Drawing.Point(666, 481);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(418, 26);
+            this.label5.Size = new System.Drawing.Size(285, 39);
             this.label5.TabIndex = 102;
-            this.label5.Text = "ex : set 1 means they can only work on 1 product per time, 0.25 means 4 per times" +
-    " etc..\r\nDefault 1 to prevent market spamming";
+            this.label5.Text = "ex : set 1 means they can only work on 1 product per time, \r\n0.25 means 4 per tim" +
+    "es etc..\r\nDefault 1 to prevent market spamming";
             // 
             // label11
             // 
@@ -301,11 +304,42 @@
             this.label11.Text = "ex : Visual Tool, Operating System, or your custom software Types (names must mat" +
     "ch)";
             // 
+            // textBox_category
+            // 
+            this.textBox_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_category.Location = new System.Drawing.Point(321, 424);
+            this.textBox_category.Name = "textBox_category";
+            this.textBox_category.Size = new System.Drawing.Size(294, 29);
+            this.textBox_category.TabIndex = 104;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(402, 456);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(117, 18);
+            this.label13.TabIndex = 105;
+            this.label13.Text = "Type Category";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(328, 477);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(232, 26);
+            this.label14.TabIndex = 106;
+            this.label14.Text = "ex : \"Computer\" for \"Operating System\", \r\nbecause there\'s categories of Operating" +
+    " System";
+            // 
             // companyTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 538);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox_category);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -370,5 +404,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox_category;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -216,7 +216,9 @@ namespace softwareInc_mod_exe
                 foreach (classes.class_Feature i in features)
                 {
                     xmlWriter.WriteStartElement("Feature");
-                    xmlWriter.WriteAttributeString("Vital", i.Forced.ToString());
+                    if (i.Fromparent != "nothing") xmlWriter.WriteAttributeString("FROM", i.Fromparent);
+                    if(i.Forced) xmlWriter.WriteAttributeString("Forced", i.Forced.ToString());
+                    if (i.Vital) xmlWriter.WriteAttributeString("Vital", i.Vital.ToString());
 
                     xmlWriter.WriteElementString("Name", i.Name);
                     xmlWriter.WriteElementString("Description", i.Description);

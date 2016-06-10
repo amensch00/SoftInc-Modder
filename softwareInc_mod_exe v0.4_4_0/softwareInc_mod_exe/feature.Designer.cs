@@ -48,7 +48,6 @@
             this.label_dependencies = new System.Windows.Forms.Label();
             this.button_add_dependency = new System.Windows.Forms.Button();
             this.label_from = new System.Windows.Forms.Label();
-            this.comboBox_from = new System.Windows.Forms.ComboBox();
             this.label_server = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.radioButton_forced = new System.Windows.Forms.RadioButton();
             this._hh1 = new System.Windows.Forms.Button();
             this._hh5 = new System.Windows.Forms.Button();
             this._hh6 = new System.Windows.Forms.Button();
@@ -68,6 +66,9 @@
             this._hh3 = new System.Windows.Forms.Button();
             this._hh4 = new System.Windows.Forms.Button();
             this.textBox_server = new System.Windows.Forms.TextBox();
+            this.textBox_from = new System.Windows.Forms.TextBox();
+            this.checkBox_forced = new System.Windows.Forms.CheckBox();
+            this.checkBox_vital = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -270,15 +271,6 @@
             this.label_from.TabIndex = 24;
             this.label_from.Text = "From (Parent Feature)";
             // 
-            // comboBox_from
-            // 
-            this.comboBox_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_from.FormattingEnabled = true;
-            this.comboBox_from.Location = new System.Drawing.Point(448, 41);
-            this.comboBox_from.Name = "comboBox_from";
-            this.comboBox_from.Size = new System.Drawing.Size(259, 28);
-            this.comboBox_from.TabIndex = 25;
-            // 
             // label_server
             // 
             this.label_server.AutoSize = true;
@@ -389,19 +381,6 @@
             this.label22.TabIndex = 39;
             this.label22.Text = "1";
             // 
-            // radioButton_forced
-            // 
-            this.radioButton_forced.AutoSize = true;
-            this.radioButton_forced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_forced.Location = new System.Drawing.Point(625, 285);
-            this.radioButton_forced.Name = "radioButton_forced";
-            this.radioButton_forced.Size = new System.Drawing.Size(83, 24);
-            this.radioButton_forced.TabIndex = 40;
-            this.radioButton_forced.TabStop = true;
-            this.radioButton_forced.Text = "Forced";
-            this.radioButton_forced.UseVisualStyleBackColor = true;
-            this.radioButton_forced.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // _hh1
             // 
             this._hh1.BackgroundImage = global::softwareInc_mod_exe.Properties.Resources.Help_Icon;
@@ -471,11 +450,44 @@
             this.textBox_server.Size = new System.Drawing.Size(132, 29);
             this.textBox_server.TabIndex = 47;
             // 
+            // textBox_from
+            // 
+            this.textBox_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_from.Location = new System.Drawing.Point(452, 41);
+            this.textBox_from.Name = "textBox_from";
+            this.textBox_from.Size = new System.Drawing.Size(217, 29);
+            this.textBox_from.TabIndex = 48;
+            // 
+            // checkBox_forced
+            // 
+            this.checkBox_forced.AutoSize = true;
+            this.checkBox_forced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_forced.Location = new System.Drawing.Point(620, 265);
+            this.checkBox_forced.Name = "checkBox_forced";
+            this.checkBox_forced.Size = new System.Drawing.Size(84, 24);
+            this.checkBox_forced.TabIndex = 50;
+            this.checkBox_forced.Text = "Forced";
+            this.checkBox_forced.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_vital
+            // 
+            this.checkBox_vital.AutoSize = true;
+            this.checkBox_vital.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_vital.Location = new System.Drawing.Point(621, 322);
+            this.checkBox_vital.Name = "checkBox_vital";
+            this.checkBox_vital.Size = new System.Drawing.Size(64, 24);
+            this.checkBox_vital.TabIndex = 51;
+            this.checkBox_vital.Text = "Vital";
+            this.checkBox_vital.UseVisualStyleBackColor = true;
+            // 
             // feature_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 497);
+            this.Controls.Add(this.checkBox_vital);
+            this.Controls.Add(this.checkBox_forced);
+            this.Controls.Add(this.textBox_from);
             this.Controls.Add(this.textBox_server);
             this.Controls.Add(this._hh4);
             this.Controls.Add(this._hh3);
@@ -483,7 +495,6 @@
             this.Controls.Add(this._hh6);
             this.Controls.Add(this._hh5);
             this.Controls.Add(this._hh1);
-            this.Controls.Add(this.radioButton_forced);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -495,7 +506,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label_server);
-            this.Controls.Add(this.comboBox_from);
             this.Controls.Add(this.label_from);
             this.Controls.Add(this.button_add_dependency);
             this.Controls.Add(this.comboBox_depend);
@@ -550,7 +560,6 @@
         private System.Windows.Forms.Label label_dependencies;
         private System.Windows.Forms.Button button_add_dependency;
         private System.Windows.Forms.Label label_from;
-        private System.Windows.Forms.ComboBox comboBox_from;
         private System.Windows.Forms.Label label_server;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -562,7 +571,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.RadioButton radioButton_forced;
         private System.Windows.Forms.Button _hh1;
         private System.Windows.Forms.Button _hh5;
         private System.Windows.Forms.Button _hh6;
@@ -570,5 +578,8 @@
         private System.Windows.Forms.Button _hh3;
         private System.Windows.Forms.Button _hh4;
         private System.Windows.Forms.TextBox textBox_server;
+        private System.Windows.Forms.TextBox textBox_from;
+        private System.Windows.Forms.CheckBox checkBox_forced;
+        private System.Windows.Forms.CheckBox checkBox_vital;
     }
 }

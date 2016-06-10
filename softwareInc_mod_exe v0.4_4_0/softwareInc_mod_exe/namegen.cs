@@ -28,13 +28,10 @@ namespace softwareInc_mod_exe
     public partial class namegen : Form
     {
         string[] prefixe = new string[100];
-        int anzahlPrefixe = 0;
         string[] base1 = new string[100];
-        int anzahlBase1 = 0;
         string[] base2 = new string[100];
 
         List<string> prefix, baseword, endword;
-        int anzahlBase2 = 0;
 
         // Strings for MessageBoxes
 

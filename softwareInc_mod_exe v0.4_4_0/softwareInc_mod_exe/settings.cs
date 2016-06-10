@@ -112,8 +112,6 @@ namespace softwareInc_mod_exe
 
         private void button_check_Click(object sender, EventArgs e)
         {
-            // WIP (Squalalah)
-
             #region WIP UPDATE CHECKER SYSTEM
         
             WebClient web = new WebClient();

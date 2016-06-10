@@ -40,7 +40,8 @@ namespace softwareInc_mod_exe
         string
             MsgDone,
             MsgNameMissing,
-            MsgErrorAddSoft;
+            MsgErrorAddSoft,
+            MsgSoftMissing;
 
         public companyTypes()
         {
@@ -57,30 +58,9 @@ namespace softwareInc_mod_exe
                         MsgDone = "Action effectuée !";
                         MsgNameMissing = "Veuillez entrer une spécialisation";
                         MsgErrorAddSoft = "Merci de compléter le nom du type de logiciel et/ou son nombre";
+                        MsgSoftMissing = "Aucun logiciel n'est assigné au type d'entreprise";
 
                         this.Text += " (traduit par Squalalah)";
-
-                        /*label_specialization.Text = "Spécialisation";
-                        label_soft_year.Text = "Nombre de logiciel par an";
-
-                        label_probayear.Text = "Petit";
-                        label_small2.Text = "Petit";
-                        label_small3.Text = "Petit";
-                        checkBox_random1.Text = "Aléatoire";
-
-                        label_min_release.Text = "Minimum de logiciels sortis par an";
-
-                        label_medium1.Text = "Moyen";
-                        label_medium2.Text = "Moyen";
-                        label_medium3.Text = "Moyen";
-                        checkBox_random2.Text = "Aléatoire";
-
-                        label_max_release.Text = "Maximum de logiciels sortis par an";
-
-                        label_large1.Text = "Grand";
-                        label_large2.Text = "Grand";
-                        label_large3.Text = "Grand";
-                        checkBox_random3.Text = "Aléatoire";*/
 
                         label_soft_year.Text = "Type de logiciel sorti";
                         label_number.Text = "Nombre";
@@ -99,6 +79,7 @@ namespace softwareInc_mod_exe
                         MsgDone = "Done!";
                         MsgNameMissing = "You must enter an specialization";
                         MsgErrorAddSoft = "Please enter a software type name and/or his number";
+                        MsgSoftMissing = "No software is assigned to the company type";
                         
                         break; 
                     } //English
@@ -109,8 +90,11 @@ namespace softwareInc_mod_exe
         private void button_add_soft_Click(object sender, EventArgs e)
         {
             if (textBox_number.Text == "" || textBox_softwaretype.Text == "") MessageBox.Show(MsgErrorAddSoft);
-            softwares.Add(textBox_softwaretype.Text);
-            MessageBox.Show(MsgDone);
+            else
+            {
+                softwares.Add(textBox_softwaretype.Text);
+                MessageBox.Show(MsgDone);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,13 +125,13 @@ namespace softwareInc_mod_exe
                     {
                         xmlWriter.WriteStartElement("Type");
                         xmlWriter.WriteAttributeString("Software", i);
+                        if (textBox_category.Text != "") xmlWriter.WriteAttributeString("Category", textBox_category.Text);
                         xmlWriter.WriteString(textBox_number.Text);
                         xmlWriter.WriteEndElement();
                     }
 
-                    xmlWriter.WriteEndElement();
-
-                    xmlWriter.WriteEndElement();
+                    xmlWriter.WriteEndElement(); // </Types>
+                    xmlWriter.WriteEndElement(); // </CompanyType>
 
                     #region old code
                     //Per year
@@ -245,7 +229,6 @@ namespace softwareInc_mod_exe
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            MessageBox.Show((Convert.ToDecimal(trackBar1.Value) / 10).ToString());
         }
 
         private void textBox_number_KeyPress(object sender, KeyPressEventArgs e)
@@ -261,6 +244,7 @@ namespace softwareInc_mod_exe
         private int CheckValidation()
         {
             if (textBox_name.Text == "") return 1;
+            if (softwares.Count == 0) return 2;
             return -1;
         }
 
@@ -271,6 +255,11 @@ namespace softwareInc_mod_exe
                 case 1:
                     {
                         MessageBox.Show(MsgNameMissing);
+                        break;
+                    }
+                case 2:
+                    {
+                        MessageBox.Show(MsgSoftMissing);
                         break;
                     }
             }

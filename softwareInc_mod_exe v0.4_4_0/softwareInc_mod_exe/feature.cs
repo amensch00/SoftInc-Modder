@@ -85,7 +85,8 @@ namespace softwareInc_mod_exe
                         label_stability.Text = "Stabilité";
                         label_from.Text = "Via";
                         label_dependencies.Text = "Dépendances";
-                        radioButton_forced.Text = "Forcé";
+                        checkBox_forced.Text = "Forcé";
+                        checkBox_vital.Text = "Vitale";
                         button_add_dependency.Text = "Ajouter la dépendance";
                         button_create_feature.Text = "Créer la fonctionnalité";
 
@@ -130,14 +131,17 @@ namespace softwareInc_mod_exe
                 inno = ConvertTrackBarValue(trackBar2.Value),
                 usa = ConvertTrackBarValue(trackBar3.Value),
                 sta = ConvertTrackBarValue(trackBar4.Value),
-                from = "nothing";
+                from;
+
+            if (textBox_from.Text != "") from = textBox_from.Text;
+            else from = "nothing";
 
             int result = CheckValidation();
-            bool forced = radioButton_forced.Checked;
+            bool forced = checkBox_forced.Checked, vital = checkBox_vital.Checked;
 
             if (result == -1)
             {
-                feature.Add(new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, dependencies));
+                feature.Add(new classes.class_Feature(name, desc, dev, art, inno, usa, sta, from, forced, vital, dependencies));
 
                 owner.Refresh();
                 owner.UpdateGrid();
