@@ -56,7 +56,7 @@ namespace softwareInc_mod_exe
 
         private void Settings__Load(object sender, EventArgs e)
         {
-            //progressBar_download.Hide(); FOR v0.4.5.0
+            progressBar_download.Hide();
 
             label_path.Text = Properties.Settings.Default.Path;
 
@@ -132,7 +132,6 @@ namespace softwareInc_mod_exe
 
                 for (int i = 0; i < versionstext.Length; i++)
                 {
-                    MessageBox.Show("" + versionstext[i]);
                     versions[i] = Convert.ToInt32(versionstext[i]);
                     versionsapp[i] = Convert.ToInt32(versionsApp[i]);
                 }
