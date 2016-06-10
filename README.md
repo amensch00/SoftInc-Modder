@@ -39,5 +39,4 @@ Files for my SoftInc Modder
 
 # Future updates
 
-- Add <force> and Category on <type> (CompanyTypes.cs)
-- Add Update system
+- Dynamic stuff
