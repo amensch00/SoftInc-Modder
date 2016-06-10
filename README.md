@@ -41,6 +41,17 @@ Files for my SoftInc Modder
 
 - Add version in project settings (must be done for every version)
 
+# 0.4.4.7
+
+- Add 0.4.4.7 in project settings (need to be done at every version)
+
+# 0.4.4.8
+
+- Fixes on company.cs + replace combobox by numericUpDown
+- Add verification on "Founded" textbox (only numerics)
+
+
+
 # Future updates
 
 - Dynamic stuff
