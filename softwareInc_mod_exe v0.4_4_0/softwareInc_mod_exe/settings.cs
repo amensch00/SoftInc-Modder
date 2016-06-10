@@ -237,7 +237,7 @@ namespace softwareInc_mod_exe
 
         private void Completed(object sender, AsyncCompletedEventArgs e)
         {
-            MessageBox.Show("Download completed!");
+            MessageBox.Show("Download finished!");
         }
     }
 }
