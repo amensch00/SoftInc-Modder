@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4558336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4558848">
       <assemblyIdentity name="softwareInc_mod_exe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RhdYvGme5xXHwQBKcGkNyqHWNLPupac6pacCAz4sZc8=</dsig:DigestValue>
+        <dsig:DigestValue>zm1vFlLSW3DQVGa6q95cWWucW6MsW7etd51pY9LRfXQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,13 +72,13 @@
       <dsig:DigestValue>h5XH4LK6qP93Z/5uIRygBQzA88fec1RIOjp2PMXZsjc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="softwareInc_mod_exe.exe.config" size="1131">
+  <file name="softwareInc_mod_exe.exe.config" size="1155">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zhL7s5YxYf4Bfa3AsYCG9Y9kOAC3oKJBEseDDi9hq+Y=</dsig:DigestValue>
+      <dsig:DigestValue>U/tZIPumSt7LiohiV6Vkoe9dt5aA/Kk1UpO/1QrjNe4=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
