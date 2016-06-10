@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="softwareInc_mod_exe.exe" version="0.4.4.6" publicKeyToken="0000000000000000" language="en" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="softwareInc_mod_exe.exe" version="0.4.4.8" publicKeyToken="0000000000000000" language="en" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Softinc_modder_ico.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4558848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="softwareInc_mod_exe.exe" size="4558336">
       <assemblyIdentity name="softwareInc_mod_exe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zm1vFlLSW3DQVGa6q95cWWucW6MsW7etd51pY9LRfXQ=</dsig:DigestValue>
+        <dsig:DigestValue>EXZlzr3lWgjIf+CcnnQTfQMuBpnXcF6eb/1YRVFE6Fw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,13 +72,13 @@
       <dsig:DigestValue>h5XH4LK6qP93Z/5uIRygBQzA88fec1RIOjp2PMXZsjc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="softwareInc_mod_exe.exe.config" size="1155">
+  <file name="softwareInc_mod_exe.exe.config" size="1754">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U/tZIPumSt7LiohiV6Vkoe9dt5aA/Kk1UpO/1QrjNe4=</dsig:DigestValue>
+      <dsig:DigestValue>+kRVrznUX8pN6OCl1cC4BfZsns4Qnn76adRidxPrqiw=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

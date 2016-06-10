@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>go2gb7o7z3tI9O/pIquIpNvlQJ7QbCM+Y0Jq+/Te4qs=</dsig:DigestValue>
+        <dsig:DigestValue>D3NGWggQCuCvDG3FD+qO0cQxkv1ONSFSJDoxmV3Ypjc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,13 +72,13 @@
       <dsig:DigestValue>h5XH4LK6qP93Z/5uIRygBQzA88fec1RIOjp2PMXZsjc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="softwareInc_mod_exe.exe.config" size="1168">
+  <file name="softwareInc_mod_exe.exe.config" size="1754">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kLynBvbP0iF0gs0pRgaaRe2nqzfVt8fLvkykSWo+vLw=</dsig:DigestValue>
+      <dsig:DigestValue>+kRVrznUX8pN6OCl1cC4BfZsns4Qnn76adRidxPrqiw=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

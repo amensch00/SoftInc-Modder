@@ -125,7 +125,7 @@ namespace softwareInc_mod_exe
                 }
 
                 string[] versionstext = text.Split('.');
-                string[] versionsApp = Properties.Settings.Default.Version.Split('.');
+                string[] versionsApp = Properties.Settings.Default.version.Split('.');
 
                 int[] versions = new int[4];
                 int[] versionsapp = new int[4];

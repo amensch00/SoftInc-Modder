@@ -124,6 +124,7 @@
             this.label_version.Size = new System.Drawing.Size(11, 13);
             this.label_version.TabIndex = 6;
             this.label_version.Text = "-";
+            this.label_version.Click += new System.EventHandler(this.label_version_Click);
             // 
             // start_screen
             // 

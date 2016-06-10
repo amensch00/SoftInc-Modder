@@ -47,15 +47,12 @@ namespace softwareInc_mod_exe.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0.4.4.7")]
-        public string Version {
+        public string version {
             get {
-                return ((string)(this["Version"]));
-            }
-            set {
-                this["Version"] = value;
+                return ((string)(this["version"]));
             }
         }
     }

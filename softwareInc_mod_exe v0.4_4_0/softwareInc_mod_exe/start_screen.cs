@@ -35,7 +35,6 @@ namespace softwareInc_mod_exe
 
         public start_screen()
         {
-            //Properties.Settings.Default.Path = "";
             InitializeComponent();
             string userName = Environment.UserName;
 
@@ -78,8 +77,7 @@ namespace softwareInc_mod_exe
         private void start_screen_Load(object sender, EventArgs e)
         {
 
-            label_version.Text = Properties.Settings.Default.Version;
-            Properties.Settings.Default.Save();
+            label_version.Text = Properties.Settings.Default.version;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -124,6 +122,11 @@ namespace softwareInc_mod_exe
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_version_Click(object sender, EventArgs e)
         {
 
         }
