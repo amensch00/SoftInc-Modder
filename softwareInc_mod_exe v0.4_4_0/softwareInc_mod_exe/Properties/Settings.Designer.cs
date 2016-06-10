@@ -49,7 +49,7 @@ namespace softwareInc_mod_exe.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.4.4.7")]
         public string Version {
             get {
                 return ((string)(this["Version"]));

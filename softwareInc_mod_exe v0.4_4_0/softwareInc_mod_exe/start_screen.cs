@@ -77,8 +77,6 @@ namespace softwareInc_mod_exe
 
         private void start_screen_Load(object sender, EventArgs e)
         {
-            
-            Properties.Settings.Default.Version = "0.4.4.7";
 
             label_version.Text = Properties.Settings.Default.Version;
             Properties.Settings.Default.Save();
