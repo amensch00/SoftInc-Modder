@@ -142,8 +142,8 @@ namespace softwareInc_mod_exe
                     if (MessageBox.Show(msgNewUpdate, msgHeadNewUpdate,
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        Process.Start("https://github.com/mykerbal/SoftInc-Modder/releases/download/" + text + "/softwareInc_mod_exe.exe");
-                        #region FOR 0.4.5.0
+                        Process.Start("https://github.com/mykerbal/SoftInc-Modder/releases/download/" + text + "/softwareInc_mod.exe");
+                        #region FOR 0.4.5.0 or later
                         // FOR 0.4.5.0
                         /*
                         progressBar_download.Show();
