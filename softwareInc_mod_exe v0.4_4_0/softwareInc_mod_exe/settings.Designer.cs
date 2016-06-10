@@ -34,6 +34,7 @@
             this.button_path = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label_path = new System.Windows.Forms.Label();
+            this.progressBar_download = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // checkBox_tutorial
@@ -93,11 +94,19 @@
             this.label_path.TabIndex = 12;
             this.label_path.Text = "/";
             // 
+            // progressBar_download
+            // 
+            this.progressBar_download.Location = new System.Drawing.Point(189, 139);
+            this.progressBar_download.Name = "progressBar_download";
+            this.progressBar_download.Size = new System.Drawing.Size(271, 35);
+            this.progressBar_download.TabIndex = 13;
+            // 
             // Settings_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 352);
+            this.Controls.Add(this.progressBar_download);
             this.Controls.Add(this.label_path);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_path);
@@ -119,5 +128,6 @@
         private System.Windows.Forms.Button button_path;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_path;
+        private System.Windows.Forms.ProgressBar progressBar_download;
     }
 }

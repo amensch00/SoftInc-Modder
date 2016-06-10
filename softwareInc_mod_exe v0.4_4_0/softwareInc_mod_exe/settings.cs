@@ -114,12 +114,13 @@ namespace softwareInc_mod_exe
         {
             // WIP (Squalalah)
 
-            
+            #region WIP UPDATE CHECKER SYSTEM
+        
             WebClient web = new WebClient();
             String text;
             try
             {
-                System.IO.Stream stream = web.OpenRead("http://www.anthonymontreuil.me/version.txt");
+                System.IO.Stream stream = web.OpenRead("https://mykerbal.github.io/SoftInc-Modder/version.txt");
                 using (System.IO.StreamReader reader = new System.IO.StreamReader(stream))
                 {
                     text = reader.ReadToEnd();
@@ -138,18 +139,20 @@ namespace softwareInc_mod_exe
                     versionsapp[i] = Convert.ToInt32(versionsApp[i]);
                 }
 
-                if (CheckUpdate(versions, versionsapp))
+                if (CheckUpdate(versions, versionsapp)) // If version.txt version is more recent than software version.
                 {
                     if (MessageBox.Show(msgNewUpdate, msgHeadNewUpdate,
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        //Process.Start("https://github.com/Squalalah/SoftInc-Modder/releases/download/" + text + "/SoftInc-Modder-" + text + ".zip"); Modification needed
+                        Process.Start("https://github.com/mykerbal/SoftInc-Modder/releases/download/" + text + "/softwareInc_mod_exe.exe");
                         #region FOR 0.4.5.0
                         // FOR 0.4.5.0
-                        /*progressBar_download.Show();
+                        /*
+                        progressBar_download.Show();
                         web.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
                         web.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-                        web.DownloadFileAsync(new Uri("http://anthonymontreuil.me/file.zip"), Properties.Settings.Default.Path + @"\file.zip");*/
+                        web.DownloadFileAsync(new Uri("http://anthonymontreuil.me/file.zip"), Properties.Settings.Default.Path + @"\file.zip");
+                        */
                         #endregion
                     }
                 }
@@ -159,67 +162,6 @@ namespace softwareInc_mod_exe
             {
                 MessageBox.Show(msgErrorDL);
             }
-            #region old code
-            /*string newVersion = null;
-            string xmlURL = @".\xml.xml";
-            string oldVersion = "0.04";
-            string url = "";
-            XmlTextReader reader = new XmlTextReader(xmlURL);
-            try
-            {
-                reader.MoveToContent();
-                string elementName = "";
-                if ((reader.NodeType == XmlNodeType.Element) &&
-                    (reader.Name == "SoftInc_modder"))
-                {
-                    while (reader.Read())
-                    {
-                        if (reader.NodeType == XmlNodeType.Element)
-                            elementName = reader.Name;
-                        else
-                        {
-                            if ((reader.NodeType == XmlNodeType.Text) &&
-                                (reader.HasValue))
-                            {
-                                switch (elementName)
-                                {
-                                    case "version":
-                                        newVersion = reader.Value;
-                                        if (newVersion.ToString() != oldVersion)
-                                        {
-                                            MessageBox.Show(msgCheck, msgCheckHead, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                                            Process.Start("http://www.dropbox.com");
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("[DEBUG] Hallo");
-                                            break;
-                                        }
-                                        break;
-                                    case "url":
-                                        url = reader.Value;
-                                        break;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-            }
-            finally
-            {
-                if (reader != null) reader.Close();
-            }
-            //if (MessageBox.Show("Done cheacking!\nNew updates avaiable, do you want to download them?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    Process.Start("http://www.royal-server.com/");
-            //}
-            //else
-            //{
-
-            //}*/
             #endregion
         }
 
@@ -292,7 +234,7 @@ namespace softwareInc_mod_exe
 
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            //progressBar_download.Value = e.ProgressPercentage; FOR v0.4.5.0
+            progressBar_download.Value = e.ProgressPercentage; //FOR v0.4.5.0
         }
 
         private void Completed(object sender, AsyncCompletedEventArgs e)
