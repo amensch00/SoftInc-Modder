@@ -45,7 +45,7 @@ Files for my SoftInc Modder
 
 - Fixes on company.cs + replace combobox by numericUpDown
 - Add verification on "Founded" textbox (only numerics)
-
+- Remove messageboxes when clicking on company and settings button
 
 
 # Future updates
