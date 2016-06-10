@@ -50,6 +50,7 @@ Files for my SoftInc Modder
 # 0.5.0.0
 
 - Software is now 100 percent functionnal
+- MessageBoxes for debugging removed (settings.cs)
 
 # Future updates
 
