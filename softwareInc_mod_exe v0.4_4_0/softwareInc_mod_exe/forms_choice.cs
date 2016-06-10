@@ -104,7 +104,7 @@ namespace softwareInc_mod_exe
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(MsgWarningType);
+            //MessageBox.Show(MsgWarningType);
             companyTypes companyTypes = new companyTypes();
             companyTypes.ShowInTaskbar = false;
             companyTypes.ShowDialog();
@@ -121,7 +121,7 @@ namespace softwareInc_mod_exe
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(MsgWarningSettings);
+            //MessageBox.Show(MsgWarningSettings);
             Settings_ Settings = new Settings_();
             Settings.ShowInTaskbar = false;
             Settings.Start(this, ShowHelp);
