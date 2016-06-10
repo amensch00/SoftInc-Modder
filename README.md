@@ -37,6 +37,10 @@ Files for my SoftInc Modder
 - Add <from><vital><forced> (feature.cs)
 - Add <Category> (companytype.cs)
 
+# 0.4.4.6
+
+- Add version in project settings (must be done for every version)
+
 # Future updates
 
 - Dynamic stuff
